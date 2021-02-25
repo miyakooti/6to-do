@@ -3,4 +3,14 @@
 基本的な機能
 自動的に今日のタスクに遷移する
 
+tableview関連
+https://developer.apple.com/documentation/uikit/views_and_controls/table_views/supporting_drag_and_drop_in_table_views
+https://teratail.com/questions/87762
+https://blog.mothule.com/ios/uitableview/ios-uitableview-uitableviewcell-edit-mode
 
+デフォルトTableViewサンプル集 【操作編】(swift)
+https://qiita.com/am10/items/072857551c2c6ad5b2ed
+
+文字を入力してください　次へ
+重要な順に並べ替えてください　確定する
+６つのタスクが完成しました！　TOPへ戻る
