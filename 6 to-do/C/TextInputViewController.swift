@@ -43,8 +43,6 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
          return true
     }
-    
-    
     //この辺いらんかも
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
       // 移動処理
@@ -78,6 +76,7 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
             interactionLabel.text = "６つのタスクが完成しました。"
             inputPhase = inputPhase + 1
             self.navigationItem.hidesBackButton = true
+            saveTasksFromTextField()
             return
         }
         
@@ -86,5 +85,29 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
     }
+    
+
+//        let indexPathes = IndexPath(row: 5, section: 0)
+//        for indexPath in indexPathes{
+//            tableView.cellForRow(at: )
+//        }
+
+        
+    //ここおれの天才ポイント
+    func saveTasksFromTextField(){
+        var sixTaskList:[String] = []
+        for i in 0...5{
+            //これによって、intをIndexPath型に変換しています。
+            let indexPath = IndexPath(row: i, section: 0)
+            //そのIndexPathとcellForRowの処理をループさせることによって、カスタムセルの中の要素の値を取得できるようにしています。まじで天才ですね。
+            let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
+    
+            sixTaskList.append(cell.textField.text!)
+    
+        }
+        
+        UserDefaults.standard.setValue(sixTaskList, forKey: "sixTask")
+    }
+
     
 }

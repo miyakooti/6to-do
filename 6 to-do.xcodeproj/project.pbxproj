@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,6 @@
 		D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E54B25E6881900240268 /* Assets.xcassets */; };
 		D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */; };
 		D1D1E56025E68CAC00240268 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E55F25E68CAC00240268 /* NavigationController.swift */; };
-		D1D1E56425E70E8400240268 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E56325E70E8400240268 /* InputViewController.swift */; };
-		D1D1E56825E70E9D00240268 /* PriorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E56725E70E9D00240268 /* PriorityViewController.swift */; };
-		D1D1E56B25E70EA900240268 /* ConfilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E56A25E70EA900240268 /* ConfilmViewController.swift */; };
 		D1D1E56E25E70EBC00240268 /* SeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E56D25E70EBC00240268 /* SeeViewController.swift */; };
 		D1D1E57125E72EB900240268 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E57025E72EB900240268 /* memo.txt */; };
 		D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E57725E7307B00240268 /* TextInputViewController.swift */; };
@@ -38,9 +35,6 @@
 		D1D1E54E25E6881900240268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1D1E55025E6881900240268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1D1E55F25E68CAC00240268 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		D1D1E56325E70E8400240268 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
-		D1D1E56725E70E9D00240268 /* PriorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityViewController.swift; sourceTree = "<group>"; };
-		D1D1E56A25E70EA900240268 /* ConfilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfilmViewController.swift; sourceTree = "<group>"; };
 		D1D1E56D25E70EBC00240268 /* SeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeViewController.swift; sourceTree = "<group>"; };
 		D1D1E57025E72EB900240268 /* memo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
 		D1D1E57725E7307B00240268 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +68,18 @@
 				3A7270BB56A0F23AE5776325 /* Pods-6 to-do.debug.xcconfig */,
 				B7746AB0486039069D804F89 /* Pods-6 to-do.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D16EB71825E7968E00548D99 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D1D1E54825E6881600240268 /* Main.storyboard */,
+				D1D1E58425E73C0000240268 /* TextInputCell.xib */,
+				D1D1E54B25E6881900240268 /* Assets.xcassets */,
+				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 		D1D1E53625E6881600240268 = {
@@ -99,13 +103,11 @@
 		D1D1E54125E6881600240268 /* 6 to-do */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1E54225E6881600240268 /* AppDelegate.swift */,
-				D1D1E54425E6881600240268 /* SceneDelegate.swift */,
 				D1D1E55925E68B9900240268 /* C */,
-				D1D1E54825E6881600240268 /* Main.storyboard */,
-				D1D1E54B25E6881900240268 /* Assets.xcassets */,
-				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
+				D16EB71825E7968E00548D99 /* V */,
 				D1D1E55025E6881900240268 /* Info.plist */,
+				D1D1E54425E6881600240268 /* SceneDelegate.swift */,
+				D1D1E54225E6881600240268 /* AppDelegate.swift */,
 				D1D1E57025E72EB900240268 /* memo.txt */,
 			);
 			path = "6 to-do";
@@ -116,13 +118,9 @@
 			children = (
 				D1D1E54625E6881600240268 /* ViewController.swift */,
 				D1D1E55F25E68CAC00240268 /* NavigationController.swift */,
-				D1D1E56325E70E8400240268 /* InputViewController.swift */,
-				D1D1E56725E70E9D00240268 /* PriorityViewController.swift */,
-				D1D1E56A25E70EA900240268 /* ConfilmViewController.swift */,
 				D1D1E56D25E70EBC00240268 /* SeeViewController.swift */,
 				D1D1E57725E7307B00240268 /* TextInputViewController.swift */,
 				D1D1E58325E73C0000240268 /* TextInputCell.swift */,
-				D1D1E58425E73C0000240268 /* TextInputCell.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -244,10 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D1E54725E6881600240268 /* ViewController.swift in Sources */,
-				D1D1E56425E70E8400240268 /* InputViewController.swift in Sources */,
-				D1D1E56B25E70EA900240268 /* ConfilmViewController.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
-				D1D1E56825E70E9D00240268 /* PriorityViewController.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
 				D1D1E56025E68CAC00240268 /* NavigationController.swift in Sources */,
 				D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */,

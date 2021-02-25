@@ -24,5 +24,8 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "input", sender: nil)
     }
     
+    @IBAction func tapDelete(_ sender: Any) {
+        
+    }
 }
 

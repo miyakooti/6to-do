@@ -3,14 +3,19 @@
 基本的な機能
 自動的に今日のタスクに遷移する
 
+
+
+戻るボタンを隠す。
+https://qiita.com/takashings/items/657069b22740fe4bf021
+
 tableview関連
 https://developer.apple.com/documentation/uikit/views_and_controls/table_views/supporting_drag_and_drop_in_table_views
 https://teratail.com/questions/87762
 https://blog.mothule.com/ios/uitableview/ios-uitableview-uitableviewcell-edit-mode
 
-デフォルトTableViewサンプル集 【操作編】(swift)
+
+デフォルトTableViewサンプル集 【操作編】(swift)（めっちゃ参考になった）
 https://qiita.com/am10/items/072857551c2c6ad5b2ed
 
-文字を入力してください　次へ
-重要な順に並べ替えてください　確定する
-６つのタスクが完成しました！　TOPへ戻る
+navigationController 前の画面に戻るメソッド。
+https://qiita.com/k-yamada-github/items/65b8a8cb17fd1912aca5
