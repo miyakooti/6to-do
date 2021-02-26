@@ -16,12 +16,10 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     let sixTaskList = UserDefaults.standard.object(forKey: "sixTaskList") as! [String]
     var isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
     var numOfCompleted:Int?
-    let encourageMessageList = ["その調子です。","毎日お疲れさまです。","良い一日になりますように。","タスクを楽しみましょう。","いつでもあなたらしく。","ずっと応援しています。","疲れたら休憩しましょう。","アプリを使ってくれてありがとう"]
-    
+    let encourageMessageList = ["その調子です。","毎日お疲れさまです。","良い一日になりますように。","タスクを楽しみましょう。","いつでもあなたらしく。","ずっと応援しています。","疲れたら休憩しましょう。","アプリを使ってくれてありがとう。", "目を覚ますなら、朝シャンがおすすめです。", "目を使いすぎると、頭が凝るみたいです。", "今日いいことはありましたか？", "Eigowoshabereruyouni Naritaina.", "毎日の温かいお風呂に感謝。"]
 
     @IBOutlet weak var CompleteButton: UIButton!
     @IBOutlet weak var giveUpButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

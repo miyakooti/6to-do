@@ -28,9 +28,8 @@ https://qiita.com/arthur87/items/e6e243687b15607dbb14
 label　取り消し線
 http://somen.site/2020/05/31/swift5uilabel%E3%81%AB%E5%8F%96%E6%B6%88%E7%B7%9A%E3%82%92%E5%BC%95%E3%81%8F%E6%96%B9%E6%B3%95/
 
-キーボードの色々便利なやつ
+キーボードの色々便利なやつ。iqkeyboardManager
 https://swift-ios.keicode.com/ios/how-to-make-textfield-viewable.php
-
 
 buttonの無効化
 isEnabledというプロパティがある。
@@ -50,3 +49,13 @@ self.navigationController?.navigationBar.tintColor = .white
 
 navigationBarにボタンを追加する。今回で言う設定ボタン。
 https://naoya-ono.com/swift/navigation-add-button/
+　一番上に
+        garbageButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapGarbage(_:)))
+viewDidLoadに
+        garbageButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapGarbage(_:)))
+        self.navigationItem.rightBarButtonItem = garbageButton
+んで、やりたい処理を
+    @objc func tapGarbage(_ sender: UIBarButtonItem) {
+            やりたい処理
+    }
+のように記述すればOK！
