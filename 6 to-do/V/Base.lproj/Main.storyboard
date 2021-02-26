@@ -243,6 +243,7 @@
                     <connections>
                         <outlet property="interactionButton" destination="ReT-58-27u" id="BuA-MY-0gx"/>
                         <outlet property="interactionLabel" destination="4rm-0k-VZe" id="Uip-dQ-5Ez"/>
+                        <outlet property="nextButton" destination="ReT-58-27u" id="jPx-IO-UqE"/>
                         <outlet property="tableView" destination="vz1-UA-gcH" id="bQ2-F2-Tuc"/>
                     </connections>
                 </viewController>

@@ -34,3 +34,19 @@ https://swift-ios.keicode.com/ios/how-to-make-textfield-viewable.php
 
 buttonの無効化
 isEnabledというプロパティがある。
+
+buttonのテキスト変更
+https://sunnyday-travel-aso-6487.ssl-lolipop.jp/programing/swift/button-label-text-change/
+
+ボタンをハイライトさせたときのやつ
+http://cloudcafe.tech/?p=2633
+
+設定画面の作成。超参考になった。
+https://sakura-bird1.hatenablog.com/entry/2018/03/09/014455
+
+navVCの戻るボタンの色とテキスト変更方法
+self.navigationItem.backButtonTitle = "戻る"
+self.navigationController?.navigationBar.tintColor = .white
+
+navigationBarにボタンを追加する。今回で言う設定ボタン。
+https://naoya-ono.com/swift/navigation-add-button/

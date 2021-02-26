@@ -12,10 +12,12 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topLabel: UILabel!
     let sixTaskList = UserDefaults.standard.object(forKey: "sixTaskList") as! [String]
-
     var isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
-    
     var numOfCompleted:Int?
+    let encourageMessageList = ["その調子です。","毎日お疲れさまです。","良い一日になりますように。","タスクを楽しみましょう。","いつでもあなたらしく。","ずっと応援しています。","疲れたら休憩しましょう。","アプリを使ってくれてありがとう"]
+    
+    
+    
 
     @IBOutlet weak var CompleteButton: UIButton!
     @IBOutlet weak var giveUpButton: UIButton!
@@ -24,6 +26,8 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "タスク一覧"
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TaskShowCell", bundle: nil), forCellReuseIdentifier: "TaskShowCell")
@@ -31,6 +35,8 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.isScrollEnabled = false//スクロールさせない
         
         CompleteButton.layer.cornerRadius = 5
+        
+ 
     }
     
     
@@ -93,6 +99,9 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                     UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList") //trueを登録していく。
                     // セルの内容変えたので、リロードして最新にする。
                     tableView.reloadData()
+                    
+                    //おまけ機能
+                    topLabel.text = encourageMessageList.randomElement()
                     return
                 }
             }
@@ -103,7 +112,7 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         trySetTomorrowTask()
     }
     
-    
+
     func checkButtonValue(){
 
         if numOfCompleted == 6 {
@@ -111,10 +120,11 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             topLabel.text = "すべて完了しました！お疲れさまでした！"
             giveUpButton.isEnabled = false
             
-            CompleteButton.layer.shadowColor = UIColor.yellow.cgColor
+            CompleteButton.layer.shadowColor = UIColor.systemTeal.cgColor
             CompleteButton.layer.shadowRadius = 5
             CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
             CompleteButton.layer.shadowOpacity = 1
+            
             
         } else {
             CompleteButton.setTitle(String(numOfCompleted!+1)+"番のタスクを完了する", for: .normal)

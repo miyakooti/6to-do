@@ -6,16 +6,19 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var interactionButton: UIButton!
     @IBOutlet weak var interactionLabel: UILabel!
     
+    @IBOutlet weak var nextButton: UIButton!
+    var inputPhase = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "明日のタスクを設定する"
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TextInputCell", bundle: nil), forCellReuseIdentifier: "TextInputCell")
         tableView.separatorStyle = .none//罫線をなくす
         tableView.isScrollEnabled = false//スクロールさせない
-
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,24 +40,21 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    //　タップしたときにハイライトしない
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        false //ハイライトしない
+        false
     }
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
          return true
     }
-    //この辺いらんかも
+    //これは必須。消したらtableView編集できなくなる。
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-      // 移動処理
-//      let element = tableDataList[sourceIndexPath.row]
-//      tableDataList.remove(at: sourceIndexPath.row)
-//      tableDataList.insert(element, at: destinationIndexPath.row)
     }
-    
     //編集モードにしたとき、
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
       return .none
     }
+    //編集モードにしたとき、左からインデントしない
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
       return false
     }
@@ -67,7 +67,10 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     @IBAction func tapNext(_ sender: Any) {
-    
+        // 一部赤にする処理があるため随時初期化。
+        interactionLabel.textColor = UIColor.black
+        //ボタンのテキストを変更するメソッド
+        checkButtonValue(phase: inputPhase)
         if inputPhase == 1{
             checkNullValue()//空き項目をゆる三蔵
             if isFilled{ //空き項目をゆるさんぞう
@@ -99,7 +102,6 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-    var inputPhase = 1
     //ここおれの天才ポイント
     func saveTasksFromTextField(){
         //初期化
@@ -119,6 +121,7 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     var isFilled = true
+    
     func checkNullValue() {
         isFilled = true
         for i in 0...5{
@@ -130,5 +133,18 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
 
+    //ボタンのテキストを変更するメソッド
+    func checkButtonValue(phase:Int){
+            
+            switch phase {
+            case 1:
+                nextButton.setTitle("これで確定", for: .normal)
+            case 2:
+                nextButton.setTitle("さっそくタスクを見る", for: .normal)
+            default:
+                print("checkButtonValueで不具合発生。")
+            }
+        }
+    
     
 }

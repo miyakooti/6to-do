@@ -21,7 +21,12 @@ class NavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // navBar背景色
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: "333C5E")
+        
+
+
         
 
     }

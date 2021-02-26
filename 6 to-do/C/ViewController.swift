@@ -1,22 +1,31 @@
-//
-//  ViewController.swift
-//  6 to-do
-//
-//  Created by Arai Kousuke on 2021/02/24.
-//
-
 import UIKit
-
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
+    var settingButton:UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.20, green: 0.23, blue: 0.36, alpha: 1.0)
         startButton.layer.cornerRadius = 5
+        self.navigationItem.backButtonTitle = "戻る"
+        
+        //　戻るとかのボタン。rightとleftのやつ
+        self.navigationController?.navigationBar.tintColor = .white
+        
+        //　タイトル設定
+        self.navigationItem.title = "TOP"
+        
+        // navBar背景色
+        self.navigationController!.navigationBar.titleTextAttributes = [
+        .foregroundColor: UIColor.white
+        ]
+        
+        settingButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tapSetting(_:)))
+        self.navigationItem.rightBarButtonItem = settingButton
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -54,6 +63,10 @@ class ViewController: UIViewController {
     @IBAction func tapDelete(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: "sixTaskList")
         UserDefaults.standard.removeObject(forKey: "isCompletedList")
+    }
+    
+    @objc func tapSetting(_ sender: UIBarButtonItem) {
+        
     }
 }
 
