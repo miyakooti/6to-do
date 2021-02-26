@@ -10,7 +10,6 @@ import UIKit
 class TextInputCell: UITableViewCell {
 
     @IBOutlet weak var navView: UIView!
-    
     @IBOutlet weak var textField: UITextField!
     
     override func awakeFromNib() {
@@ -22,4 +21,9 @@ class TextInputCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+
+    
+    
+    @IBAction func inputText(_ sender: Any) {
+    }
 }

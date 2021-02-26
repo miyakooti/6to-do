@@ -22,7 +22,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8vy-Nx-9Bx">
                                 <rect key="frame" x="20" y="15" width="318" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="inputText:" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="dyf-2f-tCm"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.32156862749999998" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -7,6 +7,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.overrideUserInterfaceStyle = .light
+
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.20, green: 0.23, blue: 0.36, alpha: 1.0)
         startButton.layer.cornerRadius = 5
         self.navigationItem.backButtonTitle = "戻る"

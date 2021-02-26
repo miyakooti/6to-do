@@ -9,8 +9,11 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var nextButton: UIButton!
     var inputPhase = 1
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.overrideUserInterfaceStyle = .light
+
         
         self.navigationItem.title = "明日のタスクを設定する"
         

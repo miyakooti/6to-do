@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JrX-nO-2lP">
-                                <rect key="frame" x="0.0" y="158" width="414" height="420"/>
+                                <rect key="frame" x="0.0" y="141" width="414" height="420"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="420" id="Ih3-Qk-Jc7"/>
@@ -106,7 +106,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上から順に実行していきましょう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEe-ww-PqQ">
-                                <rect key="frame" x="20" y="118" width="374" height="20"/>
+                                <rect key="frame" x="20" y="108" width="374" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="ZkJ-MG-g1T"/>
                                 </constraints>
@@ -114,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhs-Kb-5Oq">
-                                <rect key="frame" x="20" y="733" width="374" height="50"/>
+                                <rect key="frame" x="20" y="742" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.32156862749999998" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GHw-LL-U6S"/>
@@ -130,32 +130,19 @@
                                     <action selector="tapStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d36-I3-pTq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-zT-NYd">
-                                <rect key="frame" x="98" y="813" width="218" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="yje-tp-3fC"/>
-                                </constraints>
-                                <state key="normal" title="明日のタスクを設定する"/>
-                                <connections>
-                                    <action selector="tapSetTomorrow:" destination="wM4-H8-Mxc" eventType="touchUpInside" id="kIr-un-TBN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GNe-Yd-YWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bEe-ww-PqQ" firstAttribute="top" secondItem="GNe-Yd-YWS" secondAttribute="top" constant="30" id="3g5-sq-L8N"/>
+                            <constraint firstItem="bEe-ww-PqQ" firstAttribute="top" secondItem="GNe-Yd-YWS" secondAttribute="top" constant="20" id="3g5-sq-L8N"/>
                             <constraint firstItem="GNe-Yd-YWS" firstAttribute="trailing" secondItem="Qhs-Kb-5Oq" secondAttribute="trailing" constant="20" id="JU4-2j-We3"/>
-                            <constraint firstItem="GNe-Yd-YWS" firstAttribute="trailing" secondItem="5Gq-zT-NYd" secondAttribute="trailing" constant="98" id="Jg2-F4-F9X"/>
-                            <constraint firstItem="JrX-nO-2lP" firstAttribute="top" secondItem="bEe-ww-PqQ" secondAttribute="bottom" constant="20" id="RoL-Rc-5gq"/>
+                            <constraint firstItem="JrX-nO-2lP" firstAttribute="top" secondItem="bEe-ww-PqQ" secondAttribute="bottom" constant="13" id="RoL-Rc-5gq"/>
+                            <constraint firstItem="GNe-Yd-YWS" firstAttribute="bottom" secondItem="Qhs-Kb-5Oq" secondAttribute="bottom" constant="70" id="Ty0-s8-CfF"/>
                             <constraint firstItem="Qhs-Kb-5Oq" firstAttribute="leading" secondItem="GNe-Yd-YWS" secondAttribute="leading" constant="20" id="ec0-K0-XkO"/>
-                            <constraint firstItem="GNe-Yd-YWS" firstAttribute="bottom" secondItem="5Gq-zT-NYd" secondAttribute="bottom" constant="15" id="fZV-uR-tRD"/>
                             <constraint firstItem="GNe-Yd-YWS" firstAttribute="trailing" secondItem="bEe-ww-PqQ" secondAttribute="trailing" constant="20" id="feT-Cn-Ig1"/>
                             <constraint firstItem="JrX-nO-2lP" firstAttribute="leading" secondItem="GNe-Yd-YWS" secondAttribute="leading" id="g1E-Ui-kMz"/>
                             <constraint firstItem="bEe-ww-PqQ" firstAttribute="leading" secondItem="GNe-Yd-YWS" secondAttribute="leading" constant="20" id="gaI-Df-qRf"/>
-                            <constraint firstItem="5Gq-zT-NYd" firstAttribute="top" secondItem="Qhs-Kb-5Oq" secondAttribute="bottom" constant="30" id="hzH-A4-WZz"/>
                             <constraint firstItem="JrX-nO-2lP" firstAttribute="trailing" secondItem="GNe-Yd-YWS" secondAttribute="trailing" id="kuN-Sa-LVV"/>
-                            <constraint firstItem="5Gq-zT-NYd" firstAttribute="leading" secondItem="GNe-Yd-YWS" secondAttribute="leading" constant="98" id="sAG-Ni-fqK"/>
                             <constraint firstItem="Qhs-Kb-5Oq" firstAttribute="leading" secondItem="GNe-Yd-YWS" secondAttribute="leading" constant="20" id="wiX-GK-ufv"/>
                             <constraint firstItem="GNe-Yd-YWS" firstAttribute="trailing" secondItem="Qhs-Kb-5Oq" secondAttribute="trailing" constant="20" id="xgg-XZ-Wdm"/>
                         </constraints>
@@ -163,7 +150,6 @@
                     <navigationItem key="navigationItem" id="fch-3P-YY6"/>
                     <connections>
                         <outlet property="CompleteButton" destination="Qhs-Kb-5Oq" id="Wes-tx-EUa"/>
-                        <outlet property="giveUpButton" destination="5Gq-zT-NYd" id="wcc-DA-Wu8"/>
                         <outlet property="tableView" destination="JrX-nO-2lP" id="bDR-hD-gm9"/>
                         <outlet property="topLabel" destination="bEe-ww-PqQ" id="9tP-XM-Blq"/>
                     </connections>

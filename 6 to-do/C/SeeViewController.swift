@@ -8,6 +8,8 @@
 import UIKit
 
 class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var garbageButton:UIBarButtonItem!
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topLabel: UILabel!
@@ -16,8 +18,6 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     var numOfCompleted:Int?
     let encourageMessageList = ["その調子です。","毎日お疲れさまです。","良い一日になりますように。","タスクを楽しみましょう。","いつでもあなたらしく。","ずっと応援しています。","疲れたら休憩しましょう。","アプリを使ってくれてありがとう"]
     
-    
-    
 
     @IBOutlet weak var CompleteButton: UIButton!
     @IBOutlet weak var giveUpButton: UIButton!
@@ -25,6 +25,8 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.overrideUserInterfaceStyle = .light
         
         self.navigationItem.title = "タスク一覧"
         
@@ -36,7 +38,14 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         CompleteButton.layer.cornerRadius = 5
         
- 
+        garbageButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapGarbage(_:)))
+        self.navigationItem.rightBarButtonItem = garbageButton
+        
+        CompleteButton.layer.shadowColor = UIColor.black.cgColor
+        CompleteButton.layer.shadowRadius = 5
+        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        CompleteButton.layer.shadowOpacity = 0.6
+        
     }
     
     
@@ -107,18 +116,11 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             }
         }
     }
-    
-    @IBAction func tapSetTomorrow(_ sender: Any) {
-        trySetTomorrowTask()
-    }
-    
-
     func checkButtonValue(){
 
         if numOfCompleted == 6 {
             CompleteButton.setTitle("明日のタスクを設定する", for: .normal)
             topLabel.text = "すべて完了しました！お疲れさまでした！"
-            giveUpButton.isEnabled = false
             
             CompleteButton.layer.shadowColor = UIColor.systemTeal.cgColor
             CompleteButton.layer.shadowRadius = 5
@@ -147,8 +149,8 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             alertMessage = "明日のタスクを設定しますか？"
 
         } else {
-            alertTitle = "明日のタスクを設定しますか？"
-            alertMessage = "完了していないタスクがありますが、キッパリ忘れるということも、アイビーリーメソッドでは重要です！"
+            alertTitle = "今日のタスクを破棄しますか？"
+            alertMessage = "キッパリ忘れるということも、アイビーリーメソッドは支持しています！"
         }
         
         let alertController = UIAlertController(title: alertTitle, message:alertMessage , preferredStyle: .actionSheet)
@@ -163,4 +165,7 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.present(alertController, animated: true, completion: nil)
     }
 
+    @objc func tapGarbage(_ sender: UIBarButtonItem) {
+        trySetTomorrowTask()
+    }
 }
