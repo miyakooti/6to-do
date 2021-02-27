@@ -1,10 +1,3 @@
-//
-//  SeeViewController.swift
-//  6 to-do
-//
-//  Created by Arai Kousuke on 2021/02/25.
-//
-
 import UIKit
 
 class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -43,22 +36,17 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         CompleteButton.layer.shadowRadius = 5
         CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         CompleteButton.layer.shadowOpacity = 0.6
-        
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         false //ハイライトしない
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //　カスタムセル取り出す
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
@@ -69,7 +57,7 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let textForCell = String(indexPath.row + 1)+". "+sixTaskList[indexPath.row]
         numOfCompleted = isCompletedList.filter({$0 == true}).count
-        print(isCompletedList.filter({$0 == true}).count)
+//        print(isCompletedList.filter({$0 == true}).count)
         checkButtonValue()
         
         //　セルが完了したか完了していないかで分岐。
@@ -87,7 +75,6 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
         return cell
     }
-    
     
     @IBAction func tapComplete(_ sender: Any) {
         
@@ -120,12 +107,11 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             CompleteButton.setTitle("明日のタスクを設定する", for: .normal)
             topLabel.text = "すべて完了しました！お疲れさまでした！"
             
-            //systemtealとどっちがいいかしら。
+            //終了したら、下のボタンをハイライトする。
             CompleteButton.layer.shadowColor = UIColor.yellow.cgColor
             CompleteButton.layer.shadowRadius = 5
             CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
             CompleteButton.layer.shadowOpacity = 1
-            
             
         } else {
             CompleteButton.setTitle(String(numOfCompleted!+1)+"番のタスクを完了する", for: .normal)

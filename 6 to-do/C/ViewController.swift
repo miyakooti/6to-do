@@ -20,11 +20,16 @@ class ViewController: UIViewController {
         .foregroundColor: UIColor.white
         ]
         
-        settingButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tapSetting(_:)))
+        settingButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(tapSetting(_:)))
         self.navigationItem.rightBarButtonItem = settingButton
         
         checkSegueSetting()
-
+        
+        startButton.layer.shadowColor = UIColor.black.cgColor
+        startButton.layer.shadowRadius = 5
+        startButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        startButton.layer.shadowOpacity = 0.3
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +46,6 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    
 
     @IBAction func tapStart(_ sender: Any) {
         if UserDefaults.standard.object(forKey: "sixTaskList") == nil{
@@ -67,13 +70,6 @@ class ViewController: UIViewController {
         } else {
             performSegue(withIdentifier: "show", sender: nil)
         }
-    }
-    
-    @IBAction func tapDelete(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: "sixTaskList")
-        UserDefaults.standard.removeObject(forKey: "isCompletedList")
-        UserDefaults.standard.removeObject(forKey: "goToShowSetting")
-
     }
     
     @objc func tapSetting(_ sender: UIBarButtonItem) {

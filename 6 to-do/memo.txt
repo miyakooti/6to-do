@@ -86,3 +86,6 @@ UserDefaultsは、保存されている値がnilだとしてobject()で取り出
 uiSwitchのオンオフの状態は、.isOnプロパティで管理する。〇〇.isOn = trueとすれば、コードから操作することが可能。
 
 iPadでアラート表示するとクラッシュする問題。アラートの場所指定してあげないといけない。
+
+Xcodeに搭載されている画像一覧。システムアイコンっていうらしい。
+https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/

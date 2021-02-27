@@ -60,7 +60,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="その他" id="6en-mW-Myf">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="22J-JJ-LVb" rowHeight="60" style="IBUITableViewCellStyleDefault" id="bHc-Bk-Xkq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="22J-JJ-LVb" imageView="52Z-Xj-IG2" rowHeight="60" style="IBUITableViewCellStyleDefault" id="bHc-Bk-Xkq">
                                         <rect key="frame" x="0.0" y="171.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bHc-Bk-Xkq" id="8N3-ne-Vb5">
@@ -68,16 +68,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="アイビー・リー・メソッドとは？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="22J-JJ-LVb">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="60"/>
+                                                    <rect key="frame" x="59" y="0.0" width="316" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="questionmark.circle.fill" catalog="system" id="52Z-Xj-IG2">
+                                                    <rect key="frame" x="22" y="20.5" width="20" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="f2r-Z3-ORg" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Try-NT-PRQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="f2r-Z3-ORg" imageView="E0j-dB-X9P" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Try-NT-PRQ">
                                         <rect key="frame" x="0.0" y="231.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Try-NT-PRQ" id="CfT-dq-8Et">
@@ -85,16 +90,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="レビューを書く" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="f2r-Z3-ORg">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="60"/>
+                                                    <rect key="frame" x="59" y="0.0" width="316" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="star.leadinghalf.fill" catalog="system" id="E0j-dB-X9P">
+                                                    <rect key="frame" x="21" y="19.5" width="22" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="JOC-s0-Brg" rowHeight="60" style="IBUITableViewCellStyleDefault" id="7pR-ss-qYc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="JOC-s0-Brg" imageView="fDo-J2-1bO" rowHeight="60" style="IBUITableViewCellStyleDefault" id="7pR-ss-qYc">
                                         <rect key="frame" x="0.0" y="291.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7pR-ss-qYc" id="eFh-Sr-4z7">
@@ -102,14 +112,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="開発者のTwitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JOC-s0-Brg">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="60"/>
+                                                    <rect key="frame" x="59" y="0.0" width="316" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="person.crop.square" catalog="system" id="fDo-J2-1bO">
+                                                    <rect key="frame" x="22.25" y="21" width="19.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -177,15 +192,24 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-
-
-
-1.</string>
+                                        <string key="content" base64-UTF8="YES">
+CgoKCg
+</string>
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="1.">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="　夜、紙に「明日やるべきこと」を６つ書く">
@@ -194,6 +218,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -203,6 +231,10 @@ Cg
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="　その６つを重要な順に並べる">
@@ -211,6 +243,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -220,6 +256,10 @@ Cg
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="　翌日、その順番に沿ってやるべきことを進める">
@@ -228,6 +268,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -237,6 +281,10 @@ Cg
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="　全部できなくてもキッパリ忘れる">
@@ -245,6 +293,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -254,6 +306,10 @@ Cg
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="　その日の夜も、「明日やるべきこと」を６つ書く">
@@ -262,6 +318,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -271,6 +331,10 @@ Cg
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="　">
@@ -279,6 +343,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="1">
@@ -286,6 +354,10 @@ Cg
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="〜">
@@ -294,6 +366,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="6">
@@ -301,6 +377,10 @@ Cg
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment content="を毎日繰り返す">
@@ -309,6 +389,10 @@ Cg
                                             <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                             <font key="NSOriginalFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.071565949253934e-16" height="1.75"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -418,20 +502,20 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜アイビー・リー・メソッド式タスク管理〜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="IzC-fG-OXo">
-                                <rect key="frame" x="33.5" y="291" width="347" height="21"/>
+                                <rect key="frame" x="33.5" y="273.5" width="347" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="YYj-2G-wkU"/>
+                                    <constraint firstAttribute="height" constant="21" id="7lP-rZ-e9W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYB-UH-IUk">
-                                <rect key="frame" x="63" y="404.5" width="288" height="87"/>
+                                <rect key="frame" x="63" y="544" width="288" height="87"/>
                                 <color key="backgroundColor" red="0.32156862745098036" green="0.33725490196078434" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="87" id="ONx-95-GHr"/>
-                                    <constraint firstAttribute="width" constant="288" id="xmU-xm-ZMj"/>
+                                    <constraint firstAttribute="width" constant="288" id="5TG-cE-zAq"/>
+                                    <constraint firstAttribute="height" constant="87" id="Nsw-gI-FbA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="タスクを確認する">
@@ -441,33 +525,36 @@ Cg
                                     <action selector="tapStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VR9-eI-pen"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="６ to-do" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-rb-vGe">
-                                <rect key="frame" x="125.5" y="330" width="163" height="52"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="bbB-Dv-wug">
+                                <rect key="frame" x="138.5" y="379.5" width="137" height="137"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="gXI-9j-swB"/>
+                                    <constraint firstAttribute="width" constant="137" id="GpU-XH-nZf"/>
+                                    <constraint firstAttribute="height" constant="137" id="PUN-Dy-RVS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="６ to-do" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-rb-vGe">
+                                <rect key="frame" x="115" y="312.5" width="184" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="DPY-Ek-SCV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsh-xZ-h68">
-                                <rect key="frame" x="109" y="499" width="197" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="データ消去（テスト）"/>
-                                <connections>
-                                    <action selector="tapDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Acb-bY-n9Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IgP-rb-vGe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="59o-6O-GfC"/>
-                            <constraint firstItem="IzC-fG-OXo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L7c-Y8-f2p"/>
-                            <constraint firstItem="RYB-UH-IUk" firstAttribute="top" secondItem="IgP-rb-vGe" secondAttribute="bottom" constant="22.5" id="cnd-PK-iBt"/>
-                            <constraint firstItem="RYB-UH-IUk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgF-l0-2Nv"/>
-                            <constraint firstItem="RYB-UH-IUk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zVO-2h-dQN"/>
-                            <constraint firstItem="IgP-rb-vGe" firstAttribute="top" secondItem="IzC-fG-OXo" secondAttribute="bottom" constant="18" id="zXr-vq-aLh"/>
+                            <constraint firstItem="IzC-fG-OXo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E0N-jX-6vK"/>
+                            <constraint firstItem="RYB-UH-IUk" firstAttribute="top" secondItem="bbB-Dv-wug" secondAttribute="bottom" constant="27.5" id="PaR-fT-P7V"/>
+                            <constraint firstItem="IgP-rb-vGe" firstAttribute="top" secondItem="IzC-fG-OXo" secondAttribute="bottom" constant="18" id="ZD0-zZ-F6F"/>
+                            <constraint firstItem="RYB-UH-IUk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cDx-gf-bi2"/>
+                            <constraint firstItem="bbB-Dv-wug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hve-oH-Iy3"/>
+                            <constraint firstItem="IgP-rb-vGe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgf-9u-IBn"/>
+                            <constraint firstItem="bbB-Dv-wug" firstAttribute="top" secondItem="IgP-rb-vGe" secondAttribute="bottom" constant="15" id="swt-wd-LGP"/>
+                            <constraint firstItem="bbB-Dv-wug" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tkF-Ao-KCh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x1g-mr-HM4"/>
@@ -724,6 +811,10 @@ Cg
         </scene>
     </scenes>
     <resources>
+        <image name="icon" width="1192" height="1188"/>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="star.leadinghalf.fill" catalog="system" width="128" height="116"/>
         <image name="twitter" width="250" height="250"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

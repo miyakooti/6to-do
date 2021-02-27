@@ -20,10 +20,6 @@ class WhatIsViewController: UIViewController {
         myView.layer.cornerRadius = 30
         self.navigationItem.title = "アイビーリーメソッドとは"
         self.overrideUserInterfaceStyle = .light
-
-
     }
-    
-
 
 }

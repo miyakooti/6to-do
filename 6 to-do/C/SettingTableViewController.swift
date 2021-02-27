@@ -25,7 +25,6 @@ class SettingTableViewController: UITableViewController {
         }
     }
 
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -57,7 +56,6 @@ class SettingTableViewController: UITableViewController {
             return
         }
     }
-
     
     @IBAction func tapAutomaticallySegue(_ sender: Any) {
         if settingSwitch.isOn {
@@ -78,20 +76,13 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
+    // レビューページへ遷移
     func dispReview(){
-        // レビューページへ遷移
-
-        
         if #available(iOS 10.3, *){
-            
             if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                 SKStoreReviewController.requestReview(in: scene)
             }
-            
         }
     }
-    
-    
-    
     
 }

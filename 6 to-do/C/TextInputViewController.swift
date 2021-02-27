@@ -9,14 +9,10 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var nextButton: UIButton!
     var inputPhase = 1
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.overrideUserInterfaceStyle = .light
-
-        
         self.navigationItem.title = "明日のタスクを設定する"
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TextInputCell", bundle: nil), forCellReuseIdentifier: "TextInputCell")
@@ -62,12 +58,7 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
       return false
     }
     
-    // tableview---------------------------------------------------------
-
-    
-    
-//    キーボード関連
-    
+    // /tableview----------------------------------------------------------
     
     @IBAction func tapNext(_ sender: Any) {
         // 一部赤にする処理があるため随時初期化。
@@ -102,7 +93,6 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
             UserDefaults.standard.setValue("今日のタスクの設定が完了", forKey: "fromInputVC")
             self.navigationController?.popViewController(animated: true)
         }
-        
     }
     
     //ここおれの天才ポイント
@@ -118,13 +108,11 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             sixTaskList.append(cell.textField.text!)
         }
-        
         UserDefaults.standard.setValue(sixTaskList, forKey: "sixTaskList")
         UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList")
     }
     
     var isFilled = true
-    
     func checkNullValue() {
         isFilled = true
         for i in 0...5{
@@ -136,9 +124,8 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
 
-    //ボタンのテキストを変更するメソッド
+    //ボタンのテキストを随時変更するためのメソッド
     func checkButtonValue(phase:Int){
-            
             switch phase {
             case 1:
                 nextButton.setTitle("これで確定", for: .normal)
@@ -148,6 +135,4 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
                 print("checkButtonValueで不具合発生。")
             }
         }
-    
-    
 }

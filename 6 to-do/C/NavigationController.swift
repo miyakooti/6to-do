@@ -1,9 +1,3 @@
-//
-//  NavigationController.swift
-//  6 to-do
-//
-//  Created by Arai Kousuke on 2021/02/24.
-//
 
 import UIKit
 
