@@ -21,6 +21,9 @@ https://qiita.com/am10/items/072857551c2c6ad5b2ed
 navigationController 前の画面に戻るメソッド。
 https://qiita.com/k-yamada-github/items/65b8a8cb17fd1912aca5
 
+falseの配列一気に作ったときのやつ。同じ値で特定の長さの配列を作成する。
+https://qiita.com/Kyome/items/2e296dbf6bca29e15c54
+
 配列の特定の値を数える。（filter）
 https://qiita.com/mashiroyuya/items/dadd891ffbb8f5019310
 https://qiita.com/arthur87/items/e6e243687b15607dbb14
@@ -33,6 +36,9 @@ https://swift-ios.keicode.com/ios/how-to-make-textfield-viewable.php
 
 buttonの無効化
 isEnabledというプロパティがある。
+
+配列からランダムに取り出す。
+https://naoya-ono.com/swift/swift-array-random/
 
 buttonのテキスト変更
 https://sunnyday-travel-aso-6487.ssl-lolipop.jp/programing/swift/button-label-text-change/
@@ -59,3 +65,24 @@ viewDidLoadに
             やりたい処理
     }
 のように記述すればOK！
+
+iphoneのダークテーマ対策
+https://qiita.com/hiroyuki7/items/161881c38bd6e19fd396
+
+
+あプリ内設定画面　作成方法　static cell
+https://sakura-bird1.hatenablog.com/entry/2018/03/09/014455
+
+あのON　OFFを切り替えるやつは、UISWITCHというらしい、、、
+https://techacademy.jp/magazine/2781
+
+アプリ内で、「〇〇の使い心地はいかがですか？星をタップしてください」のやつ！めっちゃ簡単だった。
+https://justi.xyz/2019/09/24/star-review/
+https://zenn.dev/donchan922/articles/61a5684c1a2c520abc8e
+https://stackoverflow.com/questions/64029622/swift-app-cannot-find-skstoreproductviewcontroller-in-scope
+
+UserDefaultsは、保存されている値がnilだとしてobject()で取り出したとしても、エラーは起きない。でもアンラップするとエラー起きるので注意。
+
+uiSwitchのオンオフの状態は、.isOnプロパティで管理する。〇〇.isOn = trueとすれば、コードから操作することが可能。
+
+iPadでアラート表示するとクラッシュする問題。アラートの場所指定してあげないといけない。

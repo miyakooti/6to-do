@@ -10,6 +10,9 @@
 		D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB71B25E7A41300548D99 /* TaskShowCell.swift */; };
 		D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16EB71C25E7A41300548D99 /* TaskShowCell.xib */; };
 		D16EB72925E89A1800548D99 /* TaskManageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72825E89A1800548D99 /* TaskManageModel.swift */; };
+		D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */; };
+		D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72F25E952D600548D99 /* WhatIsViewController.swift */; };
+		D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB73225E952E000548D99 /* TwitterViewController.swift */; };
 		D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54225E6881600240268 /* AppDelegate.swift */; };
 		D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54425E6881600240268 /* SceneDelegate.swift */; };
 		D1D1E54725E6881600240268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54625E6881600240268 /* ViewController.swift */; };
@@ -32,6 +35,9 @@
 		D16EB71B25E7A41300548D99 /* TaskShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskShowCell.swift; sourceTree = "<group>"; };
 		D16EB71C25E7A41300548D99 /* TaskShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskShowCell.xib; sourceTree = "<group>"; };
 		D16EB72825E89A1800548D99 /* TaskManageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManageModel.swift; sourceTree = "<group>"; };
+		D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		D16EB72F25E952D600548D99 /* WhatIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsViewController.swift; sourceTree = "<group>"; };
+		D16EB73225E952E000548D99 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		D1D1E53F25E6881600240268 /* 6 to-do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6 to-do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D1E54225E6881600240268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D1E54425E6881600240268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 				D1D1E57725E7307B00240268 /* TextInputViewController.swift */,
 				D1D1E58325E73C0000240268 /* TextInputCell.swift */,
 				D16EB71B25E7A41300548D99 /* TaskShowCell.swift */,
+				D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */,
+				D16EB72F25E952D600548D99 /* WhatIsViewController.swift */,
+				D16EB73225E952E000548D99 /* TwitterViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -259,13 +268,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */,
 				D16EB72925E89A1800548D99 /* TaskManageModel.swift in Sources */,
 				D1D1E54725E6881600240268 /* ViewController.swift in Sources */,
 				D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
+				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
 				D1D1E56025E68CAC00240268 /* NavigationController.swift in Sources */,
 				D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */,
+				D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */,
 				D1D1E56E25E70EBC00240268 /* SeeViewController.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
 			);

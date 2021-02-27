@@ -120,7 +120,8 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             CompleteButton.setTitle("明日のタスクを設定する", for: .normal)
             topLabel.text = "すべて完了しました！お疲れさまでした！"
             
-            CompleteButton.layer.shadowColor = UIColor.systemTeal.cgColor
+            //systemtealとどっちがいいかしら。
+            CompleteButton.layer.shadowColor = UIColor.yellow.cgColor
             CompleteButton.layer.shadowRadius = 5
             CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
             CompleteButton.layer.shadowOpacity = 1
@@ -160,6 +161,16 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         alertController.addAction(action1)
         alertController.addAction(action2)
+        
+        // iPad対策--------------------------------------------------
+        alertController.popoverPresentationController?.sourceView=self.view
+        let screenSize = UIScreen.main.bounds
+        // ここで表示位置を調整
+        // xは画面中央、yは画面下部になる様に指定
+        alertController.popoverPresentationController?.sourceRect=CGRect(x:screenSize.size.width/2,y:screenSize.size.height,width:0,height:0)
+        // /iPad対策--------------------------------------------------
+        
+        
         self.present(alertController, animated: true, completion: nil)
     }
 
