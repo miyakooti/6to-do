@@ -25,39 +25,8 @@
 		D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E57725E7307B00240268 /* TextInputViewController.swift */; };
 		D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E58325E73C0000240268 /* TextInputCell.swift */; };
 		D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E58425E73C0000240268 /* TextInputCell.xib */; };
-		D1DBFA7325EFB3A100E39F52 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DBFA7225EFB3A100E39F52 /* WidgetKit.framework */; };
-		D1DBFA7525EFB3A100E39F52 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DBFA7425EFB3A100E39F52 /* SwiftUI.framework */; };
-		D1DBFA7825EFB3A100E39F52 /* myWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBFA7725EFB3A100E39F52 /* myWidget.swift */; };
-		D1DBFA7B25EFB3A100E39F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DBFA7A25EFB3A100E39F52 /* Assets.xcassets */; };
-		D1DBFA7D25EFB3A100E39F52 /* myWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D1DBFA7925EFB3A100E39F52 /* myWidget.intentdefinition */; };
-		D1DBFA7E25EFB3A100E39F52 /* myWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D1DBFA7925EFB3A100E39F52 /* myWidget.intentdefinition */; };
-		D1DBFA8125EFB3A100E39F52 /* myWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1DBFA7125EFB3A100E39F52 /* myWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EBA07FEB11925B99C44449D7 /* Pods_6_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7459AB387C7FE72C383FD9 /* Pods_6_to_do.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D1DBFA7F25EFB3A100E39F52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D1D1E53725E6881600240268 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D1DBFA7025EFB3A100E39F52;
-			remoteInfo = myWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D1DBFA8225EFB3A100E39F52 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				D1DBFA8125EFB3A100E39F52 /* myWidgetExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A7270BB56A0F23AE5776325 /* Pods-6 to-do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.debug.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,13 +52,6 @@
 		D1D1E57725E7307B00240268 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		D1D1E58325E73C0000240268 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		D1D1E58425E73C0000240268 /* TextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputCell.xib; sourceTree = "<group>"; };
-		D1DBFA7125EFB3A100E39F52 /* myWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = myWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1DBFA7225EFB3A100E39F52 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		D1DBFA7425EFB3A100E39F52 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		D1DBFA7725EFB3A100E39F52 /* myWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWidget.swift; sourceTree = "<group>"; };
-		D1DBFA7925EFB3A100E39F52 /* myWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = myWidget.intentdefinition; sourceTree = "<group>"; };
-		D1DBFA7A25EFB3A100E39F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D1DBFA7C25EFB3A100E39F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1DBFA6E25EFB3A100E39F52 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1DBFA7525EFB3A100E39F52 /* SwiftUI.framework in Frameworks */,
-				D1DBFA7325EFB3A100E39F52 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				5D7459AB387C7FE72C383FD9 /* Pods_6_to_do.framework */,
-				D1DBFA7225EFB3A100E39F52 /* WidgetKit.framework */,
-				D1DBFA7425EFB3A100E39F52 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				D1D1E54125E6881600240268 /* 6 to-do */,
-				D1DBFA7625EFB3A100E39F52 /* myWidget */,
 				D1D1E54025E6881600240268 /* Products */,
 				BF45538490C2DF051BEE7457 /* Pods */,
 				A25E1A6A119371225DE515C1 /* Frameworks */,
@@ -167,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				D1D1E53F25E6881600240268 /* 6 to-do.app */,
-				D1DBFA7125EFB3A100E39F52 /* myWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,17 +151,6 @@
 			path = C;
 			sourceTree = "<group>";
 		};
-		D1DBFA7625EFB3A100E39F52 /* myWidget */ = {
-			isa = PBXGroup;
-			children = (
-				D1DBFA7725EFB3A100E39F52 /* myWidget.swift */,
-				D1DBFA7925EFB3A100E39F52 /* myWidget.intentdefinition */,
-				D1DBFA7A25EFB3A100E39F52 /* Assets.xcassets */,
-				D1DBFA7C25EFB3A100E39F52 /* Info.plist */,
-			);
-			path = myWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,34 +163,15 @@
 				D1D1E53C25E6881600240268 /* Frameworks */,
 				D1D1E53D25E6881600240268 /* Resources */,
 				1EC10BFE548E18056E313456 /* [CP] Embed Pods Frameworks */,
-				D1DBFA8225EFB3A100E39F52 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D1DBFA8025EFB3A100E39F52 /* PBXTargetDependency */,
 			);
 			name = "6 to-do";
 			productName = "6 to-do";
 			productReference = D1D1E53F25E6881600240268 /* 6 to-do.app */;
 			productType = "com.apple.product-type.application";
-		};
-		D1DBFA7025EFB3A100E39F52 /* myWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1DBFA8525EFB3A100E39F52 /* Build configuration list for PBXNativeTarget "myWidgetExtension" */;
-			buildPhases = (
-				D1DBFA6D25EFB3A100E39F52 /* Sources */,
-				D1DBFA6E25EFB3A100E39F52 /* Frameworks */,
-				D1DBFA6F25EFB3A100E39F52 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = myWidgetExtension;
-			productName = myWidgetExtension;
-			productReference = D1DBFA7125EFB3A100E39F52 /* myWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -264,9 +183,6 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					D1D1E53E25E6881600240268 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					D1DBFA7025EFB3A100E39F52 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -285,7 +201,6 @@
 			projectRoot = "";
 			targets = (
 				D1D1E53E25E6881600240268 /* 6 to-do */,
-				D1DBFA7025EFB3A100E39F52 /* myWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -301,14 +216,6 @@
 				D1D1E54A25E6881600240268 /* Main.storyboard in Resources */,
 				D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */,
 				D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D1DBFA6F25EFB3A100E39F52 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1DBFA7B25EFB3A100E39F52 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +271,6 @@
 				D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */,
 				D16EB72925E89A1800548D99 /* TaskManageModel.swift in Sources */,
 				D1D1E54725E6881600240268 /* ViewController.swift in Sources */,
-				D1DBFA7E25EFB3A100E39F52 /* myWidget.intentdefinition in Sources */,
 				D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
@@ -377,24 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1DBFA6D25EFB3A100E39F52 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1DBFA7D25EFB3A100E39F52 /* myWidget.intentdefinition in Sources */,
-				D1DBFA7825EFB3A100E39F52 /* myWidget.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D1DBFA8025EFB3A100E39F52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D1DBFA7025EFB3A100E39F52 /* myWidgetExtension */;
-			targetProxy = D1DBFA7F25EFB3A100E39F52 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D1D1E54825E6881600240268 /* Main.storyboard */ = {
@@ -536,7 +425,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A7270BB56A0F23AE5776325 /* Pods-6 to-do.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -557,7 +445,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7746AB0486039069D804F89 /* Pods-6 to-do.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -569,48 +456,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D1DBFA8325EFB3A100E39F52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N6VB623J2W;
-				INFOPLIST_FILE = myWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo.myWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D1DBFA8425EFB3A100E39F52 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N6VB623J2W;
-				INFOPLIST_FILE = myWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo.myWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -633,15 +478,6 @@
 			buildConfigurations = (
 				D1D1E55425E6881900240268 /* Debug */,
 				D1D1E55525E6881900240268 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D1DBFA8525EFB3A100E39F52 /* Build configuration list for PBXNativeTarget "myWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D1DBFA8325EFB3A100E39F52 /* Debug */,
-				D1DBFA8425EFB3A100E39F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
