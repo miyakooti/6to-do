@@ -1,8 +1,11 @@
 import UIKit
+import GoogleMobileAds
 
 class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var garbageButton:UIBarButtonItem!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topLabel: UILabel!
@@ -36,6 +39,13 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         CompleteButton.layer.shadowRadius = 5
         CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         CompleteButton.layer.shadowOpacity = 0.6
+        
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = "ca-app-pub-9827752847639075/4604400705"
+        bannerView.rootViewController = self
+
+        // 広告読み込み
+        bannerView.load(GADRequest())
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

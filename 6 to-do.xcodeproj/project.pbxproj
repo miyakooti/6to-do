@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C640CD9A15AA1F6677924A68 /* Pods_6_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */; };
 		D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB71B25E7A41300548D99 /* TaskShowCell.swift */; };
 		D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16EB71C25E7A41300548D99 /* TaskShowCell.xib */; };
 		D16EB72925E89A1800548D99 /* TaskManageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72825E89A1800548D99 /* TaskManageModel.swift */; };
@@ -25,13 +26,12 @@
 		D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E57725E7307B00240268 /* TextInputViewController.swift */; };
 		D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E58325E73C0000240268 /* TextInputCell.swift */; };
 		D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E58425E73C0000240268 /* TextInputCell.xib */; };
-		EBA07FEB11925B99C44449D7 /* Pods_6_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7459AB387C7FE72C383FD9 /* Pods_6_to_do.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A7270BB56A0F23AE5776325 /* Pods-6 to-do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.debug.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.debug.xcconfig"; sourceTree = "<group>"; };
-		5D7459AB387C7FE72C383FD9 /* Pods_6_to_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6_to_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7746AB0486039069D804F89 /* Pods-6 to-do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.release.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.release.xcconfig"; sourceTree = "<group>"; };
+		13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6_to_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F722FA33765F24EAC1E1631 /* Pods-6 to-do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.release.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.release.xcconfig"; sourceTree = "<group>"; };
+		82B9EFE4432E8DBED5BC19DA /* Pods-6 to-do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.debug.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.debug.xcconfig"; sourceTree = "<group>"; };
 		D16EB71B25E7A41300548D99 /* TaskShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskShowCell.swift; sourceTree = "<group>"; };
 		D16EB71C25E7A41300548D99 /* TaskShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskShowCell.xib; sourceTree = "<group>"; };
 		D16EB72825E89A1800548D99 /* TaskManageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManageModel.swift; sourceTree = "<group>"; };
@@ -59,17 +59,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA07FEB11925B99C44449D7 /* Pods_6_to_do.framework in Frameworks */,
+				C640CD9A15AA1F6677924A68 /* Pods_6_to_do.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A25E1A6A119371225DE515C1 /* Frameworks */ = {
+		0AC3FB5D1C7203585F7931FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D7459AB387C7FE72C383FD9 /* Pods_6_to_do.framework */,
+				13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -77,8 +77,8 @@
 		BF45538490C2DF051BEE7457 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3A7270BB56A0F23AE5776325 /* Pods-6 to-do.debug.xcconfig */,
-				B7746AB0486039069D804F89 /* Pods-6 to-do.release.xcconfig */,
+				82B9EFE4432E8DBED5BC19DA /* Pods-6 to-do.debug.xcconfig */,
+				3F722FA33765F24EAC1E1631 /* Pods-6 to-do.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@
 				D1D1E54125E6881600240268 /* 6 to-do */,
 				D1D1E54025E6881600240268 /* Products */,
 				BF45538490C2DF051BEE7457 /* Pods */,
-				A25E1A6A119371225DE515C1 /* Frameworks */,
+				0AC3FB5D1C7203585F7931FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,11 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1D1E55325E6881900240268 /* Build configuration list for PBXNativeTarget "6 to-do" */;
 			buildPhases = (
-				5C8F7EEA7244880899DE55E6 /* [CP] Check Pods Manifest.lock */,
+				155C2F7FACDC0DC9D60E5314 /* [CP] Check Pods Manifest.lock */,
 				D1D1E53B25E6881600240268 /* Sources */,
 				D1D1E53C25E6881600240268 /* Frameworks */,
 				D1D1E53D25E6881600240268 /* Resources */,
-				1EC10BFE548E18056E313456 /* [CP] Embed Pods Frameworks */,
+				E5939A7AF93420BD02040F12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,24 +222,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EC10BFE548E18056E313456 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-6 to-do/Pods-6 to-do-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-6 to-do/Pods-6 to-do-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-6 to-do/Pods-6 to-do-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C8F7EEA7244880899DE55E6 /* [CP] Check Pods Manifest.lock */ = {
+		155C2F7FACDC0DC9D60E5314 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,6 +242,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5939A7AF93420BD02040F12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-6 to-do/Pods-6 to-do-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-6 to-do/Pods-6 to-do-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-6 to-do/Pods-6 to-do-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -423,17 +423,33 @@
 		};
 		D1D1E55425E6881900240268 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A7270BB56A0F23AE5776325 /* Pods-6 to-do.debug.xcconfig */;
+			baseConfigurationReference = 82B9EFE4432E8DBED5BC19DA /* Pods-6 to-do.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6VB623J2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftReorder\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleUserMessagingPlatform/Frameworks/Release\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleMobileAds\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/UserMessagingPlatform\"",
+					"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks",
+				);
 				INFOPLIST_FILE = "6 to-do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -443,17 +459,33 @@
 		};
 		D1D1E55525E6881900240268 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7746AB0486039069D804F89 /* Pods-6 to-do.release.xcconfig */;
+			baseConfigurationReference = 3F722FA33765F24EAC1E1631 /* Pods-6 to-do.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6VB623J2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftReorder\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleUserMessagingPlatform/Frameworks/Release\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleMobileAds\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/UserMessagingPlatform\"",
+					"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks",
+				);
 				INFOPLIST_FILE = "6 to-do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

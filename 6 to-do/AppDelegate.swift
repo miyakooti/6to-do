@@ -7,14 +7,18 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+
         // この３行で、キーボード以外の場所をタップするとキーボードを閉じたり、textfieldが自動的にキーボードより上のように位置するようにしている。
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false

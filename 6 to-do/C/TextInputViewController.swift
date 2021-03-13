@@ -1,7 +1,7 @@
 import UIKit
 
 class TextInputViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var interactionButton: UIButton!
     @IBOutlet weak var interactionLabel: UILabel!

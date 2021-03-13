@@ -7,9 +7,11 @@
 
 import UIKit
 import StoreKit
+import GoogleMobileAds
 
 class SettingTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var bannerView: GADBannerView!
     
     @IBOutlet var myTableView: UITableView!
     @IBOutlet weak var settingSwitch: UISwitch!
@@ -23,6 +25,12 @@ class SettingTableViewController: UITableViewController {
         if let indexPathForSelectedRow = myTableView.indexPathForSelectedRow { //ハイライト解除
             myTableView.deselectRow(at: indexPathForSelectedRow, animated: true)
         }
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = "ca-app-pub-9827752847639075/4604400705"
+        bannerView.rootViewController = self
+
+        // 広告読み込み
+        bannerView.load(GADRequest())
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

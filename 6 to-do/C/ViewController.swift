@@ -1,6 +1,9 @@
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var bannerView: GADBannerView!
 
     @IBOutlet weak var startButton: UIButton!
     var settingButton:UIBarButtonItem!
@@ -29,6 +32,13 @@ class ViewController: UIViewController {
         startButton.layer.shadowRadius = 5
         startButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         startButton.layer.shadowOpacity = 0.3
+        
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = "ca-app-pub-9827752847639075/4604400705"
+        bannerView.rootViewController = self
+
+        // 広告読み込み
+        bannerView.load(GADRequest())
         
     }
     
