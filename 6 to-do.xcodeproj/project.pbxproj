@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C640CD9A15AA1F6677924A68 /* Pods_6_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */; };
+		D14E2FC325FD8EF00048D7FC /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E2FC225FD8EF00048D7FC /* MemoViewController.swift */; };
+		D14E2FDD25FD95F20048D7FC /* TaskMemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E2FDB25FD95F20048D7FC /* TaskMemoCell.swift */; };
+		D14E2FDE25FD95F20048D7FC /* TaskMemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14E2FDC25FD95F20048D7FC /* TaskMemoCell.xib */; };
 		D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB71B25E7A41300548D99 /* TaskShowCell.swift */; };
 		D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16EB71C25E7A41300548D99 /* TaskShowCell.xib */; };
 		D16EB72925E89A1800548D99 /* TaskManageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72825E89A1800548D99 /* TaskManageModel.swift */; };
@@ -32,6 +35,9 @@
 		13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6_to_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F722FA33765F24EAC1E1631 /* Pods-6 to-do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.release.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.release.xcconfig"; sourceTree = "<group>"; };
 		82B9EFE4432E8DBED5BC19DA /* Pods-6 to-do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.debug.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.debug.xcconfig"; sourceTree = "<group>"; };
+		D14E2FC225FD8EF00048D7FC /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		D14E2FDB25FD95F20048D7FC /* TaskMemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMemoCell.swift; sourceTree = "<group>"; };
+		D14E2FDC25FD95F20048D7FC /* TaskMemoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskMemoCell.xib; sourceTree = "<group>"; };
 		D16EB71B25E7A41300548D99 /* TaskShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskShowCell.swift; sourceTree = "<group>"; };
 		D16EB71C25E7A41300548D99 /* TaskShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskShowCell.xib; sourceTree = "<group>"; };
 		D16EB72825E89A1800548D99 /* TaskManageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManageModel.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				D1D1E54B25E6881900240268 /* Assets.xcassets */,
 				D1D1E58425E73C0000240268 /* TextInputCell.xib */,
 				D16EB71C25E7A41300548D99 /* TaskShowCell.xib */,
+				D14E2FDC25FD95F20048D7FC /* TaskMemoCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -144,9 +151,11 @@
 				D1D1E57725E7307B00240268 /* TextInputViewController.swift */,
 				D1D1E58325E73C0000240268 /* TextInputCell.swift */,
 				D16EB71B25E7A41300548D99 /* TaskShowCell.swift */,
+				D14E2FDB25FD95F20048D7FC /* TaskMemoCell.swift */,
 				D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */,
 				D16EB72F25E952D600548D99 /* WhatIsViewController.swift */,
 				D16EB73225E952E000548D99 /* TwitterViewController.swift */,
+				D14E2FC225FD8EF00048D7FC /* MemoViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 				D1D1E57125E72EB900240268 /* memo.txt in Resources */,
 				D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */,
 				D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */,
+				D14E2FDE25FD95F20048D7FC /* TaskMemoCell.xib in Resources */,
 				D1D1E54A25E6881600240268 /* Main.storyboard in Resources */,
 				D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */,
 				D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */,
@@ -274,10 +284,12 @@
 				D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
+				D14E2FDD25FD95F20048D7FC /* TaskMemoCell.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
 				D1D1E56025E68CAC00240268 /* NavigationController.swift in Sources */,
 				D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */,
 				D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */,
+				D14E2FC325FD8EF00048D7FC /* MemoViewController.swift in Sources */,
 				D1D1E56E25E70EBC00240268 /* SeeViewController.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
 			);

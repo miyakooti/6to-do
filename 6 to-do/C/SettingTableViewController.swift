@@ -44,17 +44,30 @@ class SettingTableViewController: UITableViewController {
         let section = indexPath.section
         let row = indexPath.row
 
+        // switchを２個使って、セクションとrowの場合分け。
         switch section {
         case 0:
-            return
+            switch row {
+            case 0:
+                //　アプリ起動時、自動でタスク一覧を表示
+                return
+            case 1:
+                //to-doメモ
+                performSegue(withIdentifier: "goToMemo", sender: nil)
+            default:
+                return
+            }
         case 1:
             switch row {
             case 0:
+                //アイビーリーメソッドとは？
                 performSegue(withIdentifier: "whatIs", sender: nil)
             case 1:
+                //レビューを書く
                 dispReview()
                 return
             case 2:
+                //開発者のtwitter
                 performSegue(withIdentifier: "twitter", sender: nil)
                 return
             default:
