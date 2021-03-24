@@ -562,10 +562,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="3685.507246376812" y="-587.27678571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Top View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TopViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -640,9 +640,9 @@ Cg
                     <connections>
                         <outlet property="bannerView" destination="TOg-Wa-dDU" id="Uya-60-q4t"/>
                         <outlet property="startButton" destination="RYB-UH-IUk" id="I9Z-Tg-6aT"/>
-                        <segue destination="wM4-H8-Mxc" kind="show" identifier="show" id="3Qz-XC-vbc"/>
-                        <segue destination="aHZ-0v-3w5" kind="show" identifier="input" id="8P3-HU-wRZ"/>
-                        <segue destination="PaZ-Vx-Hui" kind="show" identifier="setting" id="q4F-MV-rK9"/>
+                        <segue destination="wM4-H8-Mxc" kind="show" identifier="showSeeVC" id="3Qz-XC-vbc"/>
+                        <segue destination="aHZ-0v-3w5" kind="show" identifier="showInputVC" id="8P3-HU-wRZ"/>
+                        <segue destination="PaZ-Vx-Hui" kind="show" identifier="showSettingTVC" id="q4F-MV-rK9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
