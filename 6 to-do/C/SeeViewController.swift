@@ -1,7 +1,7 @@
 import UIKit
 import GoogleMobileAds
 
-class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SeeViewController: UIViewController {
     
     var garbageButton:UIBarButtonItem!
     
@@ -15,75 +15,10 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     let encourageMessageList = Constants.encourageMessageList
 
     @IBOutlet weak var CompleteButton: UIButton!
-    @IBOutlet weak var giveUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.overrideUserInterfaceStyle = .light
-        
-        self.navigationItem.title = "タスク一覧"
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "TaskShowCell", bundle: nil), forCellReuseIdentifier: "TaskShowCell")
-        tableView.separatorStyle = .none//罫線をなくす
-        tableView.isScrollEnabled = false//スクロールさせない
-        
-        CompleteButton.layer.cornerRadius = 5
-        
-        garbageButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapGarbage(_:)))
-        self.navigationItem.rightBarButtonItem = garbageButton
-        
-        CompleteButton.layer.shadowColor = UIColor.black.cgColor
-        CompleteButton.layer.shadowRadius = 5
-        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        CompleteButton.layer.shadowOpacity = 0.6
-        
-        // GADBannerViewのプロパティを設定
-        bannerView.adUnitID = "ca-app-pub-9827752847639075/4604400705"
-        bannerView.rootViewController = self
-
-        // 広告読み込み
-        bannerView.load(GADRequest())
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        false //ハイライトしない
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //　カスタムセル取り出す
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
-        //　userdefaultsの内容を取り出す
-        isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
-        //　userdefaultsの内容をセルの変数に格納する。
-        cell.isCompleted = isCompletedList[indexPath.row]
-        
-        let textForCell = String(indexPath.row + 1)+". "+sixTaskList[indexPath.row]
-        numOfCompleted = isCompletedList.filter({$0 == true}).count
-//        print(isCompletedList.filter({$0 == true}).count)
-        checkButtonValue()
-        
-        //　セルが完了したか完了していないかで分岐。
-        if cell.isCompleted == false {
-            cell.taskLabel.text = textForCell
-        } else {
-            //棒線処理
-            let atr =  NSMutableAttributedString(string: textForCell)
-            atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, atr.length))
-            cell.taskLabel.attributedText = atr
-            
-            //セルを暗くする処理
-            cell.backView.backgroundColor =  UIColor(red: 0.13, green: 0.15, blue: 0.24, alpha: 1.0)
-            cell.taskLabel.textColor = .darkGray
-        }
-        return cell
+        setUpView()
     }
     
     @IBAction func tapComplete(_ sender: Any) {
@@ -111,6 +46,7 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             }
         }
     }
+    
     func checkButtonValue(){
 
         if numOfCompleted == 6 {
@@ -173,4 +109,77 @@ class SeeViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @objc func tapGarbage(_ sender: UIBarButtonItem) {
         trySetTomorrowTask()
     }
+    
+    func setUpView() {
+        self.overrideUserInterfaceStyle = .light
+        
+        self.navigationItem.title = "タスク一覧"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TaskShowCell", bundle: nil), forCellReuseIdentifier: "TaskShowCell")
+        tableView.separatorStyle = .none//罫線をなくす
+        tableView.isScrollEnabled = false//スクロールさせない
+        
+        CompleteButton.layer.cornerRadius = 5
+        
+        garbageButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapGarbage(_:)))
+        self.navigationItem.rightBarButtonItem = garbageButton
+        
+        CompleteButton.layer.shadowColor = UIColor.black.cgColor
+        CompleteButton.layer.shadowRadius = 5
+        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        CompleteButton.layer.shadowOpacity = 0.6
+        
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = Constants.adUnitID
+        bannerView.rootViewController = self
+
+        // 広告読み込み
+        bannerView.load(GADRequest())
+    }
+}
+
+extension SeeViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        false //ハイライトしない
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //　カスタムセル取り出す
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
+        //　userdefaultsの内容を取り出す
+        isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
+        //　userdefaultsの内容をセルの変数に格納する。
+        cell.isCompleted = isCompletedList[indexPath.row]
+        
+        let textForCell = String(indexPath.row + 1)+". "+sixTaskList[indexPath.row]
+        numOfCompleted = isCompletedList.filter({$0 == true}).count
+        //　下のボタンのテキストをチェックする
+        checkButtonValue()
+        
+        //　セルが完了したか完了していないかで分岐。
+        if cell.isCompleted == false {
+            // 完了したセルは、、
+            cell.taskLabel.text = textForCell
+        } else {
+            // 完了していないセルは、、
+            //棒線処理
+            let atr =  NSMutableAttributedString(string: textForCell)
+            atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, atr.length))
+            cell.taskLabel.attributedText = atr
+            
+            //セルを暗くする処理
+            cell.backView.backgroundColor =  UIColor(red: 0.13, green: 0.15, blue: 0.24, alpha: 1.0)
+            cell.taskLabel.textColor = .darkGray
+        }
+        return cell
+    }
+    
 }

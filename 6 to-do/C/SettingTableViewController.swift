@@ -18,19 +18,7 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "設定"
-        self.overrideUserInterfaceStyle = .light
-        checkSwitchValue()
-        
-        if let indexPathForSelectedRow = myTableView.indexPathForSelectedRow { //ハイライト解除
-            myTableView.deselectRow(at: indexPathForSelectedRow, animated: true)
-        }
-        // GADBannerViewのプロパティを設定
-        bannerView.adUnitID = "ca-app-pub-9827752847639075/4604400705"
-        bannerView.rootViewController = self
-
-        // 広告読み込み
-        bannerView.load(GADRequest())
+        setUpView()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,18 +66,18 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func tapAutomaticallySegue(_ sender: Any) {
+    @IBAction func tapUISwitch(_ sender: Any) {
         if settingSwitch.isOn {
-            UserDefaults.standard.setValue(true, forKey: "goToShowSetting")
+            UserDefaults.standard.setValue(true, forKey: "showSeeVCSetting")
         } else {
-            UserDefaults.standard.setValue(false, forKey: "goToShowSetting")
+            UserDefaults.standard.setValue(false, forKey: "showSeeVCSetting")
         }
     }
     
     func checkSwitchValue(){
-        if UserDefaults.standard.object(forKey: "goToShowSetting") != nil{
-            let goToShowSetting = UserDefaults.standard.object(forKey: "goToShowSetting") as! Bool
-            if goToShowSetting {
+        if UserDefaults.standard.object(forKey: "showSeeVCSetting") != nil{
+            let showSeeVCSetting = UserDefaults.standard.object(forKey: "showSeeVCSetting") as! Bool
+            if showSeeVCSetting {
                 settingSwitch.isOn = true
             } else {
                 settingSwitch.isOn = false
@@ -104,6 +92,22 @@ class SettingTableViewController: UITableViewController {
                 SKStoreReviewController.requestReview(in: scene)
             }
         }
+    }
+    
+    func setUpView() {
+        self.navigationItem.title = "設定"
+        self.overrideUserInterfaceStyle = .light
+        checkSwitchValue()
+        
+        if let indexPathForSelectedRow = myTableView.indexPathForSelectedRow { //ハイライト解除
+            myTableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = Constants.adUnitID
+        bannerView.rootViewController = self
+
+        // 広告読み込み
+        bannerView.load(GADRequest())
     }
     
 }

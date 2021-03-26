@@ -13,13 +13,7 @@ class TwitterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "twitter"
-        self.overrideUserInterfaceStyle = .light
-        twitterButton.layer.cornerRadius = 10
-        twitterButton.layer.shadowColor = UIColor.black.cgColor
-        twitterButton.layer.shadowRadius = 10
-        twitterButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        twitterButton.layer.shadowOpacity = 0.2
+        setUpView()
     }
     
     @IBAction func tapTwitter(_ sender: Any) {
@@ -27,6 +21,16 @@ class TwitterViewController: UIViewController {
         //UIApplication.shared.openURL(url!)
         // iOS 10以降利用可能
         UIApplication.shared.open(url!)
+    }
+    
+    func setUpView() {
+        self.navigationItem.title = "twitter"
+        self.overrideUserInterfaceStyle = .light
+        twitterButton.layer.cornerRadius = 10
+        twitterButton.layer.shadowColor = UIColor.black.cgColor
+        twitterButton.layer.shadowRadius = 10
+        twitterButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        twitterButton.layer.shadowOpacity = 0.2
     }
     
 }

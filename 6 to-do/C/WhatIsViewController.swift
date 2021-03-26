@@ -14,7 +14,11 @@ class WhatIsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpView()
+    }
+    
+    func setUpView() {
+        
         let height = textView.sizeThatFits(CGSize(width: textView.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
         textView.heightAnchor.constraint(equalToConstant: height+100).isActive = true
         myView.layer.cornerRadius = 30

@@ -51,7 +51,7 @@
                                                         <constraint firstAttribute="height" constant="31" id="Fdn-Zg-7PC"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="tapAutomaticallySegue:" destination="PaZ-Vx-Hui" eventType="valueChanged" id="1Br-Vu-Lfr"/>
+                                                        <action selector="tapUISwitch:" destination="PaZ-Vx-Hui" eventType="valueChanged" id="1Br-Vu-Lfr"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>

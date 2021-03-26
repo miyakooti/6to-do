@@ -4,13 +4,11 @@ import GoogleMobileAds
 class TopViewController: UIViewController {
     
     @IBOutlet weak var bannerView: GADBannerView!
-
     @IBOutlet weak var startButton: UIButton!
     var settingButton:UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //見た目の設定いろいろ
         setUpView()
     }
     
@@ -26,7 +24,6 @@ class TopViewController: UIViewController {
             UserDefaults.standard.removeObject(forKey: "fromInputVC")
             performSegue(withIdentifier: "showSeeVC", sender: nil)
         }
-        
     }
 
     @IBAction func tapStart(_ sender: Any) {
@@ -45,7 +42,7 @@ class TopViewController: UIViewController {
             let screenSize = UIScreen.main.bounds
             // ここで表示位置を調整
             // xは画面中央、yは画面下部になる様に指定
-            alertController.popoverPresentationController?.sourceRect=CGRect(x:screenSize.size.width/2,y:screenSize.size.height,width:0,height:0)
+            alertController.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
             // /iPad対策--------------------------------------------------
             
             self.present(alertController, animated: true, completion: nil)
@@ -59,9 +56,9 @@ class TopViewController: UIViewController {
     }
     
     func checkSegueSetting() {
-        if UserDefaults.standard.object(forKey: "goToShowSetting") != nil && UserDefaults.standard.object(forKey: "sixTaskList") != nil {
-            let goToShowSetting = UserDefaults.standard.object(forKey: "goToShowSetting") as! Bool
-            switch goToShowSetting {
+        if UserDefaults.standard.object(forKey: "showSeeVCSetting") != nil && UserDefaults.standard.object(forKey: "sixTaskList") != nil {
+            let showSeeVCSetting = UserDefaults.standard.object(forKey: "showSeeVCSetting") as! Bool
+            switch showSeeVCSetting {
             case true:
                 performSegue(withIdentifier: "showSeeVC", sender: nil)
             case false:
@@ -95,7 +92,7 @@ class TopViewController: UIViewController {
         startButton.layer.shadowOpacity = 0.3
         
         // GADBannerViewのプロパティを設定
-        bannerView.adUnitID = "ca-app-pub-9827752847639075/4604400705"
+        bannerView.adUnitID = Constants.adUnitID
         bannerView.rootViewController = self
 
         // 広告読み込み
@@ -103,6 +100,3 @@ class TopViewController: UIViewController {
     }
     
 }
-
-
-

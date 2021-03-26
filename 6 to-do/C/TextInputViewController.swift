@@ -1,6 +1,6 @@
 import UIKit
 
-class TextInputViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class TextInputViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var interactionButton: UIButton!
@@ -11,54 +11,13 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.overrideUserInterfaceStyle = .light
-        self.navigationItem.title = "明日のタスクを設定する"
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "TextInputCell", bundle: nil), forCellReuseIdentifier: "TextInputCell")
-        tableView.separatorStyle = .none//罫線をなくす
-        tableView.isScrollEnabled = false//スクロールさせない
+        setUpView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         inputPhase = 1
     }
-    
-    // tableview---------------------------------------------------------
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TextInputCell", for: indexPath) as! TextInputCell
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-    //　タップしたときにハイライトしない
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        false
-    }
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-         return true
-    }
-    //これは必須。消したらtableView編集できなくなる。
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-    }
-    //編集モードにしたとき、
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-      return .none
-    }
-    //編集モードにしたとき、左からインデントしない
-    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-      return false
-    }
-    
-    // /tableview----------------------------------------------------------
     
     @IBAction func tapNext(_ sender: Any) {
         // 一部赤にする処理があるため随時初期化。
@@ -95,7 +54,6 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    //ここおれの天才ポイント
     func saveTasksFromTextField(){
         //初期化
         var sixTaskList:[String] = []
@@ -104,7 +62,7 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
         for i in 0...5{
             //これによって、intをIndexPath型に変換しています。
             let indexPath = IndexPath(row: i, section: 0)
-            //そのIndexPathとcellForRowの処理をループさせることによって、カスタムセルの中の要素の値を取得できるようにしています。まじで天才ですね。
+            //そのIndexPathとcellForRowの処理をループさせることによって、カスタムセルの中の要素の値を取得できるようにしています。
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             sixTaskList.append(cell.textField.text!)
         }
@@ -135,4 +93,49 @@ class TextInputViewController: UIViewController, UITableViewDelegate, UITableVie
                 print("checkButtonValueで不具合発生。")
             }
         }
+    
+    func setUpView() {
+        self.overrideUserInterfaceStyle = .light
+        self.navigationItem.title = "明日のタスクを設定する"
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TextInputCell", bundle: nil), forCellReuseIdentifier: "TextInputCell")
+        tableView.separatorStyle = .none//罫線をなくす
+        tableView.isScrollEnabled = false//スクロールさせない
+    }
+}
+
+extension TextInputViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TextInputCell", for: indexPath) as! TextInputCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    //　タップしたときにハイライトしない
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        false
+    }
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+         return true
+    }
+    //これは必須。消したらtableView編集できなくなる。
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    }
+    //編集モードにしたとき、
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+      return .none
+    }
+    //編集モードにしたとき、左からインデントしない
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+      return false
+    }
+    
 }
