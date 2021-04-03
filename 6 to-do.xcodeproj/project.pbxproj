@@ -91,16 +91,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D151C1B2260B391300875252 /* storyboards */ = {
+		D151C1B2260B391300875252 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				D1D1E54825E6881600240268 /* Main.storyboard */,
 				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
 			);
-			path = storyboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		D16EB71825E7968E00548D99 /* V */ = {
+		D16EB71825E7968E00548D99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D1D1E54B25E6881900240268 /* Assets.xcassets */,
@@ -108,15 +108,15 @@
 				D16EB71C25E7A41300548D99 /* TaskShowCell.xib */,
 				D14E2FDC25FD95F20048D7FC /* TaskMemoCell.xib */,
 			);
-			path = V;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		D16EB72725E899FB00548D99 /* M */ = {
+		D16EB72725E899FB00548D99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D16EB72825E89A1800548D99 /* TaskManageModel.swift */,
 			);
-			path = M;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D1D1E53625E6881600240268 = {
@@ -140,10 +140,10 @@
 		D1D1E54125E6881600240268 /* 6 to-do */ = {
 			isa = PBXGroup;
 			children = (
-				D151C1B2260B391300875252 /* storyboards */,
-				D16EB72725E899FB00548D99 /* M */,
-				D1D1E55925E68B9900240268 /* C */,
-				D16EB71825E7968E00548D99 /* V */,
+				D151C1B2260B391300875252 /* Storyboards */,
+				D16EB72725E899FB00548D99 /* Models */,
+				D1D1E55925E68B9900240268 /* Controllers */,
+				D16EB71825E7968E00548D99 /* Views */,
 				D1D1E55025E6881900240268 /* Info.plist */,
 				D1D1E54425E6881600240268 /* SceneDelegate.swift */,
 				D1D1E54225E6881600240268 /* AppDelegate.swift */,
@@ -153,7 +153,7 @@
 			path = "6 to-do";
 			sourceTree = "<group>";
 		};
-		D1D1E55925E68B9900240268 /* C */ = {
+		D1D1E55925E68B9900240268 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D1D1E54625E6881600240268 /* TopViewController.swift */,
@@ -168,7 +168,7 @@
 				D16EB73225E952E000548D99 /* TwitterViewController.swift */,
 				D14E2FC225FD8EF00048D7FC /* MemoViewController.swift */,
 			);
-			path = C;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

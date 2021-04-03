@@ -49,7 +49,7 @@ class TextInputViewController: UIViewController {
         }
         
         if inputPhase == 3{
-            UserDefaults.standard.setValue("今日のタスクの設定が完了", forKey: "fromInputVC")
+            defaults.setValue("今日のタスクの設定が完了", forKey: "fromInputVC")
             self.navigationController?.popViewController(animated: true)
         }
     }
@@ -66,8 +66,8 @@ class TextInputViewController: UIViewController {
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             sixTaskList.append(cell.textField.text!)
         }
-        UserDefaults.standard.setValue(sixTaskList, forKey: "sixTaskList")
-        UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList")
+        defaults.setValue(sixTaskList, forKey: "sixTaskList")
+        defaults.setValue(isCompletedList, forKey: "isCompletedList")
     }
     
     var isFilled = true

@@ -1,11 +1,15 @@
 import UIKit
 import GoogleMobileAds
 
+//　グローバル変数。ここであってるかな。
+let defaults = UserDefaults.standard
+
 class TopViewController: UIViewController {
     
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var startButton: UIButton!
     var settingButton:UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,18 +20,18 @@ class TopViewController: UIViewController {
         super.viewWillAppear(animated)
         
         // SeeViewControllerまたはInputViewControllerから遷移してきたときには、自動的に他のVCに遷移する。
-        if UserDefaults.standard.object(forKey: "fromSeeVC") != nil {
-            UserDefaults.standard.removeObject(forKey: "fromSeeVC")
+        if defaults.object(forKey: "fromSeeVC") != nil {
+            defaults.removeObject(forKey: "fromSeeVC")
             performSegue(withIdentifier: "showInputVC", sender: nil)
         }
-        if UserDefaults.standard.object(forKey: "fromInputVC") != nil {
-            UserDefaults.standard.removeObject(forKey: "fromInputVC")
+        if defaults.object(forKey: "fromInputVC") != nil {
+            defaults.removeObject(forKey: "fromInputVC")
             performSegue(withIdentifier: "showSeeVC", sender: nil)
         }
     }
 
     @IBAction func tapStart(_ sender: Any) {
-        if UserDefaults.standard.object(forKey: "sixTaskList") == nil{
+        if defaults.object(forKey: "sixTaskList") == nil{
             let alertController = UIAlertController(title: "まだタスクを登録していません。", message: "新たにタスクを登録しますか？", preferredStyle: .actionSheet)
             let action1 = UIAlertAction(title: "はい", style: .default) { (alert) in
                 self.performSegue(withIdentifier: "showInputVC", sender: nil)
@@ -56,8 +60,8 @@ class TopViewController: UIViewController {
     }
     
     func checkSegueSetting() {
-        if UserDefaults.standard.object(forKey: "showSeeVCSetting") != nil && UserDefaults.standard.object(forKey: "sixTaskList") != nil {
-            let showSeeVCSetting = UserDefaults.standard.object(forKey: "showSeeVCSetting") as! Bool
+        if defaults.object(forKey: "showSeeVCSetting") != nil && defaults.object(forKey: "sixTaskList") != nil {
+            let showSeeVCSetting = defaults.object(forKey: "showSeeVCSetting") as! Bool
             switch showSeeVCSetting {
             case true:
                 performSegue(withIdentifier: "showSeeVC", sender: nil)
