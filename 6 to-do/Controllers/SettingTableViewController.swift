@@ -68,15 +68,15 @@ class SettingTableViewController: UITableViewController {
     
     @IBAction func tapUISwitch(_ sender: Any) {
         if settingSwitch.isOn {
-            defaults.setValue(true, forKey: "showSeeVCSetting")
+            UserDefaults.standard.setValue(true, forKey: "showSeeVCSetting")
         } else {
-            defaults.setValue(false, forKey: "showSeeVCSetting")
+            UserDefaults.standard.setValue(false, forKey: "showSeeVCSetting")
         }
     }
     
     func checkSwitchValue(){
         //よく考えたら一行でいい、、
-        settingSwitch.isOn = defaults.bool(forKey: "showSeeVCSetting")
+        settingSwitch.isOn = UserDefaults.standard.bool(forKey: "showSeeVCSetting")
     }
     
     // レビューページへ遷移

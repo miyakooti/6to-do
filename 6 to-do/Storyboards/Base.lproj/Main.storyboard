@@ -649,10 +649,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="93.75"/>
         </scene>
-        <!--See View Controller-->
+        <!--Show List View Controller-->
         <scene sceneID="l74-Ex-S0n">
             <objects>
-                <viewController storyboardIdentifier="showVC" id="wM4-H8-Mxc" customClass="SeeViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showVC" id="wM4-H8-Mxc" customClass="ShowListViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a6U-ad-ibb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

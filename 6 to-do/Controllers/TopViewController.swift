@@ -1,15 +1,11 @@
 import UIKit
 import GoogleMobileAds
 
-//　グローバル変数。ここであってるかな。
-let defaults = UserDefaults.standard
-
-class TopViewController: UIViewController {
+final class TopViewController: UIViewController {
     
-    @IBOutlet weak var bannerView: GADBannerView!
-    @IBOutlet weak var startButton: UIButton!
-    var settingButton:UIBarButtonItem!
-    
+    @IBOutlet private weak var bannerView: GADBannerView!
+    @IBOutlet private weak var startButton: UIButton!
+    private var settingButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,60 +14,35 @@ class TopViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // SeeViewControllerまたはInputViewControllerから遷移してきたときには、自動的に他のVCに遷移する。
-        if defaults.object(forKey: "fromSeeVC") != nil {
-            defaults.removeObject(forKey: "fromSeeVC")
-            performSegue(withIdentifier: "showInputVC", sender: nil)
-        }
-        if defaults.object(forKey: "fromInputVC") != nil {
-            defaults.removeObject(forKey: "fromInputVC")
-            performSegue(withIdentifier: "showSeeVC", sender: nil)
-        }
+        checkAutomaticalTransition()
     }
 
-    @IBAction func tapStart(_ sender: Any) {
-        if defaults.object(forKey: "sixTaskList") == nil{
-            let alertController = UIAlertController(title: "まだタスクを登録していません。", message: "新たにタスクを登録しますか？", preferredStyle: .actionSheet)
-            let action1 = UIAlertAction(title: "はい", style: .default) { (alert) in
-                self.performSegue(withIdentifier: "showInputVC", sender: nil)
-            }
-            let action2 = UIAlertAction(title: "いいえ", style: .cancel)
-            
-            alertController.addAction(action1)
-            alertController.addAction(action2)
-            
-            // iPad対策--------------------------------------------------
-            alertController.popoverPresentationController?.sourceView=self.view
-            let screenSize = UIScreen.main.bounds
-            // ここで表示位置を調整
-            // xは画面中央、yは画面下部になる様に指定
-            alertController.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
-            // /iPad対策--------------------------------------------------
-            
-            self.present(alertController, animated: true, completion: nil)
+    @IBAction private func tapStart(_ sender: Any) {
+        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) == nil{
+            AlertPresenter.presentNewTaskAlert(viewController: self)
         } else {
-            performSegue(withIdentifier: "showSeeVC", sender: nil)
+            performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
         }
     }
     
     @objc func tapSetting(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "showSettingTVC", sender: nil)
+        performSegue(withIdentifier: Constants.UserDefaultsKey.showSettingVCKey, sender: nil)
     }
     
-    func checkSegueSetting() {
-        if defaults.object(forKey: "showSeeVCSetting") != nil && defaults.object(forKey: "sixTaskList") != nil {
-            let showSeeVCSetting = defaults.object(forKey: "showSeeVCSetting") as! Bool
+    private func checkSegueSetting() {
+        if UserDefaults.standard.object(forKey: "showSeeVCSetting") != nil
+            && UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) != nil {
+            let showSeeVCSetting = UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.showSeeSettingKey) as! Bool
             switch showSeeVCSetting {
             case true:
-                performSegue(withIdentifier: "showSeeVC", sender: nil)
+                performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
             case false:
                 return
             }
         }
     }
     
-    func setUpView(){
+    private func setUpView(){
         self.overrideUserInterfaceStyle = .light
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.20, green: 0.23, blue: 0.36, alpha: 1.0)
         startButton.layer.cornerRadius = 5
@@ -89,18 +60,28 @@ class TopViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = settingButton
         
         checkSegueSetting()
-        
+
         startButton.layer.shadowColor = UIColor.black.cgColor
         startButton.layer.shadowRadius = 5
         startButton.layer.shadowOffset = .zero
         startButton.layer.shadowOpacity = 0.3
-        
         // GADBannerViewのプロパティを設定
         bannerView.adUnitID = Constants.adUnitID
         bannerView.rootViewController = self
-
         // 広告読み込み
         bannerView.load(GADRequest())
+    }
+    
+    private func checkAutomaticalTransition() {
+        // SeeViewControllerまたはInputViewControllerから遷移してきたときには、自動的に他のVCに遷移する。
+        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromSeeVCKey) != nil {
+            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromSeeVCKey)
+            performSegue(withIdentifier: Constants.UserDefaultsKey.showInputVCKey, sender: nil)
+        }
+        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromInputVCKey) != nil {
+            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromInputVCKey)
+            performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
+        }
     }
     
 }

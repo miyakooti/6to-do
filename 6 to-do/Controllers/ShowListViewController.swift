@@ -1,7 +1,7 @@
 import UIKit
 import GoogleMobileAds
 
-class SeeViewController: UIViewController {
+class ShowListViewController: UIViewController {
     
     var garbageButton:UIBarButtonItem!
     
@@ -9,8 +9,8 @@ class SeeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topLabel: UILabel!
-    let sixTaskList = defaults.object(forKey: "sixTaskList") as! [String]
-    var isCompletedList = defaults.object(forKey: "isCompletedList") as! [Bool]
+    let sixTaskList = UserDefaults.standard.object(forKey: "sixTaskList") as! [String]
+    var isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
     var numOfCompleted:Int?
     let encourageMessageList = Constants.encourageMessageList
 
@@ -35,7 +35,7 @@ class SeeViewController: UIViewController {
                     cell.isCompleted = true
                     // userdefaultsの内容も変えないとね
                     isCompletedList[indexPath.row] = true
-                    defaults.setValue(isCompletedList, forKey: "isCompletedList") //trueを登録していく。
+                    UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList") //trueを登録していく。
                     // セルの内容変えたので、リロードして最新にする。
                     tableView.reloadData()
                     
@@ -65,9 +65,9 @@ class SeeViewController: UIViewController {
     }
     
     func resetAll(){
-        defaults.removeObject(forKey: "sixTaskList")
-        defaults.removeObject(forKey: "isCompletedList")
-        defaults.setValue("明日のタスクを設定中", forKey: "fromSeeVC")
+        UserDefaults.standard.removeObject(forKey: "sixTaskList")
+        UserDefaults.standard.removeObject(forKey: "isCompletedList")
+        UserDefaults.standard.setValue("明日のタスクを設定中", forKey: "fromSeeVC")
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -140,7 +140,7 @@ class SeeViewController: UIViewController {
     }
 }
 
-extension SeeViewController: UITableViewDelegate, UITableViewDataSource{
+extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
@@ -155,7 +155,7 @@ extension SeeViewController: UITableViewDelegate, UITableViewDataSource{
         //　カスタムセル取り出す
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
         //　userdefaultsの内容を取り出す
-        isCompletedList = defaults.object(forKey: "isCompletedList") as! [Bool]
+        isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
         //　userdefaultsの内容をセルの変数に格納する。
         cell.isCompleted = isCompletedList[indexPath.row]
         
