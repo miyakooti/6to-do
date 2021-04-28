@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C640CD9A15AA1F6677924A68 /* Pods_6_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */; };
+		D14355F0263973D600CE805A /* TextInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355EF263973D600CE805A /* TextInput.storyboard */; };
+		D14355F32639793100CE805A /* ShowList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355F22639793100CE805A /* ShowList.storyboard */; };
+		D14355F626397C1E00CE805A /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355F526397C1E00CE805A /* Setting.storyboard */; };
+		D14355F926397CC400CE805A /* WhatIs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355F826397CC400CE805A /* WhatIs.storyboard */; };
 		D14E2FDE25FD95F20048D7FC /* TaskMemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14E2FDC25FD95F20048D7FC /* TaskMemoCell.xib */; };
 		D151C1B5260B3F3400875252 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D151C1B4260B3F3400875252 /* Constants.swift */; };
 		D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB71B25E7A41300548D99 /* TaskShowCell.swift */; };
@@ -15,6 +19,8 @@
 		D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */; };
 		D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72F25E952D600548D99 /* WhatIsViewController.swift */; };
 		D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB73225E952E000548D99 /* TwitterViewController.swift */; };
+		D17658A226396BF000431794 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A126396BF000431794 /* Top.storyboard */; };
+		D17658A526396C0200431794 /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A426396C0200431794 /* Twitter.storyboard */; };
 		D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54225E6881600240268 /* AppDelegate.swift */; };
 		D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54425E6881600240268 /* SceneDelegate.swift */; };
 		D1D1E54725E6881600240268 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54625E6881600240268 /* TopViewController.swift */; };
@@ -34,6 +40,10 @@
 		13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6_to_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F722FA33765F24EAC1E1631 /* Pods-6 to-do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.release.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.release.xcconfig"; sourceTree = "<group>"; };
 		82B9EFE4432E8DBED5BC19DA /* Pods-6 to-do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.debug.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.debug.xcconfig"; sourceTree = "<group>"; };
+		D14355EF263973D600CE805A /* TextInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextInput.storyboard; sourceTree = "<group>"; };
+		D14355F22639793100CE805A /* ShowList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowList.storyboard; sourceTree = "<group>"; };
+		D14355F526397C1E00CE805A /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		D14355F826397CC400CE805A /* WhatIs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WhatIs.storyboard; sourceTree = "<group>"; };
 		D14E2FDC25FD95F20048D7FC /* TaskMemoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskMemoCell.xib; sourceTree = "<group>"; };
 		D151C1B4260B3F3400875252 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D16EB71B25E7A41300548D99 /* TaskShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskShowCell.swift; sourceTree = "<group>"; };
@@ -41,6 +51,8 @@
 		D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		D16EB72F25E952D600548D99 /* WhatIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsViewController.swift; sourceTree = "<group>"; };
 		D16EB73225E952E000548D99 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		D17658A126396BF000431794 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
+		D17658A426396C0200431794 /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 		D1D1E53F25E6881600240268 /* 6 to-do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6 to-do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D1E54225E6881600240268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D1E54425E6881600240268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,12 @@
 			children = (
 				D1D1E54825E6881600240268 /* Main.storyboard */,
 				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
+				D17658A126396BF000431794 /* Top.storyboard */,
+				D17658A426396C0200431794 /* Twitter.storyboard */,
+				D14355EF263973D600CE805A /* TextInput.storyboard */,
+				D14355F22639793100CE805A /* ShowList.storyboard */,
+				D14355F526397C1E00CE805A /* Setting.storyboard */,
+				D14355F826397CC400CE805A /* WhatIs.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -224,13 +242,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D14355F0263973D600CE805A /* TextInput.storyboard in Resources */,
+				D17658A226396BF000431794 /* Top.storyboard in Resources */,
 				D1D1E57125E72EB900240268 /* memo.txt in Resources */,
 				D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */,
 				D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */,
 				D14E2FDE25FD95F20048D7FC /* TaskMemoCell.xib in Resources */,
 				D1D1E54A25E6881600240268 /* Main.storyboard in Resources */,
+				D17658A526396C0200431794 /* Twitter.storyboard in Resources */,
 				D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */,
+				D14355F32639793100CE805A /* ShowList.storyboard in Resources */,
+				D14355F926397CC400CE805A /* WhatIs.storyboard in Resources */,
 				D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */,
+				D14355F626397C1E00CE805A /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

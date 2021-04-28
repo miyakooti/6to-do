@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KOw-4D-NhW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Twitter View Controller-->
+        <scene sceneID="I5k-lD-o9H">
+            <objects>
+                <viewController id="KOw-4D-NhW" customClass="TwitterViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Vh-F4-sRy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="twitterのリンクはこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYD-QQ-s9e">
+                                <rect key="frame" x="50" y="408" width="314" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WGM-Ti-P0l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↓ ↓ ↓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6E-5X-8Vj">
+                                <rect key="frame" x="157" y="436.5" width="100" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="5QQ-zY-6aF"/>
+                                    <constraint firstAttribute="width" constant="100" id="xum-bV-hJi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-n7-jWd">
+                                <rect key="frame" x="110" y="212" width="194" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="6DQ-6N-De5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fke-vJ-cEZ">
+                                <rect key="frame" x="117" y="467" width="180" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="mHc-0i-HR1"/>
+                                    <constraint firstAttribute="height" constant="44" id="szt-M0-LzP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="@ karai_shan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapTwitter:" destination="KOw-4D-NhW" eventType="touchUpInside" id="FX7-IP-6KP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nfb-Av-MSt"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E6E-5X-8Vj" firstAttribute="top" secondItem="kYD-QQ-s9e" secondAttribute="bottom" constant="7.5" id="1rc-w7-jCn"/>
+                            <constraint firstItem="rcq-n7-jWd" firstAttribute="leading" secondItem="Nfb-Av-MSt" secondAttribute="leading" constant="110" id="1tD-3m-Qxl"/>
+                            <constraint firstItem="E6E-5X-8Vj" firstAttribute="centerY" secondItem="9Vh-F4-sRy" secondAttribute="centerY" id="2PP-b7-5Qx"/>
+                            <constraint firstItem="kYD-QQ-s9e" firstAttribute="top" secondItem="rcq-n7-jWd" secondAttribute="bottom" constant="20" id="6qt-Jb-Wnz"/>
+                            <constraint firstItem="Nfb-Av-MSt" firstAttribute="trailing" secondItem="rcq-n7-jWd" secondAttribute="trailing" constant="110" id="Jza-82-U73"/>
+                            <constraint firstItem="Nfb-Av-MSt" firstAttribute="trailing" secondItem="kYD-QQ-s9e" secondAttribute="trailing" constant="50" id="eQ8-aY-xSx"/>
+                            <constraint firstItem="Fke-vJ-cEZ" firstAttribute="top" secondItem="E6E-5X-8Vj" secondAttribute="bottom" constant="7.5" id="iWi-ME-SMW"/>
+                            <constraint firstItem="Fke-vJ-cEZ" firstAttribute="centerX" secondItem="9Vh-F4-sRy" secondAttribute="centerX" id="ocg-iH-ROR"/>
+                            <constraint firstItem="kYD-QQ-s9e" firstAttribute="leading" secondItem="Nfb-Av-MSt" secondAttribute="leading" constant="50" id="qxI-VH-dP7"/>
+                            <constraint firstItem="E6E-5X-8Vj" firstAttribute="centerX" secondItem="9Vh-F4-sRy" secondAttribute="centerX" id="wBI-PT-1NL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Un2-NP-9NR"/>
+                    <connections>
+                        <outlet property="twitterButton" destination="Fke-vJ-cEZ" id="68N-Ij-Bwv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2Y-sn-ZiI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857" y="-206"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="twitter" width="250" height="250"/>
+    </resources>
+</document>

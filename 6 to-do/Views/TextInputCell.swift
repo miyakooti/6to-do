@@ -21,9 +21,6 @@ class TextInputCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-
-    
-    
     @IBAction func inputText(_ sender: Any) {
     }
 }

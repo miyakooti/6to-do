@@ -56,7 +56,7 @@ final class SettingTableViewController: UITableViewController {
                 return
             case 2:
                 //開発者のtwitter
-                performSegue(withIdentifier: "twitter", sender: nil)
+                performSegue(withIdentifier: "showTwitter", sender: nil)
                 return
             default:
                 return
