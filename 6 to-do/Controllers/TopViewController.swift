@@ -25,7 +25,7 @@ final class TopViewController: UIViewController {
         }
     }
     
-    @objc func tapSetting(_ sender: UIBarButtonItem) {
+    @objc private func tapSetting(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: Constants.UserDefaultsKey.showSettingVCKey, sender: nil)
     }
     
@@ -47,14 +47,9 @@ final class TopViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.20, green: 0.23, blue: 0.36, alpha: 1.0)
         startButton.layer.cornerRadius = 5
         self.navigationItem.backButtonTitle = "戻る"
-        //　戻るとかのボタン。rightとleftのやつ
         self.navigationController?.navigationBar.tintColor = .white
-        //　タイトル設定
         self.navigationItem.title = "TOP"
-        // navBar背景色
-        self.navigationController!.navigationBar.titleTextAttributes = [
-        .foregroundColor: UIColor.white
-        ]
+        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         settingButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(tapSetting(_:)))
         self.navigationItem.rightBarButtonItem = settingButton

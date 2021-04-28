@@ -1,13 +1,13 @@
 import UIKit
 
-class TextInputViewController: UIViewController {
+final class TextInputViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var interactionButton: UIButton!
-    @IBOutlet weak var interactionLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var interactionButton: UIButton!
+    @IBOutlet private weak var interactionLabel: UILabel!
+    @IBOutlet private weak var nextButton: UIButton!
     
-    @IBOutlet weak var nextButton: UIButton!
-    var inputPhase = 1
+    private var inputPhase = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +19,16 @@ class TextInputViewController: UIViewController {
         inputPhase = 1
     }
     
-    @IBAction func tapNext(_ sender: Any) {
+    @IBAction private func tapNext(_ sender: Any) {
         // 一部赤にする処理があるため随時初期化。
         interactionLabel.textColor = UIColor.black
-        //ボタンのテキストを変更するメソッド
+        // inputPhaseに従ってテキストを変更する。
         checkButtonValue(phase: inputPhase)
-        if inputPhase == 1{
-            checkNullValue()//空き項目をゆる三蔵
-            if isFilled{ //空き項目をゆるさんぞう
+        
+        switch inputPhase {
+        case 1:
+            let isFilled = checkIsFilled()
+            if isFilled {
                 tableView.setEditing(true, animated: true)
                 interactionLabel.text = "重要な順に並べ替えてください。"
                 inputPhase = inputPhase + 1
@@ -36,9 +38,7 @@ class TextInputViewController: UIViewController {
                 interactionLabel.textColor = UIColor.red
                 return
             }
-        }
-        
-        if inputPhase == 2{
+        case 2:
             saveTasksFromTextField()
             tableView.setEditing(false, animated: true)
             interactionLabel.text = "６つのタスクが完成しました！"
@@ -46,15 +46,17 @@ class TextInputViewController: UIViewController {
             self.navigationItem.hidesBackButton = true
             saveTasksFromTextField()
             return
-        }
-        
-        if inputPhase == 3{
+        case 3:
             UserDefaults.standard.setValue("今日のタスクの設定が完了", forKey: "fromInputVC")
             self.navigationController?.popViewController(animated: true)
+        default:
+            print("tapNextがおかしいです")
+            return
         }
+        
     }
     
-    func saveTasksFromTextField(){
+    private func saveTasksFromTextField(){
         //初期化
         var sixTaskList:[String] = []
         let isCompletedList = [Bool](repeating: false, count: 6)
@@ -66,24 +68,24 @@ class TextInputViewController: UIViewController {
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             sixTaskList.append(cell.textField.text!)
         }
+        // すべて保存する。
         UserDefaults.standard.setValue(sixTaskList, forKey: "sixTaskList")
         UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList")
+        UserDefaults.standard.synchronize()
     }
     
-    var isFilled = true
-    func checkNullValue() {
-        isFilled = true
+    private func checkIsFilled() -> Bool {
         for i in 0...5{
             let indexPath = IndexPath(row: i, section: 0)
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             if cell.textField.text! == "" {
-                isFilled = false
+                return false //returnは関数も抜け出す
             }
         }
+        return true
     }
 
-    //ボタンのテキストを随時変更するためのメソッド
-    func checkButtonValue(phase:Int){
+    private func checkButtonValue(phase:Int) {
             switch phase {
             case 1:
                 nextButton.setTitle("これで確定", for: .normal)
@@ -94,7 +96,7 @@ class TextInputViewController: UIViewController {
             }
         }
     
-    func setUpView() {
+    private func setUpView() {
         self.overrideUserInterfaceStyle = .light
         self.navigationItem.title = "明日のタスクを設定する"
         tableView.delegate = self

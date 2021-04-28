@@ -9,12 +9,12 @@ import UIKit
 import StoreKit
 import GoogleMobileAds
 
-class SettingTableViewController: UITableViewController {
+final class SettingTableViewController: UITableViewController {
     
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet private weak var bannerView: GADBannerView!
     
-    @IBOutlet var myTableView: UITableView!
-    @IBOutlet weak var settingSwitch: UISwitch!
+    @IBOutlet private var myTableView: UITableView!
+    @IBOutlet private weak var settingSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func tapUISwitch(_ sender: Any) {
+    @IBAction private func tapUISwitch(_ sender: Any) {
         if settingSwitch.isOn {
             UserDefaults.standard.setValue(true, forKey: "showSeeVCSetting")
         } else {
@@ -74,21 +74,21 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
-    func checkSwitchValue(){
-        //よく考えたら一行でいい、、
+    private func checkSwitchValue(){
         settingSwitch.isOn = UserDefaults.standard.bool(forKey: "showSeeVCSetting")
     }
     
-    // レビューページへ遷移
-    func dispReview(){
+    private func dispReview(){
         if #available(iOS 10.3, *){
             if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                 SKStoreReviewController.requestReview(in: scene)
             }
+        } else {
+            print("iOS 10.3未満です")
         }
     }
     
-    func setUpView() {
+    private func setUpView() {
         self.navigationItem.title = "設定"
         self.overrideUserInterfaceStyle = .light
         checkSwitchValue()

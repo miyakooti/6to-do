@@ -1,29 +1,22 @@
-//
-//  TwitterViewController.swift
-//  6 to-do
-//
-//  Created by Arai Kousuke on 2021/02/27.
-//
-
 import UIKit
 
-class TwitterViewController: UIViewController {
+final class TwitterViewController: UIViewController {
 
-    @IBOutlet weak var twitterButton: UIButton!
+    @IBOutlet private weak var twitterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
     }
     
-    @IBAction func tapTwitter(_ sender: Any) {
+    @IBAction private func tapTwitter(_ sender: Any) {
         let url = URL(string: "https://twitter.com/karai_shan")
         //UIApplication.shared.openURL(url!)
         // iOS 10以降利用可能
         UIApplication.shared.open(url!)
     }
     
-    func setUpView() {
+    private func setUpView() {
         self.navigationItem.title = "twitter"
         self.overrideUserInterfaceStyle = .light
         twitterButton.layer.cornerRadius = 10

@@ -1,45 +1,40 @@
 import UIKit
 import GoogleMobileAds
 
-class ShowListViewController: UIViewController {
+final class ShowListViewController: UIViewController {
     
-    var garbageButton:UIBarButtonItem!
+    private var garbageButton: UIBarButtonItem!
     
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet private weak var bannerView: GADBannerView!
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var topLabel: UILabel!
-    let sixTaskList = UserDefaults.standard.object(forKey: "sixTaskList") as! [String]
-    var isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
-    var numOfCompleted:Int?
-    let encourageMessageList = Constants.encourageMessageList
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var topLabel: UILabel!
+    private let sixTaskList = UserDefaults.standard.object(forKey: "sixTaskList") as! [String]
+    private var isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
+    private var numOfCompleted:Int?
+    private let encourageMessageList = Constants.encourageMessageList
 
-    @IBOutlet weak var CompleteButton: UIButton!
+    @IBOutlet private weak var CompleteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
     }
     
-    @IBAction func tapComplete(_ sender: Any) {
-        
+    @IBAction private func tapComplete(_ sender: Any) {
         if numOfCompleted == 6 { //終わってるときは終了ボタンとして挙動する。
             trySetTomorrowTask()
         } else { //終わってないときは一つずつ完了させていくボタンとして挙動する。
             for i in 0...5{
                 let indexPath = IndexPath(row: i, section: 0)
                 let cell = tableView.cellForRow(at: indexPath) as! TaskShowCell
-                
-                //　一番上のタスクを完了にする。
-                if cell.isCompleted == false {
+            
+                if cell.isCompleted == false { //　一番上のタスクを完了にする。
                     cell.isCompleted = true
                     // userdefaultsの内容も変えないとね
                     isCompletedList[indexPath.row] = true
                     UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList") //trueを登録していく。
-                    // セルの内容変えたので、リロードして最新にする。
                     tableView.reloadData()
-                    
-                    //おまけ機能
                     topLabel.text = encourageMessageList.randomElement()
                     return
                 }
@@ -47,7 +42,7 @@ class ShowListViewController: UIViewController {
         }
     }
     
-    func checkButtonValue(){
+    private func checkButtonValue(){
 
         if numOfCompleted == 6 {
             CompleteButton.setTitle("明日のタスクを設定する", for: .normal)
@@ -64,14 +59,14 @@ class ShowListViewController: UIViewController {
         }
     }
     
-    func resetAll(){
+    private func resetAll(){
         UserDefaults.standard.removeObject(forKey: "sixTaskList")
         UserDefaults.standard.removeObject(forKey: "isCompletedList")
         UserDefaults.standard.setValue("明日のタスクを設定中", forKey: "fromSeeVC")
         self.navigationController?.popViewController(animated: true)
     }
     
-    func trySetTomorrowTask(){
+    private func trySetTomorrowTask(){
         //完了しているときとしていないときで文言を変えたいので分岐。これによりアラートアクションは共通化できる。
         let alertTitle:String
         let alertMessage:String
@@ -102,17 +97,15 @@ class ShowListViewController: UIViewController {
         alertController.popoverPresentationController?.sourceRect=CGRect(x:screenSize.size.width/2,y:screenSize.size.height,width:0,height:0)
         // /iPad対策--------------------------------------------------
         
-        
         self.present(alertController, animated: true, completion: nil)
     }
 
-    @objc func tapGarbage(_ sender: UIBarButtonItem) {
+    @objc private func tapGarbage(_ sender: UIBarButtonItem) {
         trySetTomorrowTask()
     }
     
-    func setUpView() {
+    private func setUpView() {
         self.overrideUserInterfaceStyle = .light
-        
         self.navigationItem.title = "タスク一覧"
         
         tableView.delegate = self
