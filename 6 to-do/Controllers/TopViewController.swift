@@ -19,7 +19,7 @@ final class TopViewController: UIViewController {
 
     @IBAction private func tapStart(_ sender: Any) {
         if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) == nil{
-            AlertPresenter.presentNewTaskAlert(viewController: self)
+            AlertPresenter.presentNewTaskAlert(topVC: self)
         } else {
             performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
         }

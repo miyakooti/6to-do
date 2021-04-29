@@ -96,15 +96,11 @@ final class SettingTableViewController: UITableViewController {
         self.navigationItem.title = "設定"
         self.overrideUserInterfaceStyle = .light
         checkSwitchValue()
-        
         if let indexPathForSelectedRow = myTableView.indexPathForSelectedRow { //ハイライト解除
             myTableView.deselectRow(at: indexPathForSelectedRow, animated: true)
         }
-        // GADBannerViewのプロパティを設定
         bannerView.adUnitID = Constants.adUnitID
         bannerView.rootViewController = self
-
-        // 広告読み込み
         bannerView.load(GADRequest())
     }
     
