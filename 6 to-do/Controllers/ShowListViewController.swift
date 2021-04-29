@@ -4,6 +4,7 @@ import GoogleMobileAds
 final class ShowListViewController: UIViewController {
     
     private var garbageButton: UIBarButtonItem!
+    private var sumOfCompletion = 0
     
     @IBOutlet private weak var bannerView: GADBannerView!
 
@@ -18,6 +19,7 @@ final class ShowListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sumOfCompletion = UserDefaults.standard.integer(forKey: "sumOfCompletion")
         setUpView()
     }
     
@@ -28,12 +30,16 @@ final class ShowListViewController: UIViewController {
             for i in 0...5{
                 let indexPath = IndexPath(row: i, section: 0)
                 let cell = tableView.cellForRow(at: indexPath) as! TaskShowCell
-            
                 if cell.isCompleted == false { //　一番上のタスクを完了にする。
                     cell.isCompleted = true
-                    // userdefaultsの内容も変えないとね
+                    
+                    sumOfCompletion = sumOfCompletion + 1
+                    UserDefaults.standard.setValue(sumOfCompletion, forKey: "sumOfCompletion")
+                    
                     isCompletedList[indexPath.row] = true
-                    UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList") //trueを登録していく。
+                    UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList")
+                    UserDefaults.standard.synchronize()
+                    
                     tableView.reloadData()
                     topLabel.text = encourageMessageList.randomElement()
                     return
@@ -67,7 +73,6 @@ final class ShowListViewController: UIViewController {
     }
     
     private func trySetTomorrowTask(){
-        //完了しているときとしていないときで文言を変えたいので分岐。これによりアラートアクションは共通化できる。
         let alertTitle:String
         let alertMessage:String
         if numOfCompleted == 6{
@@ -145,24 +150,19 @@ extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
         false //ハイライトしない
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //　カスタムセル取り出す
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
-        //　userdefaultsの内容を取り出す
         isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
-        //　userdefaultsの内容をセルの変数に格納する。
         cell.isCompleted = isCompletedList[indexPath.row]
         
         let textForCell = String(indexPath.row + 1)+". "+sixTaskList[indexPath.row]
         numOfCompleted = isCompletedList.filter({$0 == true}).count
-        //　下のボタンのテキストをチェックする
         checkButtonValue()
         
-        //　セルが完了したか完了していないかで分岐。
         if cell.isCompleted == false {
-            // 完了したセルは、、
+            // 完了したセルは
             cell.taskLabel.text = textForCell
         } else {
-            // 完了していないセルは、、
+            // 完了していないセル
             //棒線処理
             let atr =  NSMutableAttributedString(string: textForCell)
             atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, atr.length))

@@ -58,6 +58,10 @@ final class SettingTableViewController: UITableViewController {
                 //開発者のtwitter
                 performSegue(withIdentifier: "showTwitter", sender: nil)
                 return
+            case 3:
+                //これまでに完了したtodoの数
+                performSegue(withIdentifier: "showSum", sender: nil)
+                return
             default:
                 return
             }

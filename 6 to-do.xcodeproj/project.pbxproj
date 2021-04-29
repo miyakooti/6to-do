@@ -19,8 +19,10 @@
 		D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */; };
 		D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72F25E952D600548D99 /* WhatIsViewController.swift */; };
 		D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB73225E952E000548D99 /* TwitterViewController.swift */; };
-		D17658A226396BF000431794 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A126396BF000431794 /* Top.storyboard */; };
 		D17658A526396C0200431794 /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A426396C0200431794 /* Twitter.storyboard */; };
+		D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */; };
+		D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */; };
+		D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */; };
 		D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54225E6881600240268 /* AppDelegate.swift */; };
 		D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54425E6881600240268 /* SceneDelegate.swift */; };
 		D1D1E54725E6881600240268 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54625E6881600240268 /* TopViewController.swift */; };
@@ -51,8 +53,10 @@
 		D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		D16EB72F25E952D600548D99 /* WhatIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsViewController.swift; sourceTree = "<group>"; };
 		D16EB73225E952E000548D99 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
-		D17658A126396BF000431794 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
 		D17658A426396C0200431794 /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
+		D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowSum.storyboard; sourceTree = "<group>"; };
+		D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSumViewController.swift; sourceTree = "<group>"; };
+		D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountAnimateLabel.swift; sourceTree = "<group>"; };
 		D1D1E53F25E6881600240268 /* 6 to-do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6 to-do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D1E54225E6881600240268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D1E54425E6881600240268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,14 +106,14 @@
 		D151C1B2260B391300875252 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1E54825E6881600240268 /* Main.storyboard */,
 				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
-				D17658A126396BF000431794 /* Top.storyboard */,
-				D17658A426396C0200431794 /* Twitter.storyboard */,
+				D1D1E54825E6881600240268 /* Main.storyboard */,
 				D14355EF263973D600CE805A /* TextInput.storyboard */,
 				D14355F22639793100CE805A /* ShowList.storyboard */,
 				D14355F526397C1E00CE805A /* Setting.storyboard */,
 				D14355F826397CC400CE805A /* WhatIs.storyboard */,
+				D17658A426396C0200431794 /* Twitter.storyboard */,
+				D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F613BC262D31350043B762 /* AlertPresenter.swift */,
+				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */,
 				D16EB72F25E952D600548D99 /* WhatIsViewController.swift */,
 				D16EB73225E952E000548D99 /* TwitterViewController.swift */,
+				D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,8 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14355F0263973D600CE805A /* TextInput.storyboard in Resources */,
-				D17658A226396BF000431794 /* Top.storyboard in Resources */,
 				D1D1E57125E72EB900240268 /* memo.txt in Resources */,
+				D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */,
 				D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */,
 				D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */,
 				D14E2FDE25FD95F20048D7FC /* TaskMemoCell.xib in Resources */,
@@ -312,6 +318,7 @@
 				D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
 				D151C1B5260B3F3400875252 /* Constants.swift in Sources */,
+				D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */,
 				D1F613BD262D31350043B762 /* AlertPresenter.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
@@ -320,6 +327,7 @@
 				D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */,
 				D1D1E56E25E70EBC00240268 /* ShowListViewController.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
+				D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -525,7 +533,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

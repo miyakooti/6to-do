@@ -17,7 +17,7 @@
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="5dr-8Z-TaA" customClass="GADBannerView">
-                            <rect key="frame" x="0.0" y="369.5" width="414" height="50"/>
+                            <rect key="frame" x="0.0" y="429.5" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="labelColor"/>
                             <constraints>
@@ -134,6 +134,28 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="f62-ei-rvQ" imageView="MbQ-yQ-GdF" rowHeight="60" style="IBUITableViewCellStyleDefault" id="ZSu-Ss-B1E">
+                                        <rect key="frame" x="0.0" y="351.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZSu-Ss-B1E" id="iFL-5B-4W8">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="これまでに完了したtodoの数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f62-ei-rvQ">
+                                                    <rect key="frame" x="59.75" y="0.0" width="315.25" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="rectangle.badge.checkmark" catalog="system" id="MbQ-yQ-GdF">
+                                                    <rect key="frame" x="19.25" y="21.5" width="25.5" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -149,6 +171,7 @@
                         <outlet property="settingSwitch" destination="a16-89-KCm" id="hJW-a6-yni"/>
                         <segue destination="Y5p-jj-z2d" kind="show" identifier="whatIs" id="YRl-BI-uEU"/>
                         <segue destination="jOm-HL-tpS" kind="show" identifier="showTwitter" id="aSd-8N-Wa1"/>
+                        <segue destination="5DB-jU-X5T" kind="show" identifier="showSum" id="lK7-CI-oG6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYX-Ms-8ZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -163,7 +186,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPG-nC-p0T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2463" y="-472"/>
+            <point key="canvasLocation" x="2488" y="-587"/>
+        </scene>
+        <!--ShowSum-->
+        <scene sceneID="wdC-7l-Ns5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShowSum" id="5DB-jU-X5T" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Y9z-uw-LCz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhw-Bl-7OG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452" y="-458"/>
         </scene>
         <!--WhatIs-->
         <scene sceneID="OyA-DZ-fR4">
@@ -179,6 +212,7 @@
     <resources>
         <image name="person.crop.square" catalog="system" width="128" height="114"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="rectangle.badge.checkmark" catalog="system" width="128" height="95"/>
         <image name="star.leadinghalf.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

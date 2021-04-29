@@ -42,6 +42,18 @@ final class TopViewController: UIViewController {
         }
     }
     
+    private func checkAutomaticalTransition() {
+        // SeeViewControllerまたはInputViewControllerから遷移してきたときには、自動的に他のVCに遷移する。
+        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromSeeVCKey) != nil {
+            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromSeeVCKey)
+            performSegue(withIdentifier: Constants.UserDefaultsKey.showInputVCKey, sender: nil)
+        }
+        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromInputVCKey) != nil {
+            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromInputVCKey)
+            performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
+        }
+    }
+    
     private func setUpView(){
         self.overrideUserInterfaceStyle = .light
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.20, green: 0.23, blue: 0.36, alpha: 1.0)
@@ -65,18 +77,6 @@ final class TopViewController: UIViewController {
         bannerView.rootViewController = self
         // 広告読み込み
         bannerView.load(GADRequest())
-    }
-    
-    private func checkAutomaticalTransition() {
-        // SeeViewControllerまたはInputViewControllerから遷移してきたときには、自動的に他のVCに遷移する。
-        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromSeeVCKey) != nil {
-            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromSeeVCKey)
-            performSegue(withIdentifier: Constants.UserDefaultsKey.showInputVCKey, sender: nil)
-        }
-        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromInputVCKey) != nil {
-            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromInputVCKey)
-            performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
-        }
     }
     
 }
