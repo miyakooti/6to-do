@@ -12,17 +12,11 @@ final class TextInputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        resetInputPhase()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        inputPhase = 1
-    }
-    
+
     @IBAction private func tapNext(_ sender: Any) {
-        // 一部赤にする処理があるため随時初期化。
         interactionLabel.textColor = UIColor.black
-        // inputPhaseに従ってテキストを変更する。
         checkButtonValue(phase: inputPhase)
         
         switch inputPhase {
@@ -68,7 +62,6 @@ final class TextInputViewController: UIViewController {
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             sixTaskList.append(cell.textField.text!)
         }
-        // すべて保存する。
         UserDefaults.standard.setValue(sixTaskList, forKey: "sixTaskList")
         UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList")
         UserDefaults.standard.synchronize()
@@ -104,6 +97,10 @@ final class TextInputViewController: UIViewController {
         tableView.register(UINib(nibName: "TextInputCell", bundle: nil), forCellReuseIdentifier: "TextInputCell")
         tableView.separatorStyle = .none//罫線をなくす
         tableView.isScrollEnabled = false//スクロールさせない
+    }
+    
+    private func resetInputPhase() {
+        inputPhase = 1
     }
 }
 

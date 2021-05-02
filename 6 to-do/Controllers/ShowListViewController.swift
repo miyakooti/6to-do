@@ -21,6 +21,7 @@ final class ShowListViewController: UIViewController {
         super.viewDidLoad()
         sumOfCompletion = UserDefaults.standard.integer(forKey: "sumOfCompletion")
         setUpView()
+        BannerSetUpper.setUpBanner(bannerView: bannerView, viewController: self)
     }
     
     @IBAction private func tapComplete(_ sender: Any) {
@@ -88,12 +89,6 @@ final class ShowListViewController: UIViewController {
         CompleteButton.layer.shadowRadius = 5
         CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         CompleteButton.layer.shadowOpacity = 0.6
-        
-        // GADBannerViewのプロパティを設定
-        bannerView.adUnitID = Constants.adUnitID
-        bannerView.rootViewController = self
-
-        bannerView.load(GADRequest())
     }
     
     private func changeButtonValue() {

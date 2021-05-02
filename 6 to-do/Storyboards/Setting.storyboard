@@ -10,6 +10,7 @@
         <!--Setting Table View Controller-->
         <scene sceneID="LCs-pa-SLg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYX-Ms-8ZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="4Je-pg-0Fd" customClass="SettingTableViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3Mh-ei-eSW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -169,12 +170,11 @@
                         <outlet property="bannerView" destination="5dr-8Z-TaA" id="7jQ-sN-N1A"/>
                         <outlet property="myTableView" destination="3Mh-ei-eSW" id="3a9-YU-Vtf"/>
                         <outlet property="settingSwitch" destination="a16-89-KCm" id="hJW-a6-yni"/>
-                        <segue destination="Y5p-jj-z2d" kind="show" identifier="whatIs" id="YRl-BI-uEU"/>
-                        <segue destination="jOm-HL-tpS" kind="show" identifier="showTwitter" id="aSd-8N-Wa1"/>
-                        <segue destination="5DB-jU-X5T" kind="show" identifier="showSum" id="lK7-CI-oG6"/>
+                        <segue destination="Y5p-jj-z2d" kind="show" identifier="showWhatIsVC" id="YRl-BI-uEU"/>
+                        <segue destination="jOm-HL-tpS" kind="show" identifier="showTwitterVC" id="aSd-8N-Wa1"/>
+                        <segue destination="5DB-jU-X5T" kind="show" identifier="showSumVC" id="lK7-CI-oG6"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JYX-Ms-8ZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1779.7101449275365" y="-586.60714285714278"/>
         </scene>

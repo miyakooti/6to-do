@@ -19,6 +19,7 @@ final class SettingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        BannerSetUpper.setUpBanner(bannerView: bannerView, viewController: self)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,9 +40,6 @@ final class SettingTableViewController: UITableViewController {
             case 0:
                 //　アプリ起動時、自動でタスク一覧を表示
                 return
-            case 1:
-                //to-doメモ
-                performSegue(withIdentifier: "goToMemo", sender: nil)
             default:
                 return
             }
@@ -49,18 +47,18 @@ final class SettingTableViewController: UITableViewController {
             switch row {
             case 0:
                 //アイビーリーメソッドとは？
-                performSegue(withIdentifier: "whatIs", sender: nil)
+                performSegue(withIdentifier: Constants.SegueKey.showWhatIsVCKey, sender: nil)
             case 1:
                 //レビューを書く
                 dispReview()
                 return
             case 2:
                 //開発者のtwitter
-                performSegue(withIdentifier: "showTwitter", sender: nil)
+                performSegue(withIdentifier: Constants.SegueKey.showTwitterVCKey, sender: nil)
                 return
             case 3:
                 //これまでに完了したtodoの数
-                performSegue(withIdentifier: "showSum", sender: nil)
+                performSegue(withIdentifier: Constants.SegueKey.showSumVCKey, sender: nil)
                 return
             default:
                 return
@@ -71,15 +69,11 @@ final class SettingTableViewController: UITableViewController {
     }
     
     @IBAction private func tapUISwitch(_ sender: Any) {
-        if settingSwitch.isOn {
-            UserDefaults.standard.setValue(true, forKey: "showSeeVCSetting")
-        } else {
-            UserDefaults.standard.setValue(false, forKey: "showSeeVCSetting")
-        }
+        UserDefaults.standard.setValue(settingSwitch.isOn, forKey: Constants.UserDefaultsKey.SettingOfshowSeeVCKey)
     }
     
     private func checkSwitchValue(){
-        settingSwitch.isOn = UserDefaults.standard.bool(forKey: "showSeeVCSetting")
+        settingSwitch.isOn = UserDefaults.standard.bool(forKey: Constants.UserDefaultsKey.SettingOfshowSeeVCKey)
     }
     
     private func dispReview(){
@@ -99,9 +93,7 @@ final class SettingTableViewController: UITableViewController {
         if let indexPathForSelectedRow = myTableView.indexPathForSelectedRow { //ハイライト解除
             myTableView.deselectRow(at: indexPathForSelectedRow, animated: true)
         }
-        bannerView.adUnitID = Constants.adUnitID
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+
     }
     
 }

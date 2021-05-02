@@ -10,6 +10,8 @@ final class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        checkSegueSetting()
+        BannerSetUpper.setUpBanner(bannerView: bannerView, viewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -21,24 +23,20 @@ final class TopViewController: UIViewController {
         if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) == nil{
             AlertPresenter.presentNewTaskAlert(topVC: self)
         } else {
-            performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
+            performSegue(withIdentifier: Constants.SegueKey.showSeeVCKey, sender: nil)
         }
     }
     
     @objc private func tapSetting(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: Constants.UserDefaultsKey.showSettingVCKey, sender: nil)
+        performSegue(withIdentifier: Constants.SegueKey.showSettingVCKey, sender: nil)
     }
     
     private func checkSegueSetting() {
-        if UserDefaults.standard.object(forKey: "showSeeVCSetting") != nil
-            && UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) != nil {
-            let showSeeVCSetting = UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.showSeeSettingKey) as! Bool
-            switch showSeeVCSetting {
-            case true:
-                performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
-            case false:
-                return
-            }
+        guard let settingOfShowSeeVCIsOn = UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.SettingOfshowSeeVCKey),
+              UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) != nil
+              else { return }
+        if settingOfShowSeeVCIsOn as! Bool {
+            performSegue(withIdentifier: Constants.SegueKey.showSeeVCKey, sender: nil)
         }
     }
     
@@ -46,11 +44,11 @@ final class TopViewController: UIViewController {
         // SeeViewControllerまたはInputViewControllerから遷移してきたときには、自動的に他のVCに遷移する。
         if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromSeeVCKey) != nil {
             UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromSeeVCKey)
-            performSegue(withIdentifier: Constants.UserDefaultsKey.showInputVCKey, sender: nil)
+            performSegue(withIdentifier: Constants.SegueKey.showInputVCKey, sender: nil)
         }
         if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromInputVCKey) != nil {
             UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromInputVCKey)
-            performSegue(withIdentifier: Constants.UserDefaultsKey.showSeeVCKey, sender: nil)
+            performSegue(withIdentifier: Constants.SegueKey.showSeeVCKey, sender: nil)
         }
     }
     
@@ -66,17 +64,10 @@ final class TopViewController: UIViewController {
         settingButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(tapSetting(_:)))
         self.navigationItem.rightBarButtonItem = settingButton
         
-        checkSegueSetting()
-
         startButton.layer.shadowColor = UIColor.black.cgColor
         startButton.layer.shadowRadius = 5
         startButton.layer.shadowOffset = .zero
         startButton.layer.shadowOpacity = 0.3
-        // GADBannerViewのプロパティを設定
-        bannerView.adUnitID = Constants.adUnitID
-        bannerView.rootViewController = self
-        // 広告読み込み
-        bannerView.load(GADRequest())
     }
     
 }
