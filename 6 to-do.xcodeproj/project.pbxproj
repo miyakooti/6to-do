@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C640CD9A15AA1F6677924A68 /* Pods_6_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */; };
+		D119279326464B9A00A2DE0F /* UIColorRGBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D119279226464B9A00A2DE0F /* UIColorRGBExtension.swift */; };
+		D119279726464C3500A2DE0F /* UserDefaultsKeyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */; };
 		D14355F0263973D600CE805A /* TextInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355EF263973D600CE805A /* TextInput.storyboard */; };
 		D14355F32639793100CE805A /* ShowList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355F22639793100CE805A /* ShowList.storyboard */; };
 		D14355F626397C1E00CE805A /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355F526397C1E00CE805A /* Setting.storyboard */; };
@@ -21,6 +23,7 @@
 		D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB73225E952E000548D99 /* TwitterViewController.swift */; };
 		D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */; };
 		D17658A526396C0200431794 /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A426396C0200431794 /* Twitter.storyboard */; };
+		D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D70F6264650070066762B /* SegueKeyExtension.swift */; };
 		D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */; };
 		D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */; };
 		D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */; };
@@ -30,9 +33,7 @@
 		D1D1E54A25E6881600240268 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E54825E6881600240268 /* Top.storyboard */; };
 		D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E54B25E6881900240268 /* Assets.xcassets */; };
 		D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */; };
-		D1D1E56025E68CAC00240268 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E55F25E68CAC00240268 /* NavigationController.swift */; };
 		D1D1E56E25E70EBC00240268 /* ShowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E56D25E70EBC00240268 /* ShowListViewController.swift */; };
-		D1D1E57125E72EB900240268 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E57025E72EB900240268 /* memo.txt */; };
 		D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E57725E7307B00240268 /* TextInputViewController.swift */; };
 		D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E58325E73C0000240268 /* TextInputCell.swift */; };
 		D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E58425E73C0000240268 /* TextInputCell.xib */; };
@@ -43,6 +44,8 @@
 		13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6_to_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F722FA33765F24EAC1E1631 /* Pods-6 to-do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.release.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.release.xcconfig"; sourceTree = "<group>"; };
 		82B9EFE4432E8DBED5BC19DA /* Pods-6 to-do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.debug.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.debug.xcconfig"; sourceTree = "<group>"; };
+		D119279226464B9A00A2DE0F /* UIColorRGBExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorRGBExtension.swift; sourceTree = "<group>"; };
+		D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeyExtension.swift; sourceTree = "<group>"; };
 		D14355EF263973D600CE805A /* TextInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextInput.storyboard; sourceTree = "<group>"; };
 		D14355F22639793100CE805A /* ShowList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowList.storyboard; sourceTree = "<group>"; };
 		D14355F526397C1E00CE805A /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		D16EB73225E952E000548D99 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSetUpExtension.swift; sourceTree = "<group>"; };
 		D17658A426396C0200431794 /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
+		D18D70F6264650070066762B /* SegueKeyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueKeyExtension.swift; sourceTree = "<group>"; };
 		D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowSum.storyboard; sourceTree = "<group>"; };
 		D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSumViewController.swift; sourceTree = "<group>"; };
 		D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountAnimateLabel.swift; sourceTree = "<group>"; };
@@ -67,9 +71,7 @@
 		D1D1E54B25E6881900240268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1D1E54E25E6881900240268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1D1E55025E6881900240268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1D1E55F25E68CAC00240268 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D1D1E56D25E70EBC00240268 /* ShowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListViewController.swift; sourceTree = "<group>"; };
-		D1D1E57025E72EB900240268 /* memo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
 		D1D1E57725E7307B00240268 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		D1D1E58325E73C0000240268 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		D1D1E58425E73C0000240268 /* TextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputCell.xib; sourceTree = "<group>"; };
@@ -110,6 +112,9 @@
 			children = (
 				D1F613BC262D31350043B762 /* AlertPresentExtension.swift */,
 				D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */,
+				D119279226464B9A00A2DE0F /* UIColorRGBExtension.swift */,
+				D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */,
+				D18D70F6264650070066762B /* SegueKeyExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,16 +168,15 @@
 		D1D1E54125E6881600240268 /* 6 to-do */ = {
 			isa = PBXGroup;
 			children = (
-				D151C1B4260B3F3400875252 /* Constants.swift */,
 				D1D1E54225E6881600240268 /* AppDelegate.swift */,
 				D1D1E54425E6881600240268 /* SceneDelegate.swift */,
-				D1D1E55025E6881900240268 /* Info.plist */,
-				D1D1E57025E72EB900240268 /* memo.txt */,
 				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
+				D151C1B4260B3F3400875252 /* Constants.swift */,
 				D119278D264648EB00A2DE0F /* Extensions */,
 				D151C1B2260B391300875252 /* Storyboards */,
 				D16EB71825E7968E00548D99 /* Views */,
 				D1D1E55925E68B9900240268 /* Controllers */,
+				D1D1E55025E6881900240268 /* Info.plist */,
 			);
 			path = "6 to-do";
 			sourceTree = "<group>";
@@ -180,7 +184,6 @@
 		D1D1E55925E68B9900240268 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1E55F25E68CAC00240268 /* NavigationController.swift */,
 				D1D1E54625E6881600240268 /* TopViewController.swift */,
 				D1D1E56D25E70EBC00240268 /* ShowListViewController.swift */,
 				D1D1E57725E7307B00240268 /* TextInputViewController.swift */,
@@ -252,7 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14355F0263973D600CE805A /* TextInput.storyboard in Resources */,
-				D1D1E57125E72EB900240268 /* memo.txt in Resources */,
 				D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */,
 				D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */,
 				D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */,
@@ -317,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */,
+				D119279726464C3500A2DE0F /* UserDefaultsKeyExtension.swift in Sources */,
 				D1D1E54725E6881600240268 /* TopViewController.swift in Sources */,
 				D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
@@ -324,12 +327,13 @@
 				D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */,
 				D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
+				D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
-				D1D1E56025E68CAC00240268 /* NavigationController.swift in Sources */,
 				D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */,
 				D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */,
 				D1D1E56E25E70EBC00240268 /* ShowListViewController.swift in Sources */,
 				D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */,
+				D119279326464B9A00A2DE0F /* UIColorRGBExtension.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
 				D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */,
 			);

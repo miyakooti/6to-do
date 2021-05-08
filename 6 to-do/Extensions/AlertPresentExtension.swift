@@ -14,7 +14,7 @@ extension UIViewController {
     func presentNewTaskAlert(topVC: TopViewController) {
         let alertController = UIAlertController(title: "まだタスクを登録していません。", message: "新たにタスクを登録しますか？", preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: "はい", style: .default) { (alert) in
-            topVC.performSegue(withIdentifier: Constants.SegueKey.showInputVCKey, sender: nil)
+            topVC.performSegue(withIdentifier: .showInputVCKey, sender: nil)
         }
         let action2 = UIAlertAction(title: "いいえ", style: .cancel)
         alertController.addAction(action1)
@@ -67,7 +67,7 @@ final class AlertPresenter {
     static func presentNewTaskAlert(topVC: TopViewController) {
         let alertController = UIAlertController(title: "まだタスクを登録していません。", message: "新たにタスクを登録しますか？", preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: "はい", style: .default) { (alert) in
-            topVC.performSegue(withIdentifier: Constants.SegueKey.showInputVCKey, sender: nil)
+            topVC.performSegue(withIdentifier: .showInputVCKey, sender: nil)
         }
         let action2 = UIAlertAction(title: "いいえ", style: .cancel)
         alertController.addAction(action1)

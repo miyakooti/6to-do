@@ -1,4 +1,3 @@
-
 import UIKit
 
 extension UIColor {
@@ -9,23 +8,4 @@ extension UIColor {
         let b = CGFloat(v / Int(powf(256, 0)) % 256) / 255
         self.init(red: r, green: g, blue: b, alpha: min(max(alpha, 0), 1))
     }
-}
-
-class NavigationController: UINavigationController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // navBar背景色
-        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "333C5E")
-        
-
-
-        
-
-    }
-    
-
-  
-
 }

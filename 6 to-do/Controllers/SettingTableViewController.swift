@@ -47,18 +47,18 @@ final class SettingTableViewController: UITableViewController {
             switch row {
             case 0:
                 //アイビーリーメソッドとは？
-                performSegue(withIdentifier: Constants.SegueKey.showWhatIsVCKey, sender: nil)
+                performSegue(withIdentifier: .showWhatIsVCKey, sender: nil)
             case 1:
                 //レビューを書く
                 dispReview()
                 return
             case 2:
                 //開発者のtwitter
-                performSegue(withIdentifier: Constants.SegueKey.showTwitterVCKey, sender: nil)
+                performSegue(withIdentifier: .showTwitterVCKey, sender: nil)
                 return
             case 3:
                 //これまでに完了したtodoの数
-                performSegue(withIdentifier: Constants.SegueKey.showSumVCKey, sender: nil)
+                performSegue(withIdentifier: .showSumVCKey, sender: nil)
                 return
             default:
                 return
@@ -69,11 +69,11 @@ final class SettingTableViewController: UITableViewController {
     }
     
     @IBAction private func tapUISwitch(_ sender: Any) {
-        UserDefaults.standard.setValue(settingSwitch.isOn, forKey: Constants.UserDefaultsKey.SettingOfshowSeeVCKey)
+        UserDefaults.standard.setValue(settingSwitch.isOn, forKey: .SettingOfshowSeeVCKey)
     }
     
     private func checkSwitchValue(){
-        settingSwitch.isOn = UserDefaults.standard.bool(forKey: Constants.UserDefaultsKey.SettingOfshowSeeVCKey)
+        settingSwitch.isOn = UserDefaults.standard.bool(forKey: .SettingOfshowSeeVCKey)
     }
     
     private func dispReview(){

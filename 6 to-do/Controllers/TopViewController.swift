@@ -20,35 +20,35 @@ final class TopViewController: UIViewController {
     }
 
     @IBAction private func tapStart(_ sender: Any) {
-        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) == nil{
+        if UserDefaults.standard.object(forKey: .sixTaskListKey) == nil{
             self.presentNewTaskAlert(topVC: self)
         } else {
-            performSegue(withIdentifier: Constants.SegueKey.showSeeVCKey, sender: nil)
+            performSegue(withIdentifier: .showSeeVCKey, sender: nil)
         }
     }
     
     @objc private func tapSetting(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: Constants.SegueKey.showSettingVCKey, sender: nil)
+        performSegue(withIdentifier: .showSettingVCKey, sender: nil)
     }
     
     private func checkSegueSetting() {
-        guard let settingOfShowSeeVCIsOn = UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.SettingOfshowSeeVCKey),
-              UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) != nil
+        guard let settingOfShowSeeVCIsOn = UserDefaults.standard.object(forKey: .SettingOfshowSeeVCKey),
+              UserDefaults.standard.object(forKey: .sixTaskListKey) != nil
               else { return }
         if settingOfShowSeeVCIsOn as! Bool {
-            performSegue(withIdentifier: Constants.SegueKey.showSeeVCKey, sender: nil)
+            performSegue(withIdentifier: .showSeeVCKey, sender: nil)
         }
     }
     
     private func checkAutomaticalTransition() {
         // SeeViewControllerまたはInputViewControllerから遷移してきたときには、自動的に他のVCに遷移する。
-        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromSeeVCKey) != nil {
-            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromSeeVCKey)
-            performSegue(withIdentifier: Constants.SegueKey.showInputVCKey, sender: nil)
+        if UserDefaults.standard.object(forKey: .fromSeeVCKey) != nil {
+            UserDefaults.standard.removeObject(forKey: .fromSeeVCKey)
+            performSegue(withIdentifier: .showInputVCKey, sender: nil)
         }
-        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.fromInputVCKey) != nil {
-            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKey.fromInputVCKey)
-            performSegue(withIdentifier: Constants.SegueKey.showSeeVCKey, sender: nil)
+        if UserDefaults.standard.object(forKey: .fromInputVCKey) != nil {
+            UserDefaults.standard.removeObject(forKey: .fromInputVCKey)
+            performSegue(withIdentifier: .showSeeVCKey, sender: nil)
         }
     }
     
