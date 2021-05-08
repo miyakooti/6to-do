@@ -38,6 +38,7 @@ struct sixTasks {
 }
 ~~~
 - AlertPresentExtensionの部分など、スコープが小さく名前の寿命が短いにもかかわらず、alertMessageといったふうに名前が細分化されている。
+- CountAnimateLabelはextensionで実装できたほうがよい
 - 
 
 # 改善したこと
