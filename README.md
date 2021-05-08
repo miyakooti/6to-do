@@ -26,3 +26,29 @@ appstoreリンク：https://apps.apple.com/jp/app/6-to-do-%E3%82%A2%E3%82%A4%E3%
 
 私は以前からこの作業を卓上のメモ帳に書いていたのですが、これがスマホでできたら便利だなと思ったときに思いついたアプリです。
 シンプルなアプリですが使い勝手がかなりよく作れたため、自分では一番気に入っています。
+
+# 問題点
+- どのアーキテクチャにもそれてない
+- SettingTableViewControllerがUITableViewをそのままインスタンス化してしまっている。
+- ６つのタスクのデータの処理が少し分かりづらい。これこそModelを利用して処理するべきだった。下記のような感じで。
+~~~
+struct sixTasks {
+    let taskBody: String?
+    let isCompleted: String?
+}
+~~~
+- AlertPresentExtensionの部分など、スコープが小さく名前の寿命が短いにもかかわらず、alertMessageといったふうに名前が細分化されている。
+- CountAnimateLabelはextensionで実装できたほうがよい
+- 
+
+# 改善したこと
+- 他のモジュールで利用しないメンバはprivateなどをつけた
+- storyboardを分割した
+- UITableViewは継承ではなくextensionにすることで、tableViewとUIViewControllerの処理を記述する場所を分割することが出来た。
+- 命名規則もろもろ。segueはshow
+- アラートの表示やバナーの設定などはextensionで分割
+- UserDefaultsのkeyなどは、暗黙のメンバー参照方式を利用して、他の人が間違えないようにした
+- if-else文ではなくguard文を利用して、コードを短くしつつ見やすくした。
+- ライフサイクルの中に見た目や色の設定を書いてしまっていたので、setUpViewsメソッドを別に定義して分割した
+- 
+
