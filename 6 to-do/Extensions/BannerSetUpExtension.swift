@@ -8,8 +8,8 @@
 import Foundation
 import GoogleMobileAds
 
-class BannerSetUpper {
-    static func setUpBanner(bannerView: GADBannerView, viewController: UIViewController) {
+extension GADBannerView {
+    func setUpBanner(bannerView: GADBannerView, viewController: UIViewController) {
         // GADBannerViewのプロパティを設定
         bannerView.adUnitID = Constants.adUnitID
         bannerView.rootViewController = viewController

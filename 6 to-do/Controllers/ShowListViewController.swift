@@ -21,7 +21,7 @@ final class ShowListViewController: UIViewController {
         super.viewDidLoad()
         sumOfCompletion = UserDefaults.standard.integer(forKey: "sumOfCompletion")
         setUpView()
-        BannerSetUpper.setUpBanner(bannerView: bannerView, viewController: self)
+        bannerView.setUpBanner(bannerView: bannerView, viewController: self)
     }
     
     @IBAction private func tapComplete(_ sender: Any) {

@@ -11,7 +11,7 @@ final class TopViewController: UIViewController {
         super.viewDidLoad()
         setUpView()
         checkSegueSetting()
-        BannerSetUpper.setUpBanner(bannerView: bannerView, viewController: self)
+        bannerView.setUpBanner(bannerView: bannerView, viewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -21,7 +21,7 @@ final class TopViewController: UIViewController {
 
     @IBAction private func tapStart(_ sender: Any) {
         if UserDefaults.standard.object(forKey: Constants.UserDefaultsKey.sixTaskListKey) == nil{
-            AlertPresenter.presentNewTaskAlert(topVC: self)
+            self.presentNewTaskAlert(topVC: self)
         } else {
             performSegue(withIdentifier: Constants.SegueKey.showSeeVCKey, sender: nil)
         }

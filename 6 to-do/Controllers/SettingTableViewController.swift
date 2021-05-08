@@ -19,7 +19,7 @@ final class SettingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
-        BannerSetUpper.setUpBanner(bannerView: bannerView, viewController: self)
+        bannerView.setUpBanner(bannerView: bannerView, viewController: self)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

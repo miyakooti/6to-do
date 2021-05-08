@@ -19,7 +19,7 @@
 		D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */; };
 		D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72F25E952D600548D99 /* WhatIsViewController.swift */; };
 		D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB73225E952E000548D99 /* TwitterViewController.swift */; };
-		D16F0201263E8BFE00419840 /* BannerSetUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F0200263E8BFE00419840 /* BannerSetUpper.swift */; };
+		D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */; };
 		D17658A526396C0200431794 /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A426396C0200431794 /* Twitter.storyboard */; };
 		D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */; };
 		D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */; };
@@ -36,7 +36,7 @@
 		D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E57725E7307B00240268 /* TextInputViewController.swift */; };
 		D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E58325E73C0000240268 /* TextInputCell.swift */; };
 		D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E58425E73C0000240268 /* TextInputCell.xib */; };
-		D1F613BD262D31350043B762 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F613BC262D31350043B762 /* AlertPresenter.swift */; };
+		D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F613BC262D31350043B762 /* AlertPresentExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +54,7 @@
 		D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		D16EB72F25E952D600548D99 /* WhatIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsViewController.swift; sourceTree = "<group>"; };
 		D16EB73225E952E000548D99 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
-		D16F0200263E8BFE00419840 /* BannerSetUpper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSetUpper.swift; sourceTree = "<group>"; };
+		D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSetUpExtension.swift; sourceTree = "<group>"; };
 		D17658A426396C0200431794 /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 		D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowSum.storyboard; sourceTree = "<group>"; };
 		D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSumViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		D1D1E57725E7307B00240268 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		D1D1E58325E73C0000240268 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		D1D1E58425E73C0000240268 /* TextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputCell.xib; sourceTree = "<group>"; };
-		D1F613BC262D31350043B762 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		D1F613BC262D31350043B762 /* AlertPresentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +105,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D119278D264648EB00A2DE0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1F613BC262D31350043B762 /* AlertPresentExtension.swift */,
+				D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D151C1B2260B391300875252 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,13 +142,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D16EB72725E899FB00548D99 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		D1D1E53625E6881600240268 = {
 			isa = PBXGroup;
 			children = (
@@ -166,11 +168,9 @@
 				D1D1E54425E6881600240268 /* SceneDelegate.swift */,
 				D1D1E55025E6881900240268 /* Info.plist */,
 				D1D1E57025E72EB900240268 /* memo.txt */,
-				D1F613BC262D31350043B762 /* AlertPresenter.swift */,
 				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
-				D16F0200263E8BFE00419840 /* BannerSetUpper.swift */,
+				D119278D264648EB00A2DE0F /* Extensions */,
 				D151C1B2260B391300875252 /* Storyboards */,
-				D16EB72725E899FB00548D99 /* Models */,
 				D16EB71825E7968E00548D99 /* Views */,
 				D1D1E55925E68B9900240268 /* Controllers */,
 			);
@@ -322,14 +322,14 @@
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
 				D151C1B5260B3F3400875252 /* Constants.swift in Sources */,
 				D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */,
-				D1F613BD262D31350043B762 /* AlertPresenter.swift in Sources */,
+				D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
 				D1D1E56025E68CAC00240268 /* NavigationController.swift in Sources */,
 				D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */,
 				D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */,
 				D1D1E56E25E70EBC00240268 /* ShowListViewController.swift in Sources */,
-				D16F0201263E8BFE00419840 /* BannerSetUpper.swift in Sources */,
+				D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
 				D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */,
 			);
