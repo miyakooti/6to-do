@@ -10,8 +10,8 @@ final class ShowListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var topLabel: UILabel!
     
-    private let sixTaskList = UserDefaults.standard.object(forKey: "sixTaskList") as! [String]
-    private var isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
+    private let sixTaskList = UserDefaults.standard.object(forKey: .sixTaskListKey) as! [String]
+    private var isCompletedList = UserDefaults.standard.object(forKey: .isCompletedListKey) as! [Bool]
     private var numOfCompleted:Int?
     private let encourageMessageList = Constants.encourageMessageList
 
@@ -19,7 +19,7 @@ final class ShowListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sumOfCompletion = UserDefaults.standard.integer(forKey: "sumOfCompletion")
+        sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
         setUpView()
         bannerView.setUpBanner(bannerView: bannerView, viewController: self)
     }
@@ -35,10 +35,10 @@ final class ShowListViewController: UIViewController {
                     cell.isCompleted = true
                     
                     sumOfCompletion = sumOfCompletion + 1
-                    UserDefaults.standard.setValue(sumOfCompletion, forKey: "sumOfCompletion")
+                    UserDefaults.standard.setValue(sumOfCompletion, forKey: .sumOfCompletionKey)
                     
                     isCompletedList[indexPath.row] = true
-                    UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList")
+                    UserDefaults.standard.setValue(isCompletedList, forKey: .isCompletedListKey)
                     UserDefaults.standard.synchronize()
                     
                     tableView.reloadData()
@@ -64,9 +64,9 @@ final class ShowListViewController: UIViewController {
     }
     
     internal func deleteAll(){
-        UserDefaults.standard.removeObject(forKey: "sixTaskList")
-        UserDefaults.standard.removeObject(forKey: "isCompletedList")
-        UserDefaults.standard.setValue("明日のタスクを設定中", forKey: "fromSeeVC")
+        UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
+        UserDefaults.standard.removeObject(forKey: .isCompletedListKey)
+        UserDefaults.standard.setValue("明日のタスクを設定中", forKey: .fromSeeVCKey)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -116,7 +116,7 @@ extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
-        isCompletedList = UserDefaults.standard.object(forKey: "isCompletedList") as! [Bool]
+        isCompletedList = UserDefaults.standard.object(forKey: .isCompletedListKey) as! [Bool]
         cell.isCompleted = isCompletedList[indexPath.row]
         
         let textForCell = String(indexPath.row + 1)+". "+sixTaskList[indexPath.row]

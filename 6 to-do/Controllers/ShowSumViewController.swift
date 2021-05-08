@@ -8,7 +8,7 @@ final class ShowSumViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        sumOfCompletion = UserDefaults.standard.integer(forKey: "sumOfCompletion")
+        sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
         setUpViews()
     }
 

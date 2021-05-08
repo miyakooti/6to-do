@@ -41,7 +41,7 @@ final class TextInputViewController: UIViewController {
             saveTasksFromTextField()
             return
         case 3:
-            UserDefaults.standard.setValue("今日のタスクの設定が完了", forKey: "fromInputVC")
+            UserDefaults.standard.setValue("今日のタスクの設定が完了", forKey: .fromInputVCKey)
             self.navigationController?.popViewController(animated: true)
         default:
             print("tapNextがおかしいです")
@@ -62,8 +62,8 @@ final class TextInputViewController: UIViewController {
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             sixTaskList.append(cell.textField.text!)
         }
-        UserDefaults.standard.setValue(sixTaskList, forKey: "sixTaskList")
-        UserDefaults.standard.setValue(isCompletedList, forKey: "isCompletedList")
+        UserDefaults.standard.setValue(sixTaskList, forKey: .sixTaskListKey)
+        UserDefaults.standard.setValue(isCompletedList, forKey: .isCompletedListKey)
         UserDefaults.standard.synchronize()
     }
     
