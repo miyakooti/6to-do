@@ -15,7 +15,7 @@ final class WhatIsViewController: UIViewController {
         let height = textView.sizeThatFits(CGSize(width: textView.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
         textView.heightAnchor.constraint(equalToConstant: height+100).isActive = true
         myView.layer.cornerRadius = 30
-        self.navigationItem.title = "アイビーリーメソッドとは"
+        self.navigationItem.title = VCType.whatIs.navigationTitle
         self.overrideUserInterfaceStyle = .light
     }
 

@@ -50,7 +50,8 @@ final class ShowListViewController: UIViewController {
     }
     
     @objc private func tapGarbage(_ sender: UIBarButtonItem) {
-        AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: numOfCompleted!, showListVC: self)
+        guard let num = numOfCompleted else { return }
+        AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: num, showListVC: self)
     }
     
     private func checkButtonValue(){
@@ -72,7 +73,7 @@ final class ShowListViewController: UIViewController {
     
     private func setUpView() {
         self.overrideUserInterfaceStyle = .light
-        self.navigationItem.title = "タスク一覧"
+        self.navigationItem.title = VCType.showList.navigationTitle
         
         tableView.delegate = self
         tableView.dataSource = self

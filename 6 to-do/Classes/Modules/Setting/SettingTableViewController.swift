@@ -87,7 +87,7 @@ final class SettingTableViewController: UITableViewController {
     }
     
     private func setUpView() {
-        self.navigationItem.title = "設定"
+        self.navigationItem.title = VCType.setting.navigationTitle
         self.overrideUserInterfaceStyle = .light
         checkSwitchValue()
         if let indexPathForSelectedRow = myTableView.indexPathForSelectedRow { //ハイライト解除

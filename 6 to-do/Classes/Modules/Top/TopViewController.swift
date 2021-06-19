@@ -55,15 +55,15 @@ final class TopViewController: UIViewController {
     private func setUpView(){
         self.overrideUserInterfaceStyle = .light
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.20, green: 0.23, blue: 0.36, alpha: 1.0)
-        startButton.layer.cornerRadius = 5
         self.navigationItem.backButtonTitle = "戻る"
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationItem.title = "TOP"
+        self.navigationItem.title = VCType.top.navigationTitle
         self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         settingButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(tapSetting(_:)))
         self.navigationItem.rightBarButtonItem = settingButton
         
+        startButton.layer.cornerRadius = 5
         startButton.layer.shadowColor = UIColor.black.cgColor
         startButton.layer.shadowRadius = 5
         startButton.layer.shadowOffset = .zero

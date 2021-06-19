@@ -10,14 +10,14 @@ final class TwitterViewController: UIViewController {
     }
     
     @IBAction private func tapTwitter(_ sender: Any) {
-        let url = URL(string: "https://twitter.com/karai_shan")
+        guard let url = URL(string: "https://twitter.com/karai_shan") else { return }
         //UIApplication.shared.openURL(url!)
         // iOS 10以降利用可能
-        UIApplication.shared.open(url!)
+        UIApplication.shared.open(url)
     }
     
     private func setUpView() {
-        self.navigationItem.title = "twitter"
+        self.navigationItem.title = VCType.twitter.navigationTitle
         self.overrideUserInterfaceStyle = .light
         twitterButton.layer.cornerRadius = 10
         twitterButton.layer.shadowColor = UIColor.black.cgColor

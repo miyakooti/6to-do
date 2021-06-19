@@ -13,7 +13,7 @@ final class ShowSumViewController: UIViewController {
     }
 
     private func setUpViews(){
-        self.navigationItem.title = "これまでに完了したタスクの数は、、"
+        self.navigationItem.title = VCType.showSum.navigationTitle
         self.overrideUserInterfaceStyle = .light
         
         label = CountAnimateLabel()

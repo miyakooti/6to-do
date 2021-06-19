@@ -29,3 +29,27 @@ struct Constants {
 
 }
 
+enum VCType {
+    
+    case top
+    case showList
+    case textInput
+    case setting
+    case whatIs
+    case twitter
+    case showSum
+    
+    var navigationTitle: String {
+        
+        switch self {
+        case .top: return "TOP"
+        case .showList: return "タスク一覧"
+        case .textInput: return "明日のタスクを設定する"
+        case .setting: return "設定"
+        case .whatIs: return "アイビーリーメソッドとは？"
+        case .twitter: return "Twitter"
+        case .showSum: return "これまでに完了したタスクの数は、、"
+        }
+    }
+}
+

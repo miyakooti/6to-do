@@ -179,6 +179,7 @@
 		D1F92305267E4309000B4E46 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				D1F92310267E4A1A000B4E46 /* Enums */,
 				D16EB71825E7968E00548D99 /* Cells */,
 				D119278D264648EB00A2DE0F /* Extensions */,
 				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
@@ -265,6 +266,13 @@
 				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		D1F92310267E4A1A000B4E46 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -91,7 +91,7 @@ final class TextInputViewController: UIViewController {
     
     private func setUpView() {
         self.overrideUserInterfaceStyle = .light
-        self.navigationItem.title = "明日のタスクを設定する"
+        self.navigationItem.title = VCType.textInput.navigationTitle
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TextInputCell", bundle: nil), forCellReuseIdentifier: "TextInputCell")
