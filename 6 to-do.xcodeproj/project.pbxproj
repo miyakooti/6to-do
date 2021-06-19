@@ -119,32 +119,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D151C1B2260B391300875252 /* Storyboards */ = {
+		D16EB71825E7968E00548D99 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
-				D1D1E54825E6881600240268 /* Top.storyboard */,
-				D14355EF263973D600CE805A /* TextInput.storyboard */,
-				D14355F22639793100CE805A /* ShowList.storyboard */,
-				D14355F526397C1E00CE805A /* Setting.storyboard */,
-				D14355F826397CC400CE805A /* WhatIs.storyboard */,
-				D17658A426396C0200431794 /* Twitter.storyboard */,
-				D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		D16EB71825E7968E00548D99 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D1D1E54B25E6881900240268 /* Assets.xcassets */,
 				D1D1E58425E73C0000240268 /* TextInputCell.xib */,
 				D16EB71C25E7A41300548D99 /* TaskShowCell.xib */,
 				D14E2FDC25FD95F20048D7FC /* TaskMemoCell.xib */,
 				D1D1E58325E73C0000240268 /* TextInputCell.swift */,
 				D16EB71B25E7A41300548D99 /* TaskShowCell.swift */,
 			);
-			path = Views;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D1D1E53625E6881600240268 = {
@@ -168,31 +152,119 @@
 		D1D1E54125E6881600240268 /* 6 to-do */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1E54225E6881600240268 /* AppDelegate.swift */,
-				D1D1E54425E6881600240268 /* SceneDelegate.swift */,
-				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
-				D151C1B4260B3F3400875252 /* Constants.swift */,
-				D119278D264648EB00A2DE0F /* Extensions */,
-				D151C1B2260B391300875252 /* Storyboards */,
-				D16EB71825E7968E00548D99 /* Views */,
-				D1D1E55925E68B9900240268 /* Controllers */,
+				D1F92307267E435A000B4E46 /* Classes */,
 				D1D1E55025E6881900240268 /* Info.plist */,
+				D1D1E54B25E6881900240268 /* Assets.xcassets */,
 			);
 			path = "6 to-do";
 			sourceTree = "<group>";
 		};
-		D1D1E55925E68B9900240268 /* Controllers */ = {
+		D1D1E55925E68B9900240268 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D1D1E54225E6881600240268 /* AppDelegate.swift */,
+				D1D1E54425E6881600240268 /* SceneDelegate.swift */,
+				D1F9230F267E43DD000B4E46 /* Launch */,
+				D1F92308267E4383000B4E46 /* Top */,
+				D1F92309267E438D000B4E46 /* ShowList */,
+				D1F9230A267E4398000B4E46 /* TextInput */,
+				D1F9230B267E43A1000B4E46 /* Setting */,
+				D1F9230C267E43A8000B4E46 /* WhatIs */,
+				D1F9230D267E43AE000B4E46 /* Twitter */,
+				D1F9230E267E43B5000B4E46 /* ShowSum */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D1F92305267E4309000B4E46 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				D16EB71825E7968E00548D99 /* Cells */,
+				D119278D264648EB00A2DE0F /* Extensions */,
+				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
+				D151C1B4260B3F3400875252 /* Constants.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		D1F92307267E435A000B4E46 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D1D1E55925E68B9900240268 /* Modules */,
+				D1F92305267E4309000B4E46 /* Commons */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D1F92308267E4383000B4E46 /* Top */ = {
 			isa = PBXGroup;
 			children = (
 				D1D1E54625E6881600240268 /* TopViewController.swift */,
-				D1D1E56D25E70EBC00240268 /* ShowListViewController.swift */,
-				D1D1E57725E7307B00240268 /* TextInputViewController.swift */,
-				D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */,
-				D16EB72F25E952D600548D99 /* WhatIsViewController.swift */,
-				D16EB73225E952E000548D99 /* TwitterViewController.swift */,
-				D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */,
+				D1D1E54825E6881600240268 /* Top.storyboard */,
 			);
-			path = Controllers;
+			path = Top;
+			sourceTree = "<group>";
+		};
+		D1F92309267E438D000B4E46 /* ShowList */ = {
+			isa = PBXGroup;
+			children = (
+				D1D1E56D25E70EBC00240268 /* ShowListViewController.swift */,
+				D14355F22639793100CE805A /* ShowList.storyboard */,
+			);
+			path = ShowList;
+			sourceTree = "<group>";
+		};
+		D1F9230A267E4398000B4E46 /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				D1D1E57725E7307B00240268 /* TextInputViewController.swift */,
+				D14355EF263973D600CE805A /* TextInput.storyboard */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		D1F9230B267E43A1000B4E46 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */,
+				D14355F526397C1E00CE805A /* Setting.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D1F9230C267E43A8000B4E46 /* WhatIs */ = {
+			isa = PBXGroup;
+			children = (
+				D16EB72F25E952D600548D99 /* WhatIsViewController.swift */,
+				D14355F826397CC400CE805A /* WhatIs.storyboard */,
+			);
+			path = WhatIs;
+			sourceTree = "<group>";
+		};
+		D1F9230D267E43AE000B4E46 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				D16EB73225E952E000548D99 /* TwitterViewController.swift */,
+				D17658A426396C0200431794 /* Twitter.storyboard */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		D1F9230E267E43B5000B4E46 /* ShowSum */ = {
+			isa = PBXGroup;
+			children = (
+				D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */,
+				D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */,
+			);
+			path = ShowSum;
+			sourceTree = "<group>";
+		};
+		D1F9230F267E43DD000B4E46 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				D1D1E54D25E6881900240268 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
