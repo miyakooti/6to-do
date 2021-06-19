@@ -6,5 +6,5 @@ extension String {
     static var showSettingVCKey: String { return "showSettingTVC" }
     static var showWhatIsVCKey: String { return "showWhatIsVC" }
     static var showTwitterVCKey: String { return "showTwitterVC" }
-    static var showSumVCKey: String { return "showSumVC" }
+    static var showHistoryVCKey: String { return "showHistoryVC" }
 }

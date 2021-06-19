@@ -38,6 +38,10 @@
 		D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E58325E73C0000240268 /* TextInputCell.swift */; };
 		D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E58425E73C0000240268 /* TextInputCell.xib */; };
 		D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F613BC262D31350043B762 /* AlertPresentExtension.swift */; };
+		D1F92313267E5285000B4E46 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F92312267E5285000B4E46 /* HistoryViewController.swift */; };
+		D1F92315267E5297000B4E46 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F92314267E5297000B4E46 /* History.storyboard */; };
+		D1F92317267E5C52000B4E46 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F92316267E5C52000B4E46 /* UILabelExtension.swift */; };
+		D1F9231A267E6260000B4E46 /* ProjectColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F92319267E6260000B4E46 /* ProjectColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		D1D1E58325E73C0000240268 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		D1D1E58425E73C0000240268 /* TextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputCell.xib; sourceTree = "<group>"; };
 		D1F613BC262D31350043B762 /* AlertPresentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentExtension.swift; sourceTree = "<group>"; };
+		D1F92312267E5285000B4E46 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D1F92314267E5297000B4E46 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		D1F92316267E5C52000B4E46 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		D1F92319267E6260000B4E46 /* ProjectColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 				D119279226464B9A00A2DE0F /* UIColorRGBExtension.swift */,
 				D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */,
 				D18D70F6264650070066762B /* SegueKeyExtension.swift */,
+				D1F92316267E5C52000B4E46 /* UILabelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 				D1F9230C267E43A8000B4E46 /* WhatIs */,
 				D1F9230D267E43AE000B4E46 /* Twitter */,
 				D1F9230E267E43B5000B4E46 /* ShowSum */,
+				D1F92311267E523C000B4E46 /* History */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -179,11 +189,10 @@
 		D1F92305267E4309000B4E46 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				D1F92310267E4A1A000B4E46 /* Enums */,
+				D1F92318267E622C000B4E46 /* Utilities */,
 				D16EB71825E7968E00548D99 /* Cells */,
 				D119278D264648EB00A2DE0F /* Extensions */,
 				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
-				D151C1B4260B3F3400875252 /* Constants.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -268,11 +277,22 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
-		D1F92310267E4A1A000B4E46 /* Enums */ = {
+		D1F92311267E523C000B4E46 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				D1F92312267E5285000B4E46 /* HistoryViewController.swift */,
+				D1F92314267E5297000B4E46 /* History.storyboard */,
 			);
-			path = Enums;
+			path = History;
+			sourceTree = "<group>";
+		};
+		D1F92318267E622C000B4E46 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D151C1B4260B3F3400875252 /* Constants.swift */,
+				D1F92319267E6260000B4E46 /* ProjectColor.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +365,7 @@
 				D14355F32639793100CE805A /* ShowList.storyboard in Resources */,
 				D14355F926397CC400CE805A /* WhatIs.storyboard in Resources */,
 				D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */,
+				D1F92315267E5297000B4E46 /* History.storyboard in Resources */,
 				D14355F626397C1E00CE805A /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,12 +431,15 @@
 				D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
 				D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */,
+				D1F92317267E5C52000B4E46 /* UILabelExtension.swift in Sources */,
 				D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */,
 				D1D1E56E25E70EBC00240268 /* ShowListViewController.swift in Sources */,
 				D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */,
 				D119279326464B9A00A2DE0F /* UIColorRGBExtension.swift in Sources */,
+				D1F92313267E5285000B4E46 /* HistoryViewController.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
 				D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */,
+				D1F9231A267E6260000B4E46 /* ProjectColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
