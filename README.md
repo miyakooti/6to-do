@@ -1,4 +1,8 @@
-### [appstoreリンクはこちら](https://apps.apple.com/jp/app/6-to-do-%E3%82%A2%E3%82%A4%E3%83%93%E3%83%BC-%E3%83%AA%E3%83%BC-%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E5%BC%8F%E3%82%BF%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id1555816223#?platform=iphone)
+### [----- appstoreリンクはこちら -----](https://apps.apple.com/jp/app/6-to-do-%E3%82%A2%E3%82%A4%E3%83%93%E3%83%BC-%E3%83%AA%E3%83%BC-%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E5%BC%8F%E3%82%BF%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id1555816223#?platform=iphone)
+
+<br>
+<br>
+<br>
 
 # 6 to-do 【アイビー・リー・メソッド式タスク管理アプリ‪】‬
 
@@ -22,6 +26,10 @@
 私は以前からこの作業を卓上のメモ帳に書いていたのですが、これがスマホでできたら便利だなと思ったときに思いついたアプリです。
 シンプルなアプリですが使い勝手がかなりよく作れたため、自分では一番気に入っています。
 
+<br>
+<br>
+<br>
+
 ## 問題点
 - どのアーキテクチャにもそれてない
 - SettingTableViewControllerがUITableViewをそのままインスタンス化してしまっている。viewControllerのインスタンスをtableViewで拡張するべき。
@@ -36,23 +44,29 @@ struct sixTasks {
 - CountAnimateLabelはextensionで実装できたほうがよい
 - 
 
+<br>
+<br>
+<br>
+
 ## 改善したこと
 - 他のモジュールで利用しないメンバはprivateなどをつけた。
 - 継承を意図していないクラスは、finalをつけた。
-- storyboardを分割した
+- [storyboardを分割した](https://qiita.com/miyakooti/items/6d1f6368344468e49b0e)
 - UITableViewは継承ではなくextensionにすることで、tableViewとUIViewControllerの処理を記述する場所を分割することが出来た。
-- 命名規則もろもろ。segueはshow
+- 命名規則もろもろ。segueはshowという規則があるらしい。
 - アラートの表示やバナーの設定などはextensionで分割
 - UserDefaultsのkeyなどは、Stringで暗黙のメンバー参照方式を利用して、タイポ防止。
 - if-else文ではなくguard文を利用して、letで定義しつつ早期判定をすることで、コードを短く、見やすくした。
 - ライフサイクルの中に見た目や色の設定を書いてしまっていたので、setUpViewsメソッドを別に定義して分割した
 - JSONEncoderを利用して、タスクをカスタムクラスで管理するようにした。
-- エンコードの処理をジェネリクスで共通化したので、他のカスタムクラスでもエンコードが利用できるようになった。
+- [エンコードの処理をジェネリクスで共通化したので、他のカスタムクラスでもエンコードが利用できるようになった。](https://github.com/miyakooti/myWiki/wiki/JSONEncoder.swift)
 - セルのテキストや棒線の処理などは、ViewContollerではなくセルのファイルに書くようにした。
-- ラベルを丸くする、色を１６進数で初期化する等、汎用性の高い機能はExtensionを利用して、再利用できるようにした。
+- [ラベルを丸くする](https://github.com/miyakooti/myWiki/wiki/%E6%AD%A3%E6%96%B9%E5%BD%A2%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E5%86%86%E3%81%AB%E3%81%99%E3%82%8B)、[色を１６進数で初期化する](https://github.com/miyakooti/myWiki/wiki/6%E6%A1%81%E3%81%AE16%E9%80%B2%E6%95%B0%E3%81%A7UIColor%E3%82%92%E5%88%9D%E6%9C%9F%E5%8C%96%E3%81%99%E3%82%8B)等、汎用性の高い機能はExtensionを利用して、再利用できるようにした。
 - 
 
-
+<br>
+<br>
+<br>
 
 ## これからやってみたいこと
 - これまでに完了したタスクを、SNSに共有する機能
