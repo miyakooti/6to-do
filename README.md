@@ -42,6 +42,7 @@ struct sixTasks {
 ~~~
 - AlertPresentExtensionの部分など、スコープが小さく名前の寿命が短いにもかかわらず、alertMessageといったふうに名前が細分化されている。
 - CountAnimateLabelはextensionで実装できたほうがよい
+- 「VCをdismiss→戻ってきたVCから、自動的に別のVCへ遷移」という動きをUserDefaultでやっているのはおかしいと思う
 - 
 
 <br>
