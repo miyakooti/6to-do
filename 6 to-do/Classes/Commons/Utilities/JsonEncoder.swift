@@ -17,7 +17,7 @@ class JsonEncoder {
     class func readItemsFromUserUserDefault<T: Codable>(key: String) -> [T] {
         guard let items = UserDefaults.standard.array(forKey: key) as? [Data] else { return [T]() }
         let decodedItems = items.map { try! JSONDecoder().decode(T.self, from: $0) }
-        return decodedItems as [T]
+        return decodedItems
     }
     
 }

@@ -52,8 +52,7 @@ final class TextInputViewController: UIViewController {
     
     private func saveTasksFromTextField(){
         //初期化
-//        var sixTaskList:[String] = []
-//        let isCompletedList = [Bool](repeating: false, count: 6)
+
         var taskList: [Task] = []
         
         for i in 0...5{
@@ -66,14 +65,10 @@ final class TextInputViewController: UIViewController {
             let task = Task(body: text, isCompleted: false)
             taskList.append(task)
             
-//            print(taskList)
             JsonEncoder.saveItemsToUserDefaults(list: taskList, key: .sixTaskListKey)
             
-//            sixTaskList.append(cell.textField.text!)
         }
-//        UserDefaults.standard.setValue(sixTaskList, forKey: .sixTaskListKey)
-//        UserDefaults.standard.setValue(isCompletedList, forKey: .isCompletedListKey)
-//        UserDefaults.standard.synchronize()
+
     }
     
     private func checkIsFilled() -> Bool {

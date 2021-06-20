@@ -68,7 +68,6 @@ final class ShowListViewController: UIViewController {
     
     internal func deleteAll(){
         UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
-        UserDefaults.standard.removeObject(forKey: .isCompletedListKey)
         UserDefaults.standard.setValue("明日のタスクを設定中", forKey: .fromSeeVCKey)
         self.navigationController?.popViewController(animated: true)
     }
