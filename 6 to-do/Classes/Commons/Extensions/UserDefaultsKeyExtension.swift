@@ -8,4 +8,5 @@ extension String {
     static var fromInputVCKey: String { return "fromInputVC" }
     static var sumOfCompletionKey: String { return "sumOfCompvarion" }
     static var SettingOfshowSeeVCKey: String { return "SettingOfshowSeeVC" }
+    static var HistoryKey: String { return "histryList" }
 }

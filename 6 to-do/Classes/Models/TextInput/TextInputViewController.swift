@@ -52,19 +52,28 @@ final class TextInputViewController: UIViewController {
     
     private func saveTasksFromTextField(){
         //初期化
-        var sixTaskList:[String] = []
-        let isCompletedList = [Bool](repeating: false, count: 6)
+//        var sixTaskList:[String] = []
+//        let isCompletedList = [Bool](repeating: false, count: 6)
+        var taskList: [Task] = []
         
         for i in 0...5{
             //これによって、intをIndexPath型に変換しています。
             let indexPath = IndexPath(row: i, section: 0)
             //そのIndexPathとcellForRowの処理をループさせることによって、カスタムセルの中の要素の値を取得できるようにしています。
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
-            sixTaskList.append(cell.textField.text!)
+            
+            guard let text = cell.textField.text else { return }
+            let task = Task(body: text, isCompleted: false)
+            taskList.append(task)
+            
+//            print(taskList)
+            JsonEncoder.saveItemsToUserDefaults(list: taskList, key: .sixTaskListKey)
+            
+//            sixTaskList.append(cell.textField.text!)
         }
-        UserDefaults.standard.setValue(sixTaskList, forKey: .sixTaskListKey)
-        UserDefaults.standard.setValue(isCompletedList, forKey: .isCompletedListKey)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.setValue(sixTaskList, forKey: .sixTaskListKey)
+//        UserDefaults.standard.setValue(isCompletedList, forKey: .isCompletedListKey)
+//        UserDefaults.standard.synchronize()
     }
     
     private func checkIsFilled() -> Bool {

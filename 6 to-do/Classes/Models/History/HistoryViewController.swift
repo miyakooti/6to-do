@@ -16,6 +16,7 @@ final class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
+        
         setUpViews()
     }
 
@@ -35,12 +36,9 @@ final class HistoryViewController: UIViewController {
         animationLabel.textAlignment = .center
         animationLabel.adjustsFontSizeToFitWidth = true
         animationLabel.textColor = .white
-        
         animationLabel.convertCircle(width: labelWidth)
-
         
         view.addSubview(animationLabel)
-        
         animationLabel.animate(from: 0, to: 150, duration: 1.3)
     }
 
