@@ -58,7 +58,7 @@ final class SettingTableViewController: UITableViewController {
                 return
             case 3:
                 //これまでに完了したtodoの数
-                performSegue(withIdentifier: .showSumVCKey, sender: nil)
+                performSegue(withIdentifier: .showHistoryVCKey, sender: nil)
                 return
             default:
                 return
