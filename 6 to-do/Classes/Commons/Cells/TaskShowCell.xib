@@ -20,7 +20,7 @@
                         <rect key="frame" x="13" y="5" width="377" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここにタスクのテキストが入ります" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-Ze-yNF">
-                                <rect key="frame" x="15" y="20" width="347" height="20"/>
+                                <rect key="frame" x="15" y="21.5" width="347" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -29,9 +29,8 @@
                         <color key="backgroundColor" red="0.32156862749999998" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cZt-Ze-yNF" secondAttribute="trailing" constant="15" id="JPm-AZ-LCi"/>
-                            <constraint firstAttribute="bottom" secondItem="cZt-Ze-yNF" secondAttribute="bottom" constant="20" id="N3B-55-vzf"/>
+                            <constraint firstItem="cZt-Ze-yNF" firstAttribute="centerY" secondItem="8PI-Y0-owo" secondAttribute="centerY" id="XK6-XO-7iD"/>
                             <constraint firstItem="cZt-Ze-yNF" firstAttribute="leading" secondItem="8PI-Y0-owo" secondAttribute="leading" constant="15" id="bOy-LB-CGC"/>
-                            <constraint firstItem="cZt-Ze-yNF" firstAttribute="top" secondItem="8PI-Y0-owo" secondAttribute="top" constant="20" id="mfw-gN-bUw"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -45,7 +44,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="backView" destination="8PI-Y0-owo" id="3Eh-Sm-fHN"/>
+                <outlet property="backView" destination="H2p-sc-9uM" id="bvM-U8-3EG"/>
+                <outlet property="labelBackView" destination="8PI-Y0-owo" id="3Eh-Sm-fHN"/>
                 <outlet property="taskLabel" destination="cZt-Ze-yNF" id="GGo-iD-g6L"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="86.383928571428569"/>

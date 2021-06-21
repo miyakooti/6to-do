@@ -57,11 +57,15 @@ final class ShowListViewController: UIViewController {
                     
                     let history = History(date: String(todayString), text: taskList[indexPath.row].body)
                     
-                    historyList.append(history)
+                    historyList.insert(history, at: 0)
+                    
+                    if historyList.count > 300 {
+                        historyList.removeLast()
+                    }
                     
                     JsonEncoder.saveItemsToUserDefaults(list: historyList, key: .HistoryKey)
                     
-                    let test: [History] = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
+//                    let test: [History] = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
 
                     
                     

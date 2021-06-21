@@ -10,6 +10,8 @@
 		C640CD9A15AA1F6677924A68 /* Pods_6_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B7FB1E701505BCDDE02D82 /* Pods_6_to_do.framework */; };
 		D119279326464B9A00A2DE0F /* UIColorRGBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D119279226464B9A00A2DE0F /* UIColorRGBExtension.swift */; };
 		D119279726464C3500A2DE0F /* UserDefaultsKeyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */; };
+		D125B4932680E177000D7D88 /* HistoryDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125B4912680E177000D7D88 /* HistoryDateCell.swift */; };
+		D125B4942680E177000D7D88 /* HistoryDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D125B4922680E177000D7D88 /* HistoryDateCell.xib */; };
 		D14355F0263973D600CE805A /* TextInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355EF263973D600CE805A /* TextInput.storyboard */; };
 		D14355F32639793100CE805A /* ShowList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355F22639793100CE805A /* ShowList.storyboard */; };
 		D14355F626397C1E00CE805A /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14355F526397C1E00CE805A /* Setting.storyboard */; };
@@ -52,6 +54,8 @@
 		82B9EFE4432E8DBED5BC19DA /* Pods-6 to-do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6 to-do.debug.xcconfig"; path = "Target Support Files/Pods-6 to-do/Pods-6 to-do.debug.xcconfig"; sourceTree = "<group>"; };
 		D119279226464B9A00A2DE0F /* UIColorRGBExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorRGBExtension.swift; sourceTree = "<group>"; };
 		D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeyExtension.swift; sourceTree = "<group>"; };
+		D125B4912680E177000D7D88 /* HistoryDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDateCell.swift; sourceTree = "<group>"; };
+		D125B4922680E177000D7D88 /* HistoryDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDateCell.xib; sourceTree = "<group>"; };
 		D14355EF263973D600CE805A /* TextInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextInput.storyboard; sourceTree = "<group>"; };
 		D14355F22639793100CE805A /* ShowList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowList.storyboard; sourceTree = "<group>"; };
 		D14355F526397C1E00CE805A /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				D16EB71C25E7A41300548D99 /* TaskShowCell.xib */,
 				D1D1E58325E73C0000240268 /* TextInputCell.swift */,
 				D16EB71B25E7A41300548D99 /* TaskShowCell.swift */,
+				D125B4912680E177000D7D88 /* HistoryDateCell.swift */,
+				D125B4922680E177000D7D88 /* HistoryDateCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14355F0263973D600CE805A /* TextInput.storyboard in Resources */,
+				D125B4942680E177000D7D88 /* HistoryDateCell.xib in Resources */,
 				D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */,
 				D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */,
 				D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */,
@@ -444,6 +451,7 @@
 				D192180A267EBE85005EF3F7 /* JsonEncoder.swift in Sources */,
 				D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */,
 				D119279326464B9A00A2DE0F /* UIColorRGBExtension.swift in Sources */,
+				D125B4932680E177000D7D88 /* HistoryDateCell.swift in Sources */,
 				D1F92313267E5285000B4E46 /* HistoryViewController.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
 				D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */,
