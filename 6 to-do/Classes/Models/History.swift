@@ -8,6 +8,12 @@
 import Foundation
 
 class History: Codable {
+    
     var date: String = ""
     var body: String = ""
+    
+    init(date: String, text: String) {
+        self.date = date
+        self.body = text
+    }
 }

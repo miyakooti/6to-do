@@ -20,6 +20,7 @@ final class ShowListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
+        historyList = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
         setUpView()
         bannerView.setUpBanner(bannerView: bannerView, viewController: self)
 
@@ -32,16 +33,38 @@ final class ShowListViewController: UIViewController {
         } else { //終わってないときは一つずつ完了させていくボタンとして挙動する。
             numOfCompleted = 0 // 合計値ば随時reload dataで計算するので、毎回初期化していい
             for i in 0...5{
+                // ここの中は一度しか実行されません
+                
                 let indexPath = IndexPath(row: i, section: 0)
                 let cell = tableView.cellForRow(at: indexPath) as! TaskShowCell
                 if cell.isCompleted == false { //　一番上のタスクを完了にする。
-                    cell.isCompleted = true
+                    taskList[indexPath.row].isCompleted = true // table自体に書き込むことはしないで、プログラム上の表面上のデータのみの変更。
                     
                     sumOfCompletion = sumOfCompletion + 1 // 一生記録する
                     UserDefaults.standard.setValue(sumOfCompletion, forKey: .sumOfCompletionKey)
                     
-                    taskList[indexPath.row].isCompleted = true
+                    cell.isCompleted = true
                     JsonEncoder.saveItemsToUserDefaults(list: taskList, key: .sixTaskListKey)
+                    
+                    
+                    
+                    let now = NSDate()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
+                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+                    let nowString = dateFormatter.string(from: now as Date)
+                    let todayString = nowString.prefix(10)
+                    
+                    let history = History(date: String(todayString), text: taskList[indexPath.row].body)
+                    
+                    historyList.append(history)
+                    
+                    JsonEncoder.saveItemsToUserDefaults(list: historyList, key: .HistoryKey)
+                    
+                    let test: [History] = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
+
+                    
+                    
 
                     tableView.reloadData()
                     topLabel.text = encourageMessageList.randomElement()

@@ -16,13 +16,19 @@ final class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
-        
         setUpViews()
+        
+        test()
+        
     }
 
     private func setUpViews(){
         self.navigationItem.title = VCType.showSum.navigationTitle
         self.overrideUserInterfaceStyle = .light
+        prepareAnimationLabel()
+    }
+    
+    private func prepareAnimationLabel() {
         
         animationLabel = CountAnimateLabel()
         let margin = 30
@@ -38,8 +44,36 @@ final class HistoryViewController: UIViewController {
         animationLabel.textColor = .white
         animationLabel.convertCircle(width: labelWidth)
         
-        view.addSubview(animationLabel)
+        self.view.addSubview(animationLabel)
         animationLabel.animate(from: 0, to: 150, duration: 1.3)
+    }
+    
+    func test() {
+        let historyList: [History] = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
+        
     }
 
 }
+
+//extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        let historyList: [History] = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
+//
+//        
+//        let formattedTaskList: [String:[String]] = [:]
+//        for history in historyList {
+//            if 
+//        }
+//            
+//    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//
+//    }
+//    
+//    
+//}

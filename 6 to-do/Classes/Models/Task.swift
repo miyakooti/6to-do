@@ -15,4 +15,5 @@ class Task: Codable {
         self.body = body
         self.isCompleted = isCompleted
     }
+    
 }
