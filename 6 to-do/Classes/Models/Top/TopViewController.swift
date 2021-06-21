@@ -19,6 +19,7 @@ final class TopViewController: UIViewController {
     @IBAction func debug(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
         UserDefaults.standard.removeObject(forKey: .HistoryKey)
+        UserDefaults.standard.removeObject(forKey: .sumOfCompletionKey)
     }
     
     override func viewWillAppear(_ animated: Bool) {

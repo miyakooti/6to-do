@@ -60,7 +60,7 @@ final class HistoryViewController: UIViewController {
         
         
         self.view.addSubview(animationLabel)
-        animationLabel.animate(from: 0, to: 150, duration: 1.3)
+        animationLabel.animate(from: 0, to: sumOfCompletion, duration: 1.3)
     }
     
 //   手続き
