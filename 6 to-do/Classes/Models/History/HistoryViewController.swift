@@ -9,14 +9,10 @@ import UIKit
 
 final class HistoryViewController: UIViewController {
     
-    
     @IBOutlet weak var tableView: UITableView!
-    
-    var animationLabel: CountAnimateLabel!
-    
-    var sumOfCompletion = 0
-    
-    var historyListForTableView: [String] = []
+    private var animationLabel: CountAnimateLabel!
+    private var sumOfCompletion = 0
+    private var historyListForTableView: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +23,6 @@ final class HistoryViewController: UIViewController {
         tableView.register(HistoryDateCell.nib(), forCellReuseIdentifier: HistoryDateCell.identifier)
         
         prepareHistoryListForTableView()
-        
- 
 
     }
 
@@ -48,15 +42,27 @@ final class HistoryViewController: UIViewController {
         let margin = 30
         let labelWidth = 170
         let labelHeight = 170
-        animationLabel.frame = CGRect(x: margin, y: Int(self.view.bounds.height) - labelHeight - margin, width: labelWidth, height: labelHeight)
+        animationLabel.frame = CGRect(x: Int(self.view.bounds.width) - labelWidth - margin, y: Int(self.view.bounds.height) - labelHeight - margin, width: labelWidth, height: labelHeight)
         animationLabel.textAlignment = .center
-        animationLabel.backgroundColor = ProjectColor.sixTodoDarkPurple
+        animationLabel.backgroundColor = ProjectColor.sixTodoLightPurple
         animationLabel.textColor = .black
-        animationLabel.font = .boldSystemFont(ofSize: 50)
+        animationLabel.font = .boldSystemFont(ofSize: 70)
         animationLabel.textAlignment = .center
         animationLabel.adjustsFontSizeToFitWidth = true
         animationLabel.textColor = .white
+        
+        animationLabel.shadowOffset = CGSize(width: 2, height: 2)
+        animationLabel.shadowColor = .darkGray
+  
         animationLabel.convertCircle(width: labelWidth)
+        
+        animationLabel.layer.borderWidth = 2
+        animationLabel.layer.borderColor = UIColor.lightGray.cgColor
+        
+//        animationLabel.layer.shadowColor = UIColor.black.cgColor
+//        animationLabel.layer.shadowRadius = 170
+//        animationLabel.layer.shadowOffset = CGSize(width: 170, height: 170)
+//        animationLabel.layer.shadowOpacity = 0
         
         
         self.view.addSubview(animationLabel)
@@ -64,7 +70,7 @@ final class HistoryViewController: UIViewController {
     }
     
 //   手続き
-    func prepareHistoryListForTableView() {
+    private func prepareHistoryListForTableView() {
         
         historyListForTableView.removeAll()
         
@@ -76,16 +82,12 @@ final class HistoryViewController: UIViewController {
         
         var tempDate = ""
         for history in historyList {
-//            print("------------------   \(count)   ------------------")
-//            print(history.date)
-//            print(history.body)
-//            print(tempDate)
+
             if history.date != tempDate {
                 historyListForTableView.append(history.date + "thisisdate")
                 tempDate = history.date
             }
             historyListForTableView.append(history.body)
-//            count = count + 1
         }
         print(historyListForTableView)
     }
@@ -99,16 +101,20 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let date = historyListForTableView[indexPath.row].prefix(10)
         let tail = historyListForTableView[indexPath.row].suffix(10)
+        
         if tail == "thisisdate" {
             let cell = tableView.dequeueReusableCell(withIdentifier: HistoryDateCell.identifier) as! HistoryDateCell
             cell.labelText = String(date)
             return cell
+            
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: TaskShowCell.identifier) as! TaskShowCell
             cell.prepareCellForHistory(taskForHistory: historyListForTableView[indexPath.row])
             return cell
+            
         }
         
     }
@@ -120,8 +126,10 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return 45
         }
-
     
+    }
     
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        false
     }
 }

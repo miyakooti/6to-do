@@ -48,7 +48,7 @@ enum VCType {
         case .setting: return "設定"
         case .whatIs: return "アイビーリーメソッドとは？"
         case .twitter: return "Twitter"
-        case .showSum: return "これまでに完了したタスクの数は、、"
+        case .showSum: return "これまでに完了したタスク"
         }
     }
 }

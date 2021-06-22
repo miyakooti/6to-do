@@ -7,8 +7,6 @@ final class TopViewController: UIViewController {
     @IBOutlet private weak var startButton: UIButton!
     private var settingButton: UIBarButtonItem!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -16,11 +14,11 @@ final class TopViewController: UIViewController {
         bannerView.setUpBanner(bannerView: bannerView, viewController: self)
     }
     
-    @IBAction func debug(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
-        UserDefaults.standard.removeObject(forKey: .HistoryKey)
-        UserDefaults.standard.removeObject(forKey: .sumOfCompletionKey)
-    }
+//    @IBAction func debug(_ sender: Any) {
+//        UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
+//        UserDefaults.standard.removeObject(forKey: .HistoryKey)
+//        UserDefaults.standard.removeObject(forKey: .sumOfCompletionKey)
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

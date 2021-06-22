@@ -32,12 +32,12 @@ final class ShowListViewController: UIViewController {
             AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: numOfCompleted, showListVC: self)
         } else { //終わってないときは一つずつ完了させていくボタンとして挙動する。
             numOfCompleted = 0 // 合計値ば随時reload dataで計算するので、毎回初期化していい
-            for i in 0...5{
-                // ここの中は一度しか実行されません
+            for i in 0...5 {
                 
                 let indexPath = IndexPath(row: i, section: 0)
                 let cell = tableView.cellForRow(at: indexPath) as! TaskShowCell
-                if cell.isCompleted == false { //　一番上のタスクを完了にする。
+                if cell.isCompleted == false { //　一番上のタスクを完了にする
+                    // ここの中は実質一度しか実行されません。
                     taskList[indexPath.row].isCompleted = true // table自体に書き込むことはしないで、プログラム上の表面上のデータのみの変更。
                     
                     sumOfCompletion = sumOfCompletion + 1 // 一生記録する
@@ -46,29 +46,9 @@ final class ShowListViewController: UIViewController {
                     cell.isCompleted = true
                     JsonEncoder.saveItemsToUserDefaults(list: taskList, key: .sixTaskListKey)
                     
-                    
-                    
-                    let now = NSDate()
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
-                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-                    let nowString = dateFormatter.string(from: now as Date)
-                    let todayString = nowString.prefix(10)
-                    
-                    let history = History(date: String(todayString), text: taskList[indexPath.row].body)
-                    
-                    historyList.insert(history, at: 0)
-                    
-                    if historyList.count > 300 {
-                        historyList.removeLast()
-                    }
-                    
-                    JsonEncoder.saveItemsToUserDefaults(list: historyList, key: .HistoryKey)
-                    
-//                    let test: [History] = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
 
-                    
-                    
+                    let text = taskList[indexPath.row].body
+                    saveToHistory(text: text)
 
                     tableView.reloadData()
                     topLabel.text = encourageMessageList.randomElement()
@@ -105,6 +85,24 @@ final class ShowListViewController: UIViewController {
         CompleteButton.layer.shadowRadius = 5
         CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         CompleteButton.layer.shadowOpacity = 1
+    }
+    
+    private func saveToHistory(text: String) {
+        let now = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let nowString = dateFormatter.string(from: now as Date)
+        let todayString = nowString.prefix(10)
+        
+        let history = History(date: String(todayString), text: text)
+        
+        historyList.insert(history, at: 0)
+        
+        if historyList.count > 300 {
+            historyList.removeLast()
+        }
+        JsonEncoder.saveItemsToUserDefaults(list: historyList, key: .HistoryKey)
     }
     
     private func setUpView() {

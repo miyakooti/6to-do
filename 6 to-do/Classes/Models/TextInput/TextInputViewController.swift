@@ -52,7 +52,6 @@ final class TextInputViewController: UIViewController {
     
     private func saveTasksFromTextField(){
         //初期化
-
         var taskList: [Task] = []
         
         for i in 0...5{
@@ -66,19 +65,20 @@ final class TextInputViewController: UIViewController {
             taskList.append(task)
             
             JsonEncoder.saveItemsToUserDefaults(list: taskList, key: .sixTaskListKey)
-            
         }
 
     }
     
     private func checkIsFilled() -> Bool {
+        
         for i in 0...5{
             let indexPath = IndexPath(row: i, section: 0)
             let cell = tableView.cellForRow(at: indexPath) as! TextInputCell
             if cell.textField.text! == "" {
-                return false //returnは関数も抜け出す
+                return false
             }
         }
+        
         return true
     }
 
@@ -101,6 +101,12 @@ final class TextInputViewController: UIViewController {
         tableView.register(UINib(nibName: "TextInputCell", bundle: nil), forCellReuseIdentifier: "TextInputCell")
         tableView.separatorStyle = .none//罫線をなくす
         tableView.isScrollEnabled = false//スクロールさせない
+        
+        nextButton.layer.shadowColor = UIColor.black.cgColor
+        nextButton.layer.shadowRadius = 5
+        nextButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        nextButton.layer.shadowOpacity = 0.6
+        
     }
     
     private func resetInputPhase() {

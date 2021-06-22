@@ -28,8 +28,6 @@
 		D1921808267EBA90005EF3F7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1921807267EBA90005EF3F7 /* History.swift */; };
 		D192180A267EBE85005EF3F7 /* JsonEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1921809267EBE85005EF3F7 /* JsonEncoder.swift */; };
 		D192180C267EC2F6005EF3F7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192180B267EC2F6005EF3F7 /* Task.swift */; };
-		D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */; };
-		D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */; };
 		D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */; };
 		D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54225E6881600240268 /* AppDelegate.swift */; };
 		D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54425E6881600240268 /* SceneDelegate.swift */; };
@@ -72,8 +70,6 @@
 		D1921807267EBA90005EF3F7 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		D1921809267EBE85005EF3F7 /* JsonEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonEncoder.swift; sourceTree = "<group>"; };
 		D192180B267EC2F6005EF3F7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowSum.storyboard; sourceTree = "<group>"; };
-		D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSumViewController.swift; sourceTree = "<group>"; };
 		D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountAnimateLabel.swift; sourceTree = "<group>"; };
 		D1D1E53F25E6881600240268 /* 6 to-do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6 to-do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D1E54225E6881600240268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,7 +185,6 @@
 				D1F9230B267E43A1000B4E46 /* Setting */,
 				D1F9230C267E43A8000B4E46 /* WhatIs */,
 				D1F9230D267E43AE000B4E46 /* Twitter */,
-				D1F9230E267E43B5000B4E46 /* ShowSum */,
 				D1F92311267E523C000B4E46 /* History */,
 				D1921807267EBA90005EF3F7 /* History.swift */,
 				D192180B267EC2F6005EF3F7 /* Task.swift */,
@@ -269,15 +264,6 @@
 				D17658A426396C0200431794 /* Twitter.storyboard */,
 			);
 			path = Twitter;
-			sourceTree = "<group>";
-		};
-		D1F9230E267E43B5000B4E46 /* ShowSum */ = {
-			isa = PBXGroup;
-			children = (
-				D1BF9C1F263A735D0056E4D2 /* ShowSumViewController.swift */,
-				D1BF9C1C263A733B0056E4D2 /* ShowSum.storyboard */,
-			);
-			path = ShowSum;
 			sourceTree = "<group>";
 		};
 		D1F9230F267E43DD000B4E46 /* Launch */ = {
@@ -368,7 +354,6 @@
 			files = (
 				D14355F0263973D600CE805A /* TextInput.storyboard in Resources */,
 				D125B4942680E177000D7D88 /* HistoryDateCell.xib in Resources */,
-				D1BF9C1D263A733B0056E4D2 /* ShowSum.storyboard in Resources */,
 				D1D1E54F25E6881900240268 /* LaunchScreen.storyboard in Resources */,
 				D1D1E54C25E6881900240268 /* Assets.xcassets in Resources */,
 				D1D1E54A25E6881600240268 /* Top.storyboard in Resources */,
@@ -437,7 +422,6 @@
 				D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
 				D151C1B5260B3F3400875252 /* Constants.swift in Sources */,
-				D1BF9C20263A735D0056E4D2 /* ShowSumViewController.swift in Sources */,
 				D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
 				D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */,
