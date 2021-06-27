@@ -7,18 +7,29 @@ final class TopViewController: UIViewController {
     @IBOutlet private weak var startButton: UIButton!
     private var settingButton: UIBarButtonItem!
     
+    private var emergency = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         checkSegueSetting()
         bannerView.setUpBanner(bannerView: bannerView, viewController: self)
+        
+        // クラッシュ数爆増への緊急対応
+        emergency = UserDefaults.standard.bool(forKey: "emergency")
+        if !emergency {
+            emergency = true
+            UserDefaults.standard.setValue(emergency, forKey: "emergency")
+            debug()
+        }
+        
     }
     
-//    @IBAction func debug(_ sender: Any) {
-//        UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
-//        UserDefaults.standard.removeObject(forKey: .HistoryKey)
-//        UserDefaults.standard.removeObject(forKey: .sumOfCompletionKey)
-//    }
+    private func debug() {
+        UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
+        UserDefaults.standard.removeObject(forKey: .HistoryKey)
+        UserDefaults.standard.removeObject(forKey: .sumOfCompletionKey)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
