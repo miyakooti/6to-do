@@ -43,6 +43,7 @@ struct sixTasks {
 - AlertPresentExtensionの部分など、スコープが小さく名前の寿命が短いにもかかわらず、alertMessageといったふうに名前が細分化されている。
 - CountAnimateLabelはextensionで実装できたほうがよい
 - 「VCをdismiss→戻ってきたVCから、自動的に別のVCへ遷移」という動きをUserDefaultでやっているのはおかしいと思う
+- 一回UserDefaultsの管理方法を大きく変更してアップデートしたところ、クラッシュの報告が大量発生するという大惨事が起きた。これはアップデート後はじめて起動したときは、UserDefaultsをすべて初期化することによって対応した。（あっているのだろうかこれ）
 - 
 
 <br>
