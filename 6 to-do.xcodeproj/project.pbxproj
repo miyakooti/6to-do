@@ -135,10 +135,6 @@
 		D16EB71825E7968E00548D99 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1E58425E73C0000240268 /* TextInputCell.xib */,
-				D16EB71C25E7A41300548D99 /* TaskShowCell.xib */,
-				D1D1E58325E73C0000240268 /* TextInputCell.swift */,
-				D16EB71B25E7A41300548D99 /* TaskShowCell.swift */,
 				D125B4912680E177000D7D88 /* HistoryDateCell.swift */,
 				D125B4922680E177000D7D88 /* HistoryDateCell.xib */,
 			);
@@ -173,7 +169,7 @@
 			path = "6 to-do";
 			sourceTree = "<group>";
 		};
-		D1D1E55925E68B9900240268 /* Models */ = {
+		D1D1E55925E68B9900240268 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				D1D1E54225E6881600240268 /* AppDelegate.swift */,
@@ -189,14 +185,31 @@
 				D1921807267EBA90005EF3F7 /* History.swift */,
 				D192180B267EC2F6005EF3F7 /* Task.swift */,
 			);
-			path = Models;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D1F501C226E3BF2F0009FE21 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D1D1E58325E73C0000240268 /* TextInputCell.swift */,
+				D1D1E58425E73C0000240268 /* TextInputCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D1F501C326E3BF500009FE21 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D16EB71B25E7A41300548D99 /* TaskShowCell.swift */,
+				D16EB71C25E7A41300548D99 /* TaskShowCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D1F92305267E4309000B4E46 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
 				D1F92318267E622C000B4E46 /* Utilities */,
-				D16EB71825E7968E00548D99 /* Cells */,
 				D119278D264648EB00A2DE0F /* Extensions */,
 				D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */,
 			);
@@ -206,7 +219,7 @@
 		D1F92307267E435A000B4E46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1E55925E68B9900240268 /* Models */,
+				D1D1E55925E68B9900240268 /* Modules */,
 				D1F92305267E4309000B4E46 /* Commons */,
 			);
 			path = Classes;
@@ -224,6 +237,7 @@
 		D1F92309267E438D000B4E46 /* ShowList */ = {
 			isa = PBXGroup;
 			children = (
+				D1F501C326E3BF500009FE21 /* Cells */,
 				D1D1E56D25E70EBC00240268 /* ShowListViewController.swift */,
 				D14355F22639793100CE805A /* ShowList.storyboard */,
 			);
@@ -233,6 +247,7 @@
 		D1F9230A267E4398000B4E46 /* TextInput */ = {
 			isa = PBXGroup;
 			children = (
+				D1F501C226E3BF2F0009FE21 /* Cells */,
 				D1D1E57725E7307B00240268 /* TextInputViewController.swift */,
 				D14355EF263973D600CE805A /* TextInput.storyboard */,
 			);
@@ -277,6 +292,7 @@
 		D1F92311267E523C000B4E46 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				D16EB71825E7968E00548D99 /* Cells */,
 				D1F92312267E5285000B4E46 /* HistoryViewController.swift */,
 				D1F92314267E5297000B4E46 /* History.storyboard */,
 			);
