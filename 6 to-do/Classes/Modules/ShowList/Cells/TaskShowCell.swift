@@ -50,7 +50,7 @@ class TaskShowCell: UITableViewCell {
             
             //棒線処理
             let atr =  NSMutableAttributedString(string: textForCell)
-            atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, atr.length))
+            atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSMakeRange(0, atr.length))
             self.taskLabel.attributedText = atr
             
             //セルを暗くする処理

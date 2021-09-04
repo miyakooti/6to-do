@@ -19,6 +19,7 @@ final class ShowListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewdidload")
         sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
         historyList = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
         setUpView()
@@ -132,6 +133,7 @@ final class ShowListViewController: UIViewController {
 extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("tableview delegate method")
         return 6
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
