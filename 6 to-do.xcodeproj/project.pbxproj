@@ -24,6 +24,8 @@
 		D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB73225E952E000548D99 /* TwitterViewController.swift */; };
 		D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */; };
 		D1758F3426EA60FC00C61D4D /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1758F3326EA60FC00C61D4D /* NSObject.swift */; };
+		D1758F3726EA6B9400C61D4D /* ColorPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1758F3626EA6B9400C61D4D /* ColorPickViewController.swift */; };
+		D1758F3926EA6BA600C61D4D /* ColorPick.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1758F3826EA6BA600C61D4D /* ColorPick.storyboard */; };
 		D17658A526396C0200431794 /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A426396C0200431794 /* Twitter.storyboard */; };
 		D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D70F6264650070066762B /* SegueKeyExtension.swift */; };
 		D1921808267EBA90005EF3F7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1921807267EBA90005EF3F7 /* History.swift */; };
@@ -67,6 +69,8 @@
 		D16EB73225E952E000548D99 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSetUpExtension.swift; sourceTree = "<group>"; };
 		D1758F3326EA60FC00C61D4D /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		D1758F3626EA6B9400C61D4D /* ColorPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickViewController.swift; sourceTree = "<group>"; };
+		D1758F3826EA6BA600C61D4D /* ColorPick.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPick.storyboard; sourceTree = "<group>"; };
 		D17658A426396C0200431794 /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 		D18D70F6264650070066762B /* SegueKeyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueKeyExtension.swift; sourceTree = "<group>"; };
 		D1921807267EBA90005EF3F7 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
@@ -142,6 +146,15 @@
 				D125B4922680E177000D7D88 /* HistoryDateCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D1758F3526EA6B6D00C61D4D /* ColorPick */ = {
+			isa = PBXGroup;
+			children = (
+				D1758F3626EA6B9400C61D4D /* ColorPickViewController.swift */,
+				D1758F3826EA6BA600C61D4D /* ColorPick.storyboard */,
+			);
+			path = ColorPick;
 			sourceTree = "<group>";
 		};
 		D1D1E53625E6881600240268 = {
@@ -260,6 +273,7 @@
 		D1F9230B267E43A1000B4E46 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				D1758F3526EA6B6D00C61D4D /* ColorPick */,
 				D16EB72B25E92D2700548D99 /* SettingTableViewController.swift */,
 				D14355F526397C1E00CE805A /* Setting.storyboard */,
 			);
@@ -382,6 +396,7 @@
 				D14355F926397CC400CE805A /* WhatIs.storyboard in Resources */,
 				D16EB71E25E7A41300548D99 /* TaskShowCell.xib in Resources */,
 				D1F92315267E5297000B4E46 /* History.storyboard in Resources */,
+				D1758F3926EA6BA600C61D4D /* ColorPick.storyboard in Resources */,
 				D14355F626397C1E00CE805A /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +471,7 @@
 				D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */,
 				D119279326464B9A00A2DE0F /* UIColorRGBExtension.swift in Sources */,
 				D125B4932680E177000D7D88 /* HistoryDateCell.swift in Sources */,
+				D1758F3726EA6B9400C61D4D /* ColorPickViewController.swift in Sources */,
 				D1F92313267E5285000B4E46 /* HistoryViewController.swift in Sources */,
 				D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */,
 				D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */,
