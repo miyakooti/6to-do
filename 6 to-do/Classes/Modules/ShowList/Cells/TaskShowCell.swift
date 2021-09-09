@@ -9,9 +9,9 @@ import UIKit
 
 class TaskShowCell: UITableViewCell {
     
-    static let identifier = "TaskShowCell"
+    static let identifier = TaskShowCell.className
     static func nib() -> UINib {
-        return UINib(nibName: "TaskShowCell", bundle: nil)
+        return UINib(nibName: TaskShowCell.className, bundle: nil)
     }
 
 

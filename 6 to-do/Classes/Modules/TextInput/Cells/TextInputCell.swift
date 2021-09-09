@@ -8,6 +8,11 @@
 import UIKit
 
 class TextInputCell: UITableViewCell {
+    
+    static let identifier = TextInputCell.className
+    static func nib() -> UINib {
+        return UINib(nibName: TextInputCell.className, bundle: nil)
+    }
 
     @IBOutlet weak var navView: UIView!
     @IBOutlet weak var textField: UITextField!

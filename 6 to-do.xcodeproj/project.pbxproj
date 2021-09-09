@@ -23,6 +23,7 @@
 		D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB72F25E952D600548D99 /* WhatIsViewController.swift */; };
 		D16EB73325E952E000548D99 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB73225E952E000548D99 /* TwitterViewController.swift */; };
 		D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */; };
+		D1758F3426EA60FC00C61D4D /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1758F3326EA60FC00C61D4D /* NSObject.swift */; };
 		D17658A526396C0200431794 /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17658A426396C0200431794 /* Twitter.storyboard */; };
 		D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D70F6264650070066762B /* SegueKeyExtension.swift */; };
 		D1921808267EBA90005EF3F7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1921807267EBA90005EF3F7 /* History.swift */; };
@@ -65,6 +66,7 @@
 		D16EB72F25E952D600548D99 /* WhatIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsViewController.swift; sourceTree = "<group>"; };
 		D16EB73225E952E000548D99 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSetUpExtension.swift; sourceTree = "<group>"; };
+		D1758F3326EA60FC00C61D4D /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		D17658A426396C0200431794 /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 		D18D70F6264650070066762B /* SegueKeyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueKeyExtension.swift; sourceTree = "<group>"; };
 		D1921807267EBA90005EF3F7 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */,
 				D18D70F6264650070066762B /* SegueKeyExtension.swift */,
 				D1F92316267E5C52000B4E46 /* UILabelExtension.swift */,
+				D1758F3326EA60FC00C61D4D /* NSObject.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
 				D151C1B5260B3F3400875252 /* Constants.swift in Sources */,
 				D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */,
+				D1758F3426EA60FC00C61D4D /* NSObject.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
 				D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */,
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,

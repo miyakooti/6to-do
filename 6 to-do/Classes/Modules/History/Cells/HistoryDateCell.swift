@@ -9,9 +9,9 @@ import UIKit
 
 class HistoryDateCell: UITableViewCell {
     
-    static let identifier = "HistoryDateCell"
+    static let identifier = HistoryDateCell.className
     static func nib() -> UINib {
-        return UINib(nibName: "HistoryDateCell", bundle: nil)
+        return UINib(nibName: HistoryDateCell.className, bundle: nil)
     }
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -26,6 +26,17 @@ class HistoryDateCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         dateLabel.textColor = ProjectColor.sixTodoTextGray
+        
+        
+        print(UIView.className)
+        // "UIView"が出力される
+        
+        let myLabel = UILabel()
+        print(myLabel.className)
+        // "UILabel"が出力される
+        
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,3 +47,4 @@ class HistoryDateCell: UITableViewCell {
     
     
 }
+
