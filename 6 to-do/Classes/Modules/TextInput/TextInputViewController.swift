@@ -13,6 +13,9 @@ final class TextInputViewController: UIViewController {
         super.viewDidLoad()
         setUpView()
         resetInputPhase()
+        
+        let inheritedTasks: [Task] = JsonEncoder.readItemsFromUserUserDefault(key: .unCompletedTasksKey)
+        print(inheritedTasks)
     }
 
     @IBAction private func tapNext(_ sender: Any) {

@@ -34,6 +34,8 @@
 		D192180A267EBE85005EF3F7 /* JsonEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1921809267EBE85005EF3F7 /* JsonEncoder.swift */; };
 		D192180C267EC2F6005EF3F7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192180B267EC2F6005EF3F7 /* Task.swift */; };
 		D1A5490B26F89DF400E43EB7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5490A26F89DF400E43EB7 /* UIViewControllerExtension.swift */; };
+		D1A5490D26F8BB9200E43EB7 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5490C26F8BB9200E43EB7 /* Notification.swift */; };
+		D1A5491026F8D9AC00E43EB7 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5490F26F8D9AC00E43EB7 /* CheckBox.swift */; };
 		D1BF9C24263A792E0056E4D2 /* CountAnimateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */; };
 		D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54225E6881600240268 /* AppDelegate.swift */; };
 		D1D1E54525E6881600240268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E54425E6881600240268 /* SceneDelegate.swift */; };
@@ -82,6 +84,8 @@
 		D1921809267EBE85005EF3F7 /* JsonEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonEncoder.swift; sourceTree = "<group>"; };
 		D192180B267EC2F6005EF3F7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		D1A5490A26F89DF400E43EB7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		D1A5490C26F8BB9200E43EB7 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		D1A5490F26F8D9AC00E43EB7 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		D1BF9C23263A792E0056E4D2 /* CountAnimateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountAnimateLabel.swift; sourceTree = "<group>"; };
 		D1D1E53F25E6881600240268 /* 6 to-do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6 to-do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D1E54225E6881600240268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				D1F92316267E5C52000B4E46 /* UILabelExtension.swift */,
 				D1758F3326EA60FC00C61D4D /* NSObject.swift */,
 				D1A5490A26F89DF400E43EB7 /* UIViewControllerExtension.swift */,
+				D1A5490C26F8BB9200E43EB7 /* Notification.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		D1496BA826F8969300454E12 /* TomorrowModal */ = {
 			isa = PBXGroup;
 			children = (
+				D1A5490E26F8D99500E43EB7 /* CheckBox */,
 				D1496BA926F8970D00454E12 /* TomorrowModalViewController.swift */,
 				D1496BAD26F8972600454E12 /* TomorrowModalViewController.storyboard */,
 			);
@@ -171,6 +177,14 @@
 				D1758F3826EA6BA600C61D4D /* ColorPick.storyboard */,
 			);
 			path = ColorPick;
+			sourceTree = "<group>";
+		};
+		D1A5490E26F8D99500E43EB7 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				D1A5490F26F8D9AC00E43EB7 /* CheckBox.swift */,
+			);
+			path = CheckBox;
 			sourceTree = "<group>";
 		};
 		D1D1E53625E6881600240268 = {
@@ -482,6 +496,7 @@
 				D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */,
 				D1A5490B26F89DF400E43EB7 /* UIViewControllerExtension.swift in Sources */,
 				D1D1E54325E6881600240268 /* AppDelegate.swift in Sources */,
+				D1A5491026F8D9AC00E43EB7 /* CheckBox.swift in Sources */,
 				D1F92317267E5C52000B4E46 /* UILabelExtension.swift in Sources */,
 				D16EB73025E952D600548D99 /* WhatIsViewController.swift in Sources */,
 				D1921808267EBA90005EF3F7 /* History.swift in Sources */,
@@ -489,6 +504,7 @@
 				D192180C267EC2F6005EF3F7 /* Task.swift in Sources */,
 				D192180A267EBE85005EF3F7 /* JsonEncoder.swift in Sources */,
 				D16F0201263E8BFE00419840 /* BannerSetUpExtension.swift in Sources */,
+				D1A5490D26F8BB9200E43EB7 /* Notification.swift in Sources */,
 				D119279326464B9A00A2DE0F /* UIColorRGBExtension.swift in Sources */,
 				D125B4932680E177000D7D88 /* HistoryDateCell.swift in Sources */,
 				D1758F3726EA6B9400C61D4D /* ColorPickViewController.swift in Sources */,

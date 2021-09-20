@@ -8,4 +8,6 @@ extension String {
     static var sumOfCompletionKey: String { return "sumOfCompvarion" }
     static var SettingOfshowSeeVCKey: String { return "SettingOfshowSeeVC" }
     static var HistoryKey: String { return "histryList" }
+    static var unCompletedTasksKey: String { return "unCompletedTasks" }
+    static var checkBoxStateKey: String { return "checkBoxStateKey" }
 }

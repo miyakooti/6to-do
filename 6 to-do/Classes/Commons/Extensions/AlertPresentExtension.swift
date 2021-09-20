@@ -30,7 +30,7 @@ extension UIViewController {
     func presentSetTomorrowTaskAlert(numOfCompleted: Int, showListVC: ShowListViewController){
         let alertTitle:String
         let alertMessage:String
-        if numOfCompleted == 6{
+        if numOfCompleted == 6 {
             alertTitle = "お疲れさまでした！"
             alertMessage = "明日のタスクを設定しますか？"
 
@@ -42,7 +42,7 @@ extension UIViewController {
         let alertController = UIAlertController(title: alertTitle, message:alertMessage , preferredStyle: .actionSheet)
         
         let action1 = UIAlertAction(title: "はい", style: .default) { (alert) in
-            showListVC.deleteAll()
+            showListVC.goToSetTomorrowTask()
         }
         let action2 = UIAlertAction(title: "いいえ", style: .cancel)
         
@@ -95,7 +95,7 @@ final class AlertPresenter {
         let alertController = UIAlertController(title: alertTitle, message:alertMessage , preferredStyle: .actionSheet)
         
         let action1 = UIAlertAction(title: "はい", style: .default) { (alert) in
-            showListVC.deleteAll()
+            showListVC.goToSetTomorrowTask()
         }
         let action2 = UIAlertAction(title: "いいえ", style: .cancel)
         

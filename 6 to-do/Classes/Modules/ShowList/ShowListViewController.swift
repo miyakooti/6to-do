@@ -8,23 +8,36 @@ final class ShowListViewController: UIViewController {
     private var numOfCompleted = 0
     private var taskHistories: [History] = []
     private var tasks: [Task] = []
+    var inheritUnCompletedTasks: Bool = false
     
     @IBOutlet private weak var bannerView: GADBannerView!
     @IBOutlet private weak var topMessageLabel: UILabel!
-    @IBOutlet weak var testButton: UIButton!
     @IBOutlet private weak var CompleteButton: UIButton!
     
     @IBOutlet private weak var tableView: UITableView!
     
+    private let shadeView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tomorrowVC = TomorrowModalViewController.instantiate()
+        tomorrowVC.delegate = self
         sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
         taskHistories = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
         setUpView()
         bannerView.setUpBanner(bannerView: bannerView, viewController: self)
-        
-        testButton.addTarget(self, action: #selector(self.tapTest(_:)), for: .touchUpInside)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(removeShadeView), name: .tomorrowModalDidClosed, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(goToSetTomorrowTask), name: .tomorrowModalYes, object: nil)
+    }
+    
+    @objc func removeShadeView() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.shadeView.alpha = 0
+        }) { (done) in
+            if done {
+                self.shadeView.removeFromSuperview()
+            }
+        }
     }
     
     @IBAction private func tapComplete(_ sender: Any) {
@@ -57,22 +70,23 @@ final class ShowListViewController: UIViewController {
         }
     }
     
-    @objc private func tapTest(_ sender: UIButton) {
-        let unfinishedTasks = tasks.filter({$0.isCompleted == false})
-        for task in unfinishedTasks {
-            print(task.body)
-        }
+    @objc private func tapGarbage(_ sender: UIBarButtonItem) {
+        
+        shadeView.backgroundColor = .black
+        shadeView.alpha = 0
+        self.view.addSubview(shadeView)
+        
         let vc = TomorrowModalViewController.instantiate()
+        vc.delegate = self
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
-    }
-    
-    @objc private func tapGarbage(_ sender: UIBarButtonItem) {
-        AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: numOfCompleted, showListVC: self)
+        
+        UIView.animate(withDuration: 0.2) {
+            self.shadeView.alpha = 0.3
+        }
     }
     
     private func checkButtonValue(){
-
         if numOfCompleted == 6 {
             changeButtonValue()
             topMessageLabel.text = "すべて完了しました！お疲れさまでした！"
@@ -81,15 +95,18 @@ final class ShowListViewController: UIViewController {
         }
     }
     
-    internal func deleteAll(){
+    @objc internal func goToSetTomorrowTask(){
         UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
-        UserDefaults.standard.setValue("明日のタスクを設定中", forKey: .fromSeeVCKey)
+        UserDefaults.standard.setValue("明日のタスクを設定中", forKey: .fromSeeVCKey) // ここはnotification centerでやるべき
+        let unCompletedTasks = tasks.filter({$0.isCompleted == false})
+        if inheritUnCompletedTasks {
+            JsonEncoder.saveItemsToUserDefaults(list: unCompletedTasks, key: .unCompletedTasksKey)
+        }
         self.navigationController?.popViewController(animated: true)
     }
     
     private func changeButtonValue() {
         CompleteButton.setTitle("明日のタスクを設定する", for: .normal)
-        CompleteButton.layer.shadowColor = UIColor.yellow.cgColor
         CompleteButton.layer.shadowRadius = 5
         CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         CompleteButton.layer.shadowOpacity = 1
@@ -130,7 +147,7 @@ final class ShowListViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = garbageButton
         
         CompleteButton.layer.shadowColor = UIColor.black.cgColor
-        CompleteButton.layer.shadowRadius = 5
+        CompleteButton.layer.shadowRadius = CompleteButton.layer.bounds.width / 2
         CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         CompleteButton.layer.shadowOpacity = 0.6
     }
@@ -141,7 +158,6 @@ final class ShowListViewController: UIViewController {
 extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("tableview delegate method")
         return 6
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -164,4 +180,10 @@ extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+}
+
+extension ShowListViewController: catchDataFromModal {
+    func catchData(isChecked: Bool) {
+        self.inheritUnCompletedTasks = isChecked
+    }
 }
