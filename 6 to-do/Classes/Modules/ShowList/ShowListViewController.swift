@@ -63,7 +63,7 @@ final class ShowListViewController: UIViewController {
             print(task.body)
         }
         let vc = TomorrowModalViewController.instantiate()
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }
     

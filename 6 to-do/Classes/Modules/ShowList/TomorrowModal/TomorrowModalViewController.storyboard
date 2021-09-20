@@ -11,29 +11,88 @@
         <!--Tomorrow Modal View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="TomorrowModalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TomorrowModalViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TomorrowModalViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TomorrowModalViewController" customModule="__to_do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-DA-4Pb">
-                                <rect key="frame" x="0.0" y="485" width="418" height="411"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-DA-4Pb">
+                                <rect key="frame" x="0.0" y="646" width="414" height="250"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0O-xr-FoR">
-                                        <rect key="frame" x="186" y="107" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0O-xr-FoR">
+                                        <rect key="frame" x="344" y="20" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="2xB-At-gOm"/>
+                                            <constraint firstAttribute="height" constant="50" id="BsA-q6-gKe"/>
+                                        </constraints>
+                                        <state key="normal" image="cross"/>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="c7D-Es-wMn">
+                                        <rect key="frame" x="40" y="131" width="334" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHl-tI-7vw">
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="50"/>
+                                                <color key="backgroundColor" red="0.76078431372549016" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="いいえ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4d-kw-00G">
+                                                <rect key="frame" x="192" y="0.0" width="142" height="50"/>
+                                                <color key="backgroundColor" red="0.30980392156862746" green="0.33725490196078434" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="はい">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YJ3-uV-trI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-sz-3wa">
+                                        <rect key="frame" x="50" y="40" width="314" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="zLk-b6-dqD"/>
+                                        </constraints>
+                                        <string key="text">今日のタスクを破棄して、明日のタスクを設定しますか？</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52m-Lk-u2z">
+                                        <rect key="frame" x="107" y="197" width="200" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="T0O-xr-FoR" firstAttribute="top" secondItem="cv8-DA-4Pb" secondAttribute="top" constant="20" id="Hfw-N4-LGL"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7D-Es-wMn" secondAttribute="trailing" constant="40" id="N0T-am-Q5s"/>
+                                    <constraint firstItem="Hom-sz-3wa" firstAttribute="leading" secondItem="cv8-DA-4Pb" secondAttribute="leading" constant="50" id="Rf8-Gk-GGG"/>
+                                    <constraint firstItem="c7D-Es-wMn" firstAttribute="leading" secondItem="cv8-DA-4Pb" secondAttribute="leading" constant="40" id="Udy-LB-97O"/>
+                                    <constraint firstAttribute="height" constant="250" id="ZDw-EN-pw6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hom-sz-3wa" secondAttribute="trailing" constant="50" id="c0f-Wh-j2Q"/>
+                                    <constraint firstItem="c7D-Es-wMn" firstAttribute="top" secondItem="Hom-sz-3wa" secondAttribute="bottom" constant="50" id="cIn-kv-Rop"/>
+                                    <constraint firstItem="Hom-sz-3wa" firstAttribute="top" secondItem="cv8-DA-4Pb" secondAttribute="top" constant="40" id="lqf-69-Wxq"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0O-xr-FoR" secondAttribute="trailing" constant="20" id="qYm-jZ-qeX"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cv8-DA-4Pb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Bri-8c-8gK"/>
+                            <constraint firstAttribute="trailing" secondItem="cv8-DA-4Pb" secondAttribute="trailing" id="b9y-ZA-aiS"/>
+                            <constraint firstAttribute="bottom" secondItem="cv8-DA-4Pb" secondAttribute="bottom" id="k4x-1Y-dfi"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="backView" destination="cv8-DA-4Pb" id="BvD-AS-uBg"/>
                         <outlet property="closeButton" destination="T0O-xr-FoR" id="TPV-TT-Znw"/>
+                        <outlet property="leftButton" destination="ZHl-tI-7vw" id="Uj0-j6-WoT"/>
+                        <outlet property="rightButton" destination="E4d-kw-00G" id="4Hu-aO-6hs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -42,6 +101,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cross" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
