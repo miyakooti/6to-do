@@ -5,30 +5,29 @@ final class ShowListViewController: UIViewController {
     
     private var garbageButton: UIBarButtonItem!
     private var sumOfCompletion = 0
+    private var numOfCompleted = 0
+    private var taskHistories: [History] = []
+    private var tasks: [Task] = []
     
     @IBOutlet private weak var bannerView: GADBannerView!
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var topLabel: UILabel!
-    
-    private var numOfCompleted = 0
-    private var historyList: [History] = []
-    private var taskList: [Task] = []
-    private let encourageMessageList = Constants.encourageMessageList
-
+    @IBOutlet private weak var topMessageLabel: UILabel!
+    @IBOutlet weak var testButton: UIButton!
     @IBOutlet private weak var CompleteButton: UIButton!
+    
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewdidload")
         sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
-        historyList = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
+        taskHistories = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
         setUpView()
         bannerView.setUpBanner(bannerView: bannerView, viewController: self)
+        
+        testButton.addTarget(self, action: #selector(self.tapTest(_:)), for: .touchUpInside)
 
     }
     
     @IBAction private func tapComplete(_ sender: Any) {
-        print(numOfCompleted)
         if numOfCompleted == 6 { //終わってるときは終了ボタンとして挙動する。
             AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: numOfCompleted, showListVC: self)
         } else { //終わってないときは一つずつ完了させていくボタンとして挙動する。
@@ -39,36 +38,44 @@ final class ShowListViewController: UIViewController {
                 let cell = tableView.cellForRow(at: indexPath) as! TaskShowCell
                 if cell.isCompleted == false { //　一番上のタスクを完了にする
                     // ここの中は実質一度しか実行されません。
-                    taskList[indexPath.row].isCompleted = true // table自体に書き込むことはしないで、プログラム上の表面上のデータのみの変更。
+                    tasks[indexPath.row].isCompleted = true // table自体に書き込むことはしないで、プログラム上の表面上のデータのみの変更。
                     
                     sumOfCompletion = sumOfCompletion + 1 // 一生記録する
                     UserDefaults.standard.setValue(sumOfCompletion, forKey: .sumOfCompletionKey)
                     
                     cell.isCompleted = true
-                    JsonEncoder.saveItemsToUserDefaults(list: taskList, key: .sixTaskListKey)
-                    
+                    JsonEncoder.saveItemsToUserDefaults(list: tasks, key: .sixTaskListKey)
 
-                    let text = taskList[indexPath.row].body
+                    let text = tasks[indexPath.row].body
                     saveToHistory(text: text)
 
                     tableView.reloadData()
-                    topLabel.text = encourageMessageList.randomElement()
+                    topMessageLabel.text = Constants.encourageMessageList.randomElement()
                     return
                 }
             }
         }
     }
     
+    @objc private func tapTest(_ sender: UIButton) {
+        let unfinishedTasks = tasks.filter({$0.isCompleted == false})
+        for task in unfinishedTasks {
+            print(task.body)
+        }
+        let vc = TomorrowModalViewController.instantiate()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     @objc private func tapGarbage(_ sender: UIBarButtonItem) {
-        let num = numOfCompleted
-        AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: num, showListVC: self)
+        AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: numOfCompleted, showListVC: self)
     }
     
     private func checkButtonValue(){
 
         if numOfCompleted == 6 {
             changeButtonValue()
-            topLabel.text = "すべて完了しました！お疲れさまでした！"
+            topMessageLabel.text = "すべて完了しました！お疲れさまでした！"
         } else {
             CompleteButton.setTitle(String(numOfCompleted + 1)+"番のタスクを完了する", for: .normal)
         }
@@ -98,12 +105,12 @@ final class ShowListViewController: UIViewController {
         
         let history = History(date: String(todayString), text: text)
         
-        historyList.insert(history, at: 0)
+        taskHistories.insert(history, at: 0)
         
-        if historyList.count > 300 {
-            historyList.removeLast()
+        if taskHistories.count > 300 {
+            taskHistories.removeLast()
         }
-        JsonEncoder.saveItemsToUserDefaults(list: historyList, key: .HistoryKey)
+        JsonEncoder.saveItemsToUserDefaults(list: taskHistories, key: .HistoryKey)
     }
     
     private func setUpView() {
@@ -119,6 +126,7 @@ final class ShowListViewController: UIViewController {
         CompleteButton.layer.cornerRadius = 5
         
         garbageButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapGarbage(_:)))
+
         self.navigationItem.rightBarButtonItem = garbageButton
         
         CompleteButton.layer.shadowColor = UIColor.black.cgColor
@@ -145,8 +153,8 @@ extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
         
-        taskList = JsonEncoder.readItemsFromUserUserDefault(key: .sixTaskListKey)
-        cell.prepareCell(taskList: taskList, indexPath: indexPath)
+        tasks = JsonEncoder.readItemsFromUserUserDefault(key: .sixTaskListKey)
+        cell.prepareCell(taskList: tasks, indexPath: indexPath)
         
         if cell.isCompleted {
             numOfCompleted = numOfCompleted + 1

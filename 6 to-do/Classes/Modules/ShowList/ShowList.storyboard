@@ -64,6 +64,11 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vkE-EE-V7e"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obA-3u-Nge">
+                                <rect key="frame" x="184" y="77" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dcU-Em-fr3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,7 +94,8 @@
                         <outlet property="CompleteButton" destination="3kj-69-Ygk" id="RPa-Ip-yDk"/>
                         <outlet property="bannerView" destination="cqe-p5-Lka" id="R1b-0b-X59"/>
                         <outlet property="tableView" destination="CLh-vb-7ud" id="WhA-8C-zmk"/>
-                        <outlet property="topLabel" destination="pDw-D9-Bke" id="xzj-aF-xcF"/>
+                        <outlet property="testButton" destination="obA-3u-Nge" id="gkf-1n-Xqo"/>
+                        <outlet property="topMessageLabel" destination="pDw-D9-Bke" id="3LT-41-1rG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qw4-Ro-7e5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
