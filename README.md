@@ -81,3 +81,8 @@ struct sixTasks {
 - 色変更機能
 - デザインの改修（入力するところとかひどい）
 
+
+### 9/20 未完了のタスクを引き継ぐ機能
+
+- presentするときに縮小してしまうのは、vcのmodalPresentationStyleがデフォルトのままだから
+- VCはインスタンス化してpresentできる
