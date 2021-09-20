@@ -15,7 +15,6 @@ final class TextInputViewController: UIViewController {
         resetInputPhase()
         
         let inheritedTasks: [Task] = JsonEncoder.readItemsFromUserUserDefault(key: .unCompletedTasksKey)
-        print(inheritedTasks)
     }
 
     @IBAction private func tapNext(_ sender: Any) {
@@ -45,6 +44,7 @@ final class TextInputViewController: UIViewController {
             return
         case 3:
             UserDefaults.standard.setValue("今日のタスクの設定が完了", forKey: .fromInputVCKey)
+            UserDefaults.standard.removeObject(forKey: .unCompletedTasksKey)
             self.navigationController?.popViewController(animated: true)
         default:
             print("tapNextがおかしいです")
