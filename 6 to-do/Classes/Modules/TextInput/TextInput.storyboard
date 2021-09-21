@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ERY-vB-KdL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ERY-vB-KdL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHs-Ds-4T5">
-                                <rect key="frame" x="20" y="742" width="374" height="50"/>
+                                <rect key="frame" x="35" y="742" width="344" height="50"/>
                                 <color key="backgroundColor" red="0.32156862749999998" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fNp-cE-hdH"/>
@@ -47,7 +47,7 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="wPw-7J-zXs">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wPw-7J-zXs" id="WJ8-Yj-eaG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -69,9 +69,9 @@
                             <constraint firstItem="24a-0F-MQB" firstAttribute="centerY" secondItem="uup-CM-63Z" secondAttribute="centerY" id="QZZ-IQ-iHk"/>
                             <constraint firstItem="24a-0F-MQB" firstAttribute="leading" secondItem="NQk-8i-8BK" secondAttribute="leading" id="U0q-U0-RYv"/>
                             <constraint firstItem="NQk-8i-8BK" firstAttribute="trailing" secondItem="zob-jJ-PXZ" secondAttribute="trailing" constant="20" id="ZHC-sb-UQZ"/>
-                            <constraint firstItem="NQk-8i-8BK" firstAttribute="trailing" secondItem="QHs-Ds-4T5" secondAttribute="trailing" constant="20" id="n9Y-Kh-fGy"/>
+                            <constraint firstItem="NQk-8i-8BK" firstAttribute="trailing" secondItem="QHs-Ds-4T5" secondAttribute="trailing" constant="35" id="n9Y-Kh-fGy"/>
                             <constraint firstItem="NQk-8i-8BK" firstAttribute="bottom" secondItem="QHs-Ds-4T5" secondAttribute="bottom" constant="70" id="ojM-nI-YSU"/>
-                            <constraint firstItem="QHs-Ds-4T5" firstAttribute="leading" secondItem="NQk-8i-8BK" secondAttribute="leading" constant="20" id="x7i-Ep-VGB"/>
+                            <constraint firstItem="QHs-Ds-4T5" firstAttribute="leading" secondItem="NQk-8i-8BK" secondAttribute="leading" constant="35" id="x7i-Ep-VGB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LOC-fG-1rX"/>

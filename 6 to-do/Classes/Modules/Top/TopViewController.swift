@@ -107,7 +107,7 @@ final class TopViewController: UIViewController {
         settingButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(tapSetting(_:)))
         self.navigationItem.rightBarButtonItem = settingButton
         
-        startButton.layer.cornerRadius = 5
+        startButton.layer.cornerRadius = startButton.layer.bounds.height / 2
         startButton.layer.shadowColor = UIColor.black.cgColor
         startButton.layer.shadowRadius = 5
         startButton.layer.shadowOffset = .zero

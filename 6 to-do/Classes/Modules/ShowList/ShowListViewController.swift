@@ -118,9 +118,9 @@ final class ShowListViewController: UIViewController {
     
     private func changeButtonValue() {
         CompleteButton.setTitle("明日のタスクを設定する", for: .normal)
-        CompleteButton.layer.shadowRadius = 5
-        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        CompleteButton.layer.shadowOpacity = 1
+//        CompleteButton.layer.shadowRadius = 5
+//        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        CompleteButton.layer.shadowOpacity = 1
     }
     
     private func saveToHistory(text: String) {
@@ -151,16 +151,16 @@ final class ShowListViewController: UIViewController {
         tableView.separatorStyle = .none//罫線をなくす
         tableView.isScrollEnabled = false//スクロールさせない
         
-        CompleteButton.layer.cornerRadius = 5
+        CompleteButton.layer.cornerRadius = CompleteButton.layer.bounds.height / 2
         
         garbageButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapGarbage(_:)))
 
         self.navigationItem.rightBarButtonItem = garbageButton
         
-        CompleteButton.layer.shadowColor = UIColor.black.cgColor
-        CompleteButton.layer.shadowRadius = CompleteButton.layer.bounds.width / 2
-        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        CompleteButton.layer.shadowOpacity = 0.6
+//        CompleteButton.layer.shadowColor = UIColor.black.cgColor
+//        CompleteButton.layer.shadowRadius = CompleteButton.layer.bounds.width / 2
+//        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        CompleteButton.layer.shadowOpacity = 0.6
     }
     
 }

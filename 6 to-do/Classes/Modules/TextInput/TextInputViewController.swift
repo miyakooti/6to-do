@@ -19,15 +19,15 @@ final class TextInputViewController: UIViewController {
     }
 
     @IBAction private func tapNext(_ sender: Any) {
-        interactionLabel.textColor = UIColor.black
-        checkButtonValue(phase: inputPhase)
         
+        interactionLabel.textColor = UIColor.black
         switch inputPhase {
         case 1:
             let isFilled = checkIsFilled()
             if isFilled {
                 tableView.setEditing(true, animated: true)
                 interactionLabel.text = "重要な順に並べ替えてください。"
+                checkButtonValue(phase: inputPhase)
                 inputPhase = inputPhase + 1
                 return
             } else {
@@ -39,6 +39,7 @@ final class TextInputViewController: UIViewController {
             saveTasksFromTextField()
             tableView.setEditing(false, animated: true)
             interactionLabel.text = "６つのタスクが完成しました！"
+            checkButtonValue(phase: inputPhase)
             inputPhase = inputPhase + 1
             self.navigationItem.hidesBackButton = true
             saveTasksFromTextField()
@@ -51,6 +52,7 @@ final class TextInputViewController: UIViewController {
             print("tapNextがおかしいです")
             return
         }
+
         
     }
     
@@ -106,10 +108,11 @@ final class TextInputViewController: UIViewController {
         tableView.separatorStyle = .none//罫線をなくす
         tableView.isScrollEnabled = false//スクロールさせない
         
-        nextButton.layer.shadowColor = UIColor.black.cgColor
-        nextButton.layer.shadowRadius = 5
-        nextButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        nextButton.layer.shadowOpacity = 0.6
+//        nextButton.layer.shadowColor = UIColor.black.cgColor
+//        nextButton.layer.shadowRadius = nextButton.layer.bounds.height / 2
+//        nextButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+//        nextButton.layer.shadowOpacity = 0.3
+        nextButton.layer.cornerRadius = nextButton.layer.bounds.height / 2
         
     }
     

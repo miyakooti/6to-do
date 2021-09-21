@@ -42,11 +42,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kj-69-Ygk">
-                                <rect key="frame" x="20" y="742" width="374" height="50"/>
+                                <rect key="frame" x="35" y="742" width="344" height="50"/>
                                 <color key="backgroundColor" red="0.32156862749999998" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SCH-U4-GhB"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="XhF-dz-tgP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="n番目のタスクを完了する">
@@ -70,17 +69,15 @@
                         <constraints>
                             <constraint firstItem="cqe-p5-Lka" firstAttribute="top" secondItem="3kj-69-Ygk" secondAttribute="bottom" constant="20" id="5VH-EO-wlU"/>
                             <constraint firstItem="pDw-D9-Bke" firstAttribute="leading" secondItem="dcU-Em-fr3" secondAttribute="leading" constant="20" id="Eye-oo-qgW"/>
-                            <constraint firstItem="dcU-Em-fr3" firstAttribute="trailing" secondItem="3kj-69-Ygk" secondAttribute="trailing" constant="20" id="I8A-64-nyH"/>
                             <constraint firstItem="CLh-vb-7ud" firstAttribute="top" secondItem="pDw-D9-Bke" secondAttribute="bottom" constant="13" id="Llv-hh-O68"/>
                             <constraint firstItem="cqe-p5-Lka" firstAttribute="bottom" secondItem="dcU-Em-fr3" secondAttribute="bottom" id="Mgc-i8-3Yl"/>
                             <constraint firstItem="cqe-p5-Lka" firstAttribute="leading" secondItem="dcU-Em-fr3" secondAttribute="leading" id="S42-hp-N6t"/>
                             <constraint firstItem="CLh-vb-7ud" firstAttribute="leading" secondItem="dcU-Em-fr3" secondAttribute="leading" id="UgC-fu-aie"/>
-                            <constraint firstItem="3kj-69-Ygk" firstAttribute="leading" secondItem="dcU-Em-fr3" secondAttribute="leading" constant="20" id="WbN-SW-aMw"/>
-                            <constraint firstItem="dcU-Em-fr3" firstAttribute="trailing" secondItem="3kj-69-Ygk" secondAttribute="trailing" constant="20" id="Yel-bP-YHQ"/>
+                            <constraint firstItem="dcU-Em-fr3" firstAttribute="trailing" secondItem="3kj-69-Ygk" secondAttribute="trailing" constant="35" id="Yel-bP-YHQ"/>
                             <constraint firstItem="cqe-p5-Lka" firstAttribute="trailing" secondItem="dcU-Em-fr3" secondAttribute="trailing" id="hi5-3E-UD5"/>
                             <constraint firstItem="dcU-Em-fr3" firstAttribute="trailing" secondItem="pDw-D9-Bke" secondAttribute="trailing" constant="20" id="nfg-Nb-Hf4"/>
                             <constraint firstItem="CLh-vb-7ud" firstAttribute="trailing" secondItem="dcU-Em-fr3" secondAttribute="trailing" id="sEO-RW-ZTZ"/>
-                            <constraint firstItem="3kj-69-Ygk" firstAttribute="leading" secondItem="dcU-Em-fr3" secondAttribute="leading" constant="20" id="v88-yB-zTr"/>
+                            <constraint firstItem="3kj-69-Ygk" firstAttribute="leading" secondItem="dcU-Em-fr3" secondAttribute="leading" constant="35" id="v88-yB-zTr"/>
                             <constraint firstItem="pDw-D9-Bke" firstAttribute="top" secondItem="dcU-Em-fr3" secondAttribute="top" constant="20" id="znB-Z0-dGZ"/>
                         </constraints>
                     </view>
