@@ -9,6 +9,9 @@ final class TopViewController: UIViewController {
     
     private var emergency = false
     
+    private let shadeView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -23,6 +26,18 @@ final class TopViewController: UIViewController {
             debug()
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(removeShadeView), name: .modalClosed, object: nil)
+        
+    }
+    
+    @objc func removeShadeView() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.shadeView.alpha = 0
+        }) { (done) in
+            if done {
+                self.shadeView.removeFromSuperview()
+            }
+        }
     }
     
     private func debug() {
@@ -38,7 +53,19 @@ final class TopViewController: UIViewController {
 
     @IBAction private func tapStart(_ sender: Any) {
         if UserDefaults.standard.object(forKey: .sixTaskListKey) == nil{
-            self.presentNewTaskAlert(topVC: self)
+            
+            let vc = SelectModalViewController.instantiate()
+            vc.delegate = self
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.titleText = "まだタスクを設定していません。\n新たにタスクを設定しますか？"
+            self.present(vc, animated: true, completion: nil)
+            
+            shadeView.backgroundColor = .black
+            shadeView.alpha = 0
+            self.view.addSubview(shadeView)
+            UIView.animate(withDuration: 0.2) {
+                self.shadeView.alpha = 0.3
+            }
         } else {
             performSegue(withIdentifier: .showSeeVCKey, sender: nil)
         }
@@ -87,4 +114,10 @@ final class TopViewController: UIViewController {
         startButton.layer.shadowOpacity = 0.3
     }
     
+}
+
+extension TopViewController: CatchModalActionDelegate {
+    func catchModalAction() {
+        performSegue(withIdentifier: .showInputVCKey, sender: nil)
+    }
 }

@@ -20,8 +20,6 @@ final class ShowListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tomorrowVC = TomorrowModalViewController.instantiate()
-        tomorrowVC.delegate = self
         sumOfCompletion = UserDefaults.standard.integer(forKey: .sumOfCompletionKey)
         taskHistories = JsonEncoder.readItemsFromUserUserDefault(key: .HistoryKey)
         setUpView()

@@ -10,4 +10,6 @@ import Foundation
 extension Notification.Name {
     static let tomorrowModalDidClosed = Notification.Name("tomorrowModalDidClosed")
     static let tomorrowModalYes = Notification.Name("tomorrowModalYes")
+    static let modalClosed = Notification.Name("modalClosed")
+
 }

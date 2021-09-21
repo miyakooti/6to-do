@@ -48,7 +48,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="zLk-b6-dqD"/>
                                         </constraints>
-                                        <string key="text">今日のタスクを破棄して、明日のタスクを設定しますか？</string>
+                                        <string key="text">今日のタスクを破棄して、
+明日のタスクを設定しますか？</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
