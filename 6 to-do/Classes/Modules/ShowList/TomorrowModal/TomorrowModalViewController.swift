@@ -22,10 +22,10 @@ class TomorrowModalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.overrideUserInterfaceStyle = .light
+        
         leftButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
         rightButton.addTarget(self, action: #selector(rightButtonDidTapped), for: .touchUpInside)
-
         rightButton.backgroundColor = ProjectColor.sixTodoPurple
         rightButton.layer.cornerRadius = rightButton.bounds.size.height / 2
         leftButton.layer.cornerRadius = leftButton.bounds.size.height / 2

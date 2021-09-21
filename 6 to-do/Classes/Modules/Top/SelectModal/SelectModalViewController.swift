@@ -40,6 +40,7 @@ class SelectModalViewController: UIViewController {
     }
     
     private func setUpViews() {
+        self.overrideUserInterfaceStyle = .light
         titleLabel.text = titleText
         rightButton.backgroundColor = ProjectColor.sixTodoPurple
         rightButton.layer.cornerRadius = rightButton.bounds.size.height / 2
