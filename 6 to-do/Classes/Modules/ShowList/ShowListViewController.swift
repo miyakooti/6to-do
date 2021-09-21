@@ -26,6 +26,7 @@ final class ShowListViewController: UIViewController {
         bannerView.setUpBanner(bannerView: bannerView, viewController: self)
         NotificationCenter.default.addObserver(self, selector: #selector(removeShadeView), name: .tomorrowModalDidClosed, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(goToSetTomorrowTask), name: .tomorrowModalYes, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(removeShadeView), name: .modalClosed, object: nil)
     }
     
     @objc func removeShadeView() {
@@ -40,7 +41,20 @@ final class ShowListViewController: UIViewController {
     
     @IBAction private func tapComplete(_ sender: Any) {
         if numOfCompleted == 6 { //終わってるときは終了ボタンとして挙動する。
-            AlertPresenter.presentSetTomorrowTaskAlert(numOfCompleted: numOfCompleted, showListVC: self)
+            
+            let vc = SelectModalViewController.instantiate()
+            vc.delegate = self
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.titleText = "お疲れさまでした！\n明日のタスクを設定しますか？"
+            self.present(vc, animated: true, completion: nil)
+            
+            shadeView.backgroundColor = .black
+            shadeView.alpha = 0
+            self.view.addSubview(shadeView)
+            UIView.animate(withDuration: 0.2) {
+                self.shadeView.alpha = 0.3
+            }
+            
         } else { //終わってないときは一つずつ完了させていくボタンとして挙動する。
             numOfCompleted = 0 // 合計値ば随時reload dataで計算するので、毎回初期化していい
             for i in 0...5 {
@@ -70,15 +84,14 @@ final class ShowListViewController: UIViewController {
     
     @objc private func tapGarbage(_ sender: UIBarButtonItem) {
         
-        shadeView.backgroundColor = .black
-        shadeView.alpha = 0
-        self.view.addSubview(shadeView)
-        
         let vc = TomorrowModalViewController.instantiate()
         vc.delegate = self
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
         
+        shadeView.backgroundColor = .black
+        shadeView.alpha = 0
+        self.view.addSubview(shadeView)
         UIView.animate(withDuration: 0.2) {
             self.shadeView.alpha = 0.3
         }
@@ -183,5 +196,11 @@ extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
 extension ShowListViewController: catchDataFromModal {
     func catchData(isChecked: Bool) {
         self.inheritUnCompletedTasks = isChecked
+    }
+}
+
+extension ShowListViewController: CatchModalActionDelegate {
+    func catchModalAction() {
+        self.goToSetTomorrowTask()
     }
 }

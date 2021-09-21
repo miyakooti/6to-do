@@ -47,7 +47,6 @@
 		D1D1E57925E7307B00240268 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E57725E7307B00240268 /* TextInputViewController.swift */; };
 		D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1E58325E73C0000240268 /* TextInputCell.swift */; };
 		D1D1E58625E73C0000240268 /* TextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D1E58425E73C0000240268 /* TextInputCell.xib */; };
-		D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F613BC262D31350043B762 /* AlertPresentExtension.swift */; };
 		D1F92313267E5285000B4E46 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F92312267E5285000B4E46 /* HistoryViewController.swift */; };
 		D1F92315267E5297000B4E46 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F92314267E5297000B4E46 /* History.storyboard */; };
 		D1F92317267E5C52000B4E46 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F92316267E5C52000B4E46 /* UILabelExtension.swift */; };
@@ -101,7 +100,6 @@
 		D1D1E57725E7307B00240268 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		D1D1E58325E73C0000240268 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		D1D1E58425E73C0000240268 /* TextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputCell.xib; sourceTree = "<group>"; };
-		D1F613BC262D31350043B762 /* AlertPresentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentExtension.swift; sourceTree = "<group>"; };
 		D1F92312267E5285000B4E46 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		D1F92314267E5297000B4E46 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		D1F92316267E5C52000B4E46 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 		D119278D264648EB00A2DE0F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D1F613BC262D31350043B762 /* AlertPresentExtension.swift */,
 				D16F0200263E8BFE00419840 /* BannerSetUpExtension.swift */,
 				D119279226464B9A00A2DE0F /* UIColorRGBExtension.swift */,
 				D119279626464C3500A2DE0F /* UserDefaultsKeyExtension.swift */,
@@ -505,7 +502,6 @@
 				D16EB71D25E7A41300548D99 /* TaskShowCell.swift in Sources */,
 				D1D1E58525E73C0000240268 /* TextInputCell.swift in Sources */,
 				D151C1B5260B3F3400875252 /* Constants.swift in Sources */,
-				D1F613BD262D31350043B762 /* AlertPresentExtension.swift in Sources */,
 				D1758F3426EA60FC00C61D4D /* NSObject.swift in Sources */,
 				D16EB72C25E92D2700548D99 /* SettingTableViewController.swift in Sources */,
 				D18D70F7264650070066762B /* SegueKeyExtension.swift in Sources */,

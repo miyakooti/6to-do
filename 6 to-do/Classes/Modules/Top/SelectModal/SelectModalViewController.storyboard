@@ -43,13 +43,11 @@
                                             <constraint firstAttribute="height" constant="50" id="dbB-4S-L4Z"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-JA-9sI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="サンプルサンプルサンプル\n" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-JA-9sI">
                                         <rect key="frame" x="50" y="30" width="314" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="F2l-cQ-oXS"/>
                                         </constraints>
-                                        <string key="text">今日のタスクを破棄して、
-明日のタスクを設定しますか？</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
