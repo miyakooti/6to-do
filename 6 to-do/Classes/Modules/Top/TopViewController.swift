@@ -30,6 +30,11 @@ final class TopViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkAutomaticalTransition()
+    }
+    
     @objc func removeShadeView() {
         UIView.animate(withDuration: 0.2, animations: {
             self.shadeView.alpha = 0
@@ -38,17 +43,6 @@ final class TopViewController: UIViewController {
                 self.shadeView.removeFromSuperview()
             }
         }
-    }
-    
-    private func debug() {
-        UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
-        UserDefaults.standard.removeObject(forKey: .HistoryKey)
-        UserDefaults.standard.removeObject(forKey: .sumOfCompletionKey)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        checkAutomaticalTransition()
     }
 
     @IBAction private func tapStart(_ sender: Any) {
@@ -112,6 +106,12 @@ final class TopViewController: UIViewController {
         startButton.layer.shadowRadius = 5
         startButton.layer.shadowOffset = .zero
         startButton.layer.shadowOpacity = 0.3
+    }
+    
+    private func debug() {
+        UserDefaults.standard.removeObject(forKey: .sixTaskListKey)
+        UserDefaults.standard.removeObject(forKey: .HistoryKey)
+        UserDefaults.standard.removeObject(forKey: .sumOfCompletionKey)
     }
     
 }
