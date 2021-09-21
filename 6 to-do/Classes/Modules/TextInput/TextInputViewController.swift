@@ -7,14 +7,15 @@ final class TextInputViewController: UIViewController {
     @IBOutlet private weak var interactionLabel: UILabel!
     @IBOutlet private weak var nextButton: UIButton!
     
+    private var inheritedTasks: [Task] = []
+    
     private var inputPhase = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         resetInputPhase()
-        
-        let inheritedTasks: [Task] = JsonEncoder.readItemsFromUserUserDefault(key: .unCompletedTasksKey)
+        inheritedTasks = JsonEncoder.readItemsFromUserUserDefault(key: .unCompletedTasksKey)
     }
 
     @IBAction private func tapNext(_ sender: Any) {
@@ -125,6 +126,9 @@ extension TextInputViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TextInputCell", for: indexPath) as! TextInputCell
+        if indexPath.row < self.inheritedTasks.count {
+            cell.textField.text = self.inheritedTasks[indexPath.row].body
+        }
         return cell
     }
     
