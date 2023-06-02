@@ -672,7 +672,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N6VB623J2W;
+				DEVELOPMENT_TEAM = HDB7A739SH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
@@ -689,12 +689,13 @@
 					"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks",
 				);
 				INFOPLIST_FILE = "6 to-do/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo2023;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -708,7 +709,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N6VB623J2W;
+				DEVELOPMENT_TEAM = HDB7A739SH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
@@ -725,12 +726,13 @@
 					"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks",
 				);
 				INFOPLIST_FILE = "6 to-do/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.kousuke.6todo2023;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
