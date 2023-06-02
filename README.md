@@ -1,4 +1,8 @@
-### [🙆‍♀️ appstoreリンクはこちら 🙆‍♀️](https://apps.apple.com/jp/app/6-to-do-%E3%82%A2%E3%82%A4%E3%83%93%E3%83%BC-%E3%83%AA%E3%83%BC-%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E5%BC%8F%E3%82%BF%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id1555816223#?platform=iphone)
+### [🍏 Appstoreリンク](https://apps.apple.com/jp/app/6-to-do-%E3%82%A2%E3%82%A4%E3%83%93%E3%83%BC-%E3%83%AA%E3%83%BC-%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E5%BC%8F%E3%82%BF%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id1555816223#?platform=iphone)
+
+### [🎥 今更紹介動画も撮ったのでぜひ](https://youtu.be/xIMr765hJzE)
+
+
 
 <br>
 
