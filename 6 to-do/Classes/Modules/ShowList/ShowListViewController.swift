@@ -63,9 +63,9 @@ final class ShowListViewController: UIViewController {
                 let cell = tableView.cellForRow(at: indexPath) as! TaskShowCell
                 if cell.isCompleted == false { //　一番上のタスクを完了にする
                     // ここの中は実質一度しか実行されません。
-                    tasks[indexPath.row].isCompleted = true // table自体に書き込むことはしないで、プログラム上の表面上のデータのみの変更。
+                    tasks[indexPath.row].isCompleted = true
                     
-                    sumOfCompletion = sumOfCompletion + 1 // 一生記録する
+                    sumOfCompletion = sumOfCompletion + 1
                     UserDefaults.standard.setValue(sumOfCompletion, forKey: .sumOfCompletionKey)
                     
                     cell.isCompleted = true
@@ -118,9 +118,6 @@ final class ShowListViewController: UIViewController {
     
     private func changeButtonValue() {
         CompleteButton.setTitle("明日のタスクを設定する", for: .normal)
-//        CompleteButton.layer.shadowRadius = 5
-//        CompleteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        CompleteButton.layer.shadowOpacity = 1
     }
     
     private func saveToHistory(text: String) {
@@ -181,7 +178,9 @@ extension ShowListViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskShowCell", for: indexPath) as! TaskShowCell
         
         tasks = JsonEncoder.readItemsFromUserUserDefault(key: .sixTaskListKey)
+        print("\(indexPath)、\(tasks[indexPath.row].isCompleted)のセルをprepareします")
         cell.prepareCell(taskList: tasks, indexPath: indexPath)
+        print("------------------------------")
         
         if cell.isCompleted {
             numOfCompleted = numOfCompleted + 1
